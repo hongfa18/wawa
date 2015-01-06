@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/layout_bg_color">
+<!-- <com.wawa.arm.utile.widgets.MyGifView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"/> -->
+   <!--  <WebView android:id="@+id/gif" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"/>
+ -->
+ <com.wawa.arm.utile.widgets.SearchDevicesView android:id="@+id/scan" android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+ <include layout="@layout/main_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_marginTop="25dp"/>
+</RelativeLayout>

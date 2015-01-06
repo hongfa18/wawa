@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="CM0000000001">请求服务不存在</string>
+	<string name="CM0000000002">请求输入数据校验错误</string>
+	<string name="CM0000000003">对不起，系统错误，请稍候重试</string>
+	
+	<string name="SY0000000001">用户不存在</string>
+	<string name="SY0000000002">用户异常</string>
+	
+	<string name="SY0000000009">该手机号发送短信验证码次数超过当天最大次数限制</string>
+	
+	<string name="AC0000000001">结束日期不能小于开始日期</string>
+	<string name="AC0000000002">只能查询一年内的交易数据</string>
+	
+	<string name="SC0000000001">新密码和原密码不能相同</string>
+	<string name="SC0000000002">原密码错</string>
+</resources>

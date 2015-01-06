@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:background="@drawable/bg_klt_confirm_dialog">
+	<!-- 标题 -->
+	<TextView android:id="@+id/tv_title_dialog_lock_mode_setting" 
+		android:gravity="center"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+        android:layout_gravity="center"
+		android:text="title"
+		android:textSize="22sp"
+		android:textColor="#444444"
+		android:layout_marginTop="5dp">
+	</TextView>
+	<!-- 内容 -->
+	<TextView android:id="@+id/login_send_val_code_content" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="body"
+		android:textSize="18sp"
+		android:textColor="#666666"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="9dp">
+	</TextView>
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc"
+		android:layout_marginTop="10dp">
+	</TextView>
+	<!-- 按钮 -->
+	<LinearLayout android:gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="54dp"
+		android:orientation="horizontal"
+		android:background="@android:color/transparent"
+		android:id="@+id/dialog_mode_one">
+		<Button android:id="@+id/login_send_val_code_btn_ok"  
+		    android:gravity="center"
+			android:layout_width="0px"
+			android:layout_weight="5"
+			android:layout_height="fill_parent"
+			android:text="@string/om_btn_tip_ok"
+			android:textSize="22sp"
+			android:textColor="@color/om_ye_color"
+			android:background="@drawable/selector_bg_send_val_code_left">
+		</Button>
+		<TextView android:layout_width="1dp"
+			android:layout_height="fill_parent"
+			android:background="#cccccc">
+		</TextView>
+		<Button android:id="@+id/login_send_val_code_btn_cancel"  
+			android:gravity="center"
+			android:layout_width="0px"
+			android:layout_weight="5"
+			android:layout_height="fill_parent"
+			android:text="@string/om_btn_tip_cancel"
+			android:textSize="22sp"
+			android:textColor="@color/om_ye_color"
+			android:background="@drawable/selector_bg_send_val_code_right">
+		</Button>
+	</LinearLayout>
+	<!-- 按钮 -->
+	<LinearLayout android:gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="54dp"
+		android:orientation="horizontal"
+		android:background="@android:color/transparent"
+		android:id="@+id/dialog_mode_two"
+		android:visibility="gone">
+		<Button android:id="@+id/dialog_mode_two_btn_ok"  
+		    android:gravity="center"
+			android:layout_width="0px"
+			android:layout_weight="5"
+			android:layout_height="fill_parent"
+			android:text="@string/om_btn_tip_ok"
+			android:textSize="22sp"
+			android:textColor="@color/om_ye_color"
+			android:background="@drawable/selector_bg_send_val_code_lr">
+		</Button>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">ARM无线监测</string>
+    
+    <string name="login_title">Login</string>
+    	<!-- 登录成功 -->
+    	<string name="login_tip_001">Login successfully!</string>
+    	<!-- 参数获取失败 -->
+    	<string name="login_tip_002">Failure to obtain parameters!</string>
+    	<string name="login_hint_tip_001">Enter phone No</string>
+    	<string name="login_hint_tip_002">Enter your password</string>
+    	<string name="login_change_pwd_title">Warning</string>
+    	<!-- 登录密码处于初始化状态，需要首先修改 -->
+    	<string name="login_change_loginpwd_tip_001">Login password is initialized state, you need to modify first!</string>
+    	<!-- 登录密码处于重置状态，需要修改 -->
+    	<string name="login_change_loginpwd_tip_002">Login password is reset, you need to modify first!</string>
+    	<!-- 支付密码处于初始化状态，需要修改 -->
+    	<string name="login_change_paypwd_tip_001">MPIN is initialized state, you need to modify first!</string>
+    	<!-- 支付密码处于重置状态，需要修改 -->
+    	<string name="login_change_paypwd_tip_002">MPIN is reset, you need to modify first!</string>
+    <string name="main_title">ARM无线监测</string>
+    
+    <string name="my_account">My Account</string>
+	    <string name="change_pin_tip">Change Money PIN</string>
+	    	<string name="hint_change_pin_1">Old Money PIN</string>
+	    	<string name="hint_change_pin_2">New Money PIN</string>
+	    	<string name="hint_change_pin_3">Confirm New Money PIN</string>
+	    	<string name="pin_change_state_success_tip001">Money PIN Changed Successfully!</string>
+	    	<!-- 有空输入框 存在-->
+	    	<string name="tip_input_changepin_error1">The content is empty,please check!</string>
+	    	<!-- 新密码两次输入不一样 -->
+	    	<string name="tip_input_changepin_error2">Enter the new password twice is not the same!</string>
+	    <string name="change_loginpwd_tip">Change Login Password</string>
+	    	<string name="hint_change_loginpwd_1">Old Login Password</string>
+	    	<string name="hint_change_loginpwd_2">New Login Password</string>
+	    	<string name="hint_change_loginpwd_3">Confirm New Login Password</string>
+	    	<string name="loginpwd_change_state_success_tip001">Login Password Changed Successfully!</string>
+	    <string name="money_balance_tip">My Smart Pay Balance</string>
+	    	<!-- 余额查询成功 -->
+	        <string name="balance_money_tip_001">Balance inquiries success!</string>
+	        <!-- 余额获取为空 -->
+	    	<string name="balance_money_tip_002">Get the balance is empty!</string>
+	    	<string name="hint_balance_moneye_pin">Money PIN</string>
+	    	<string name="account_balance_head_tip">Please enter money PIN firstly.</string>
+	    	<string name="account_balance_money_head_tip">Money Balance (KSH)</string>
+	    	<string name="account_balance_head_date_tip">Select Date</string>
+	    	<string name="account_query_list_title_tip">Query List</string>
+	    <string name="mini_statement_tip">Mini Statement</string>
+	    	<!-- 交易记录查询结果为空 -->
+	    	<string name="statement_tip_002">Transaction query result is empty!</string>
+	    <string name="query_statement_tip">Query Statement</string>
+	    	<!-- 开始时间不能大于或等于结束时间 -->
+	    	<string name="select_date_tip001">Start time can not be greater than or equal to the end of time!</string>
+	    	<!-- 1年 -->
+	    	<string name="select_date_tip005">Query only allowed within a year!</string>
+	    	<!-- 查询跨度仅支持30天 -->
+	    	<string name="select_date_tip002">Query span supports only 30 days!</string>
+	    	<string name="select_date_tip003">Successful</string>
+	    	<string name="select_date_tip004">Unknow</string>
+	    	<string name="select_date_tip006">End time can\'t exceed Today!</string>
+	    <string name="query_statement_item_title">Detail</string>
+	    	<string name="query_statement_item_tip001">Amount</string>
+	    	<string name="query_statement_item_tip002">Order Info:</string>
+	    	<string name="query_statement_item_tip003">Date:</string>
+	    	<string name="query_statement_item_tip004">Status:</string>
+	    		<string name="query_statement_item_tip0041">Transaction successful</string>
+    		<string name="query_statement_item_flowno">,the TXNID is %1$s.</string>
+    		<string name="query_statement_item_sendmoney_out">send money to %1$s</string>
+    		<string name="query_statement_item_sendmoney_in">receive from %1$s</string>
+    		<string name="query_statement_item_buyairtime">buy airtime for phone %1$s</string>
+    		<string name="query_statement_item_withdrawalagent">withdrawal from agent %1$s</string>
+    		<string name="query_statement_item_withdrawalatm">withdrawal from ATM %1$s</string>
+    		<string name="query_statement_item_paybill">pay bill to %1$s for %2$s</string>
+    		<string name="query_statement_item_buygoods">pay money to %1$s</string>
+    <string name="hint_send_money_11">Phone No</string>
+    <string name="hint_send_money_12">Enter amount</string>
+    <string name="hint_send_money_21">Phone No</string>
+    <string name="hint_send_money_31">Agent Code</string>
+    <string name="hint_send_money_41">Bank ATM</string>
+    <string name="hint_send_money_51">Businiss Number</string>
+    <string name="hint_send_money_53">Bill Reference No</string>
+    <string name="hint_send_money_61">Purchase Code</string>
+    <string name="tip_input_nopwd_error">The content is empty,please check!</string>
+    
+    <string name="send_money">Send Money</string>
+    	<string name="send_money_state_success_tip001">Send Money Successfully!</string>
+    
+    <string name="buy_airtime">Buy AirTime</string>
+    	<string name="buy_airtime_state_success_tip001">Buy AirTime Successfully!</string>
+    
+   	<string name="withdraw_money">WithDraw Money</string>
+	   	<string name="withdraw_money_tip">WithDraw Money Code</string>
+	   	<string name="withdraw_money_text_tip">WithDraw Money Code hava been sent</string>
+	   	<string name="withdraw_money_agent_btn_tip">Agent Withdrawal</string>
+	   		<string name="agent_withdraw_money_state_success_tip001">Agent WithDraw Money Successfully!</string>
+	   	<string name="withdraw_money_atm_btn_tip">ATM Withdrawal</string>
+	   		<string name="atm_withdraw_money_state_success_tip001">ATM WithDraw Money Successfully!</string>
+   
+   	<string name="payment_service">Payment Services</string>
+	   	<string name="pay_bill_title">Pay Bill</string>
+	   		<string name="pay_bill_state_success_tip001">Pay Bill Successfully!</string>
+	   	<string name="buy_goods_title">Buy Goods</string>
+	   		<string name="buy_goods_state_success_tip001">Buy Goods Successfully!</string>
+    
+   	<!-- 公共提示 -->
+   	<string name="trade_state_title">Transaction Info</string>
+   	<string name="random_code_title">Random code and MPin</string>
+   	<string name="hint_send_money_code">Random Code</string>
+   	<string name="hint_send_money_pin">Enter your MPin</string>
+   	<string name="hint_send_money_seconds">60 Sconds</string>
+   	<string name="sms_code_send_again">Send Again</string>
+   	<string name="change_money_code_tip">Random Code have been Sent.\nEffctive in 60 Seconds.</string>
+   	<string name="om_btn_tip_next_step">Next Step</string>
+   	<string name="om_btn_tip_send_money">Send Money</string>
+   	<string name="om_btn_tip_ok">确定</string>
+   	<string name="om_btn_tip_save">保存</string>
+   	<string name="om_btn_tip_cancel">取消</string>
+   	<string name="om_btn_tip_set">设置</string>
+   	<string name="om_select_date">Select Date</string>
+   	<string name="om_btn_tip_log_out">Log out</string>
+   		<string name="logout_tip_001">Log out successfully!</string>
+   	<string name="om_smscod_dialog_content_send_money"><![CDATA[<b color="#666666">Are you sure to send <font color="#fd9854">%1$s</font> KSH to this account (<font color="#589fd5">%2$s</font>)?</b>]]></string>
+   	<string name="om_smscod_dialog_content_buy_airtime"><![CDATA[<b color="#666666">Are you sure to buy airtime <font color="#fd9854">%1$s</font> KSH to this phone number(<font color="#589fd5">%2$s</font>)?</b>]]></string>
+   	<string name="om_smscod_dialog_content_withdraw_agent"><![CDATA[<b color="#666666">Are you sure to withdraw <font color="#fd9854">%1$s</font> KSH from this agent(<font color="#589fd5">%2$s</font>)?</b>]]></string>
+   	<string name="om_smscod_dialog_content_withdraw_atm">Are you sure to withdrawal from ATM?</string>
+   	<string name="om_smscod_dialog_content_payment_service_bill"><![CDATA[<b color="#666666">Are you sure to Pay <font color="#fd9854">%1$s</font> KSH to this bill reference number(<font color="#589fd5">%2$s</font>) from business number(<font color="#589fd5">%3$s</font>)?</b>]]></string>
+   	<string name="om_smscod_dialog_content_payment_service_goods"><![CDATA[<b color="#666666">Are you sure to Pay <font color="#fd9854">%1$s</font> KSH to this Purchase Code(<font color="#589fd5">%2$s</font>)?</b>]]></string>
+   	
+   	<!-- 服务器返回数据digest校验不通过 -->
+   	<string name="service_response_data_error">The server returns data illegal.</string>
+   	<!-- 网络交互提示 -->
+    <string name="network_not_connected">Network connection fails, check the network settings!</string>
+    <!-- 数据解析异常 -->
+    <string name="data_parser_failed">Abnormal data analysis</string>
+    <string name="io_exception_error">IO exception!</string>
+    <!-- 网络异常，错误码： -->
+    <string name="net_status_code_error">Network anomalies, error code：%d</string>
+    <!-- 网络异常，请求超时 -->
+    <string name="net_exception_error">Network anomalies, request timeout!</string>
+    <!-- 网络异常，读取超时 -->
+    <string name="socket_exception_error">Network anomalies, read data timeout!</string>
+    <!-- 操作成功 -->
+    <string name="oper_success">Successful operation!</string>
+    <!-- 操作失败 -->
+    <string name="oper_fail">Operation failed!</string>
+    <!-- 运行时异常 -->
+    <string name="app_run_code_error">Application runtime exception</string>
+    <!-- 应用错误 -->
+	<string name="app_error">应用错误</string>
+	<!-- 很抱歉，应用程序出现错误，即将退出。\n请提交错误报告，我们会尽快修复这个问题！ -->
+    <string name="app_error_message">应用内部错误即将退出，请点击确认上传错误日志!</string>
+    <string name="submit_report">确认</string>
+    
+    <string name="app_exit_tip">退出</string>
+    <string name="app_menu_surelogout">确定退出ARM无线监测?</string>
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+    
+    <!-- 下拉刷新 -->
+    <string name="pull_to_refresh_pull_label">Pull down to refresh&#8230;</string>
+    <!-- 松开进行加载 -->
+    <string name="pull_to_refresh_release_label">Let go loading&#8230;</string>
+    <string name="pull_to_refresh_refreshing_label">Loading&#8230;</string>
+    <!-- 上拉加载更多 -->
+    <string name="pull_to_refresh_tap_label">Pull up to load more data&#8230;</string>
+    <!-- 没有内容 -->
+    <string name="pull_to_refresh_not_content">No content</string>
+    
+    <string name="not_connected">还没有连接到蓝牙设备</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="title_connecting">连接中...</string>
+    <string name="title_connected_to">连接到: </string>
+    <string name="title_not_connected">没有连上</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">搜索蓝牙设备...</string>
+    <string name="select_device">选择蓝牙设备连接</string>
+    <string name="none_paired">没有配对的蓝牙设备</string>
+    <string name="none_found">没有发现蓝牙设备</string>
+    <string name="title_paired_devices">已配对蓝牙设备</string>
+    <string name="title_other_devices">未配对蓝牙设备</string>
+    <string name="button_scan">搜索蓝牙</string>
+</resources>

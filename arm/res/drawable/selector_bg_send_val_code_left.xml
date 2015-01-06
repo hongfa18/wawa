@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+     <!-- 表示按下状态使用 -->
+     <item android:state_pressed="true"> 
+     	<shape>
+			<solid android:color="#f1f1f1"/>
+			<!-- corners为边缘的圆角 -->
+   			 <corners   
+	        android:bottomLeftRadius="5dp"  
+	        />  
+		</shape>
+     </item>
+     <!-- default -->
+     <item> 
+     	<shape>
+			<solid android:color="#ffffff"/>
+			<!-- corners为边缘的圆角 -->
+   			 <corners   
+	        android:bottomLeftRadius="5dp"  
+	        />  
+		</shape>
+     </item>
+</selector>
+

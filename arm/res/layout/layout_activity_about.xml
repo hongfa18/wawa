@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/layout_bg_color"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_account_layout"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView 
+            android:id="@+id/phone_sn"
+            android:text="手机SN：55668889"
+            style="@style/account_text_style_new"
+            android:background="@drawable/selector_account_menu_item_top"/>
+         <TextView 
+            android:id="@+id/app_version"
+            android:text="APP版本：V1.0"
+            style="@style/account_text_style_new"
+            android:background="@drawable/selector_account_menu_item_bottom"
+            android:layout_marginTop="-0.25dp"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_account_layout"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/arm_name"
+            android:text="ARM名称：BK3231_SPP"
+            style="@style/account_text_style_new"
+            android:background="@drawable/selector_account_menu_item_top"/>
+         <TextView 
+            android:id="@+id/arm_mac"
+            android:text="ARM地址：55：A4:6A:c5"
+            style="@style/account_text_style_new"
+            android:background="@drawable/selector_account_menu_item_middle"
+            android:layout_marginTop="-0.25dp"/>
+         <TextView 
+            android:id="@+id/arm_version"
+            android:text="ARM版本：V1.0"
+            style="@style/account_text_style_new"
+            android:background="@drawable/selector_account_menu_item_bottom"
+            android:layout_marginTop="-0.25dp"/>
+    </LinearLayout>
+</LinearLayout>
+

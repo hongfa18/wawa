@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+     <!-- 表示按下状态使用 -->
+     <item android:state_pressed="true"> 
+     	<shape>
+     		<!-- 渐变 默认的模式为android:type="linear"线性，android:type="radial"半径，android: type="sweep" 
+     		     android:angle="0" 从左到右  逆时针
+			<gradient
+			android:startColor="@color/white"
+			android:endColor="#D5D5D5"
+			android:angle="90" />
+     		-->
+			<!-- 填充  -->
+			<solid android:color="@color/account_text_bg_click_color"/>
+			<!-- 描边 -->
+			<stroke
+			android:width="0.5dp"
+			android:color="@color/account_text_stroke_color" />
+			<!-- 圆角   -->
+			<corners 
+			android:bottomLeftRadius="5dp"  
+	        android:bottomRightRadius="5dp"  
+	        android:topLeftRadius="5dp"  
+	        android:topRightRadius="5dp" />
+		</shape>
+     </item>
+     <!-- 表示聚焦状态使用
+     <item android:state_focused="true" > 
+         <shape>
+     	    <solid android:color="#ffffff"/>
+			<stroke
+			android:width="0.5dp"
+			android:color="#fd9854" />
+     	    <corners 
+			android:bottomLeftRadius="5dp"  
+	        android:bottomRightRadius="5dp"  
+	        android:topLeftRadius="5dp"  
+	        android:topRightRadius="5dp" />
+		</shape>
+     </item> -->
+     <!-- default -->
+     <item> 
+     	<shape>
+     	    <solid android:color="@color/account_text_bg_default_color"/>
+     	  <!--   描边  -->
+			<stroke
+			android:width="0.5dp"
+			android:color="@color/account_text_stroke_color" />
+     	    <corners 
+			android:bottomLeftRadius="5dp"  
+	        android:bottomRightRadius="5dp"  
+	        android:topLeftRadius="5dp"  
+	        android:topRightRadius="5dp" />
+		</shape>
+     </item>
+</selector>

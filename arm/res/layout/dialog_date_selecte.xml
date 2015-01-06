@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:background="@drawable/bg_klt_confirm_dialog">
+	<!-- 标题 -->
+	<TextView android:id="@+id/tv_title_dialog_lock_mode_setting" 
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="left"
+		android:text="@string/om_select_date"
+		android:textSize="22sp"
+		android:textColor="@color/om_ye_color"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginLeft="5dp"/>
+	<TextView android:layout_width="fill_parent" android:layout_height="2dp" android:background="@color/om_ye_color"/>
+	<!-- 内容 -->
+	<DatePicker android:id="@+id/select_date_datepicker" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="9dp"/>
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc"
+		android:layout_marginTop="10dp"/>
+	<!-- 按钮 -->
+	<LinearLayout android:gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="54dp"
+		android:orientation="horizontal"
+		android:background="@android:color/transparent">
+		<Button android:id="@+id/select_date_btn_cancel"    
+		    android:gravity="center"
+			android:layout_width="0px"
+			android:layout_weight="5"
+			android:layout_height="fill_parent"
+			android:text="@string/om_btn_tip_cancel"
+			android:textSize="22sp"
+			android:textColor="@color/om_ye_color"
+			android:background="@drawable/selector_bg_send_val_code_left">
+		</Button>
+		<TextView android:layout_width="1dp"
+			android:layout_height="fill_parent"
+			android:background="#cccccc">
+		</TextView>
+		<Button android:id="@+id/select_date_btn_ok"
+			android:gravity="center"
+			android:layout_width="0px"
+			android:layout_weight="5"
+			android:layout_height="fill_parent"
+			android:text="@string/om_btn_tip_set"
+			android:textSize="22sp"
+			android:textColor="@color/om_ye_color"
+			android:background="@drawable/selector_bg_send_val_code_right">
+		</Button>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:background="@android:color/transparent">
+    <TextView 
+        android:id="@+id/item_namedaar_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:layout_margin="5dp"
+        android:text="11"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"/>
+    <Button android:id="@+id/item_link_btn"  
+		android:gravity="center"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="配对连接"
+		android:layout_centerVertical="true"
+		android:textSize="16sp"
+		android:padding="10dp"
+		android:layout_margin="5dp"
+		android:textColor="@color/om_ye_color"
+		android:background="@drawable/selector_bg_device">
+	</Button>
+    <Button android:id="@+id/item_clear_btn" 
+        android:layout_toLeftOf="@id/item_link_btn" 
+		android:gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="清除"
+		android:layout_centerVertical="true"
+		android:textSize="16sp"
+		android:padding="10dp"
+		android:layout_margin="5dp"
+		android:textColor="@color/om_ye_color"
+		android:background="@drawable/selector_bg_device">
+	</Button>
+	<TextView android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:layout_alignParentBottom="true"
+			android:background="#cccccc">
+		</TextView>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wawa.arm"
+    android:versionCode="1"
+    android:versionName="V1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="18" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    
+    <application
+        android:name="com.wawa.arm.common.OMApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomTitleBar" >
+        <!-- 启动 -->
+        <activity android:name="com.wawa.arm.StartActivity" android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 设置 -->
+        <activity android:name="SettingActivity" android:screenOrientation="nosensor"></activity>
+         <!-- 关于 -->
+        <activity android:name="AboutActivity" android:screenOrientation="nosensor"></activity>
+        <!-- 蓝牙操作界面 -->
+        <activity android:name="DeviceListActivity" android:screenOrientation="nosensor" android:theme="@android:style/Theme.Dialog"
+                  android:configChanges="orientation|keyboardHidden" ></activity>
+        <!-- 主界面 -->
+        <activity android:name="ARMActivity" android:screenOrientation="nosensor" android:launchMode="singleTask"></activity>
+    </application>
+</manifest>

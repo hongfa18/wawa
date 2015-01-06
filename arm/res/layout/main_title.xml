@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res/com.wawa.arm"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical" 
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/title_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:padding="3dp"
+        android:src="@drawable/change_icon" />
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_centerVertical="true"
+        android:text="0"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@id/title_icon"
+        android:textSize="20sp" />
+    <LinearLayout android:layout_height="35dp" 
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/layout_first">
+        <com.wawa.arm.utile.widgets.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ripple:rv_centered="true">
+	        <ImageView
+	        android:id="@+id/open_icon"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/globe_bg"
+	        android:visibility="gone"
+	        android:clickable="true"/>
+        </com.wawa.arm.utile.widgets.RippleView>
+        <com.wawa.arm.utile.widgets.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ripple:rv_centered="true">
+	        <ImageView
+	        android:id="@+id/setting_icon"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:scaleType="fitXY"
+	        android:layout_marginLeft="10dp"
+	        android:src="@drawable/selector_setting_bg"/>
+        </com.wawa.arm.utile.widgets.RippleView>
+    </LinearLayout>
+</RelativeLayout>

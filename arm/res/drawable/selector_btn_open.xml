@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+     <!-- 表示按下状态使用 -->
+     <item android:state_pressed="true" android:drawable="@drawable/widget_count_bg2"> 
+     </item>
+      
+     <item android:drawable="@drawable/widget_count_bg"> 
+     </item>
+</selector>
