@@ -15,6 +15,7 @@ import com.wawa.arm.common.OMApplication;
 
 public class LogThread extends Thread{
 	public static boolean isPrintLog = true;
+	private int maxfilelength = 1024 * 1024 * 5;
 	@Override
 	public void run() {
 		String status = Environment.getExternalStorageState();
@@ -43,9 +44,10 @@ public class LogThread extends Thread{
 					}
 				} else {
 					if (file.exists()) {
-						if (file.length() > 1024 * 1024 * 4) {
-							file.delete();
-							file.createNewFile();
+						if (file.length() > maxfilelength) {
+							String rootPath = file.getParent();
+							File newFile = new File(rootPath + File.separator + "arm_log_old.txt");
+							file.renameTo(newFile);
 						}
 					} else {
 						file.createNewFile();
@@ -57,6 +59,15 @@ public class LogThread extends Thread{
 				buffereReader = new BufferedReader(new InputStreamReader(proccess.getInputStream()));
 				String str = null;
 				while ((str = buffereReader.readLine()) != null && isPrintLog) {
+					if(file.length() > maxfilelength){
+						String rootPath = file.getParent();
+						File newFile = new File(rootPath + File.separator + "arm_log_old.txt");
+						file.renameTo(newFile);
+						file = new File(logPath.toString());
+						file.createNewFile();
+						fw = new FileWriter(logPath.toString(), true);
+						bw = new BufferedWriter(fw);
+					}
 					if (str.contains(myPid)) {
 						bw.write(str);
 						bw.newLine();

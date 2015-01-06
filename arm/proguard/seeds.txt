@@ -69,7 +69,10 @@ com.wawa.arm.AboutActivity
 com.wawa.arm.AboutActivity: AboutActivity()
 com.wawa.arm.DeviceListActivity
 com.wawa.arm.DeviceListActivity: DeviceListActivity()
+com.wawa.arm.R$anim: int animation_sp_movie
 com.wawa.arm.R$anim: int net_loading_animation
+com.wawa.arm.R$anim: int slide_in_right_my
+com.wawa.arm.R$anim: int slide_out_left_my
 com.wawa.arm.R$attr: int adapterViewBackground
 com.wawa.arm.R$attr: int centered
 com.wawa.arm.R$attr: int clipPadding
@@ -91,6 +94,16 @@ com.wawa.arm.R$attr: int lineWidth
 com.wawa.arm.R$attr: int pageColor
 com.wawa.arm.R$attr: int pullMode
 com.wawa.arm.R$attr: int radius
+com.wawa.arm.R$attr: int rv_alpha
+com.wawa.arm.R$attr: int rv_centered
+com.wawa.arm.R$attr: int rv_color
+com.wawa.arm.R$attr: int rv_framerate
+com.wawa.arm.R$attr: int rv_rippleDuration
+com.wawa.arm.R$attr: int rv_ripplePadding
+com.wawa.arm.R$attr: int rv_type
+com.wawa.arm.R$attr: int rv_zoom
+com.wawa.arm.R$attr: int rv_zoomDuration
+com.wawa.arm.R$attr: int rv_zoomScale
 com.wawa.arm.R$attr: int selectedBold
 com.wawa.arm.R$attr: int selectedColor
 com.wawa.arm.R$attr: int snap
@@ -241,10 +254,107 @@ com.wawa.arm.R$drawable: int action_refresh
 com.wawa.arm.R$drawable: int bg_account_balance_layout
 com.wawa.arm.R$drawable: int bg_account_layout
 com.wawa.arm.R$drawable: int bg_btn_next_ok
+com.wawa.arm.R$drawable: int bg_device_head_txv
 com.wawa.arm.R$drawable: int bg_klt_confirm_dialog
 com.wawa.arm.R$drawable: int bg_om_net_dialog
 com.wawa.arm.R$drawable: int bg_pager_default
 com.wawa.arm.R$drawable: int btn_ba_gray_highlight
+com.wawa.arm.R$drawable: int change_icon
+com.wawa.arm.R$drawable: int change_icon_0
+com.wawa.arm.R$drawable: int change_icon_1
+com.wawa.arm.R$drawable: int change_icon_10
+com.wawa.arm.R$drawable: int change_icon_11
+com.wawa.arm.R$drawable: int change_icon_12
+com.wawa.arm.R$drawable: int change_icon_13
+com.wawa.arm.R$drawable: int change_icon_14
+com.wawa.arm.R$drawable: int change_icon_15
+com.wawa.arm.R$drawable: int change_icon_16
+com.wawa.arm.R$drawable: int change_icon_17
+com.wawa.arm.R$drawable: int change_icon_18
+com.wawa.arm.R$drawable: int change_icon_19
+com.wawa.arm.R$drawable: int change_icon_2
+com.wawa.arm.R$drawable: int change_icon_20
+com.wawa.arm.R$drawable: int change_icon_21
+com.wawa.arm.R$drawable: int change_icon_22
+com.wawa.arm.R$drawable: int change_icon_23
+com.wawa.arm.R$drawable: int change_icon_24
+com.wawa.arm.R$drawable: int change_icon_25
+com.wawa.arm.R$drawable: int change_icon_26
+com.wawa.arm.R$drawable: int change_icon_27
+com.wawa.arm.R$drawable: int change_icon_28
+com.wawa.arm.R$drawable: int change_icon_29
+com.wawa.arm.R$drawable: int change_icon_3
+com.wawa.arm.R$drawable: int change_icon_30
+com.wawa.arm.R$drawable: int change_icon_31
+com.wawa.arm.R$drawable: int change_icon_32
+com.wawa.arm.R$drawable: int change_icon_33
+com.wawa.arm.R$drawable: int change_icon_34
+com.wawa.arm.R$drawable: int change_icon_35
+com.wawa.arm.R$drawable: int change_icon_36
+com.wawa.arm.R$drawable: int change_icon_37
+com.wawa.arm.R$drawable: int change_icon_38
+com.wawa.arm.R$drawable: int change_icon_39
+com.wawa.arm.R$drawable: int change_icon_4
+com.wawa.arm.R$drawable: int change_icon_40
+com.wawa.arm.R$drawable: int change_icon_41
+com.wawa.arm.R$drawable: int change_icon_42
+com.wawa.arm.R$drawable: int change_icon_43
+com.wawa.arm.R$drawable: int change_icon_44
+com.wawa.arm.R$drawable: int change_icon_45
+com.wawa.arm.R$drawable: int change_icon_46
+com.wawa.arm.R$drawable: int change_icon_47
+com.wawa.arm.R$drawable: int change_icon_48
+com.wawa.arm.R$drawable: int change_icon_49
+com.wawa.arm.R$drawable: int change_icon_5
+com.wawa.arm.R$drawable: int change_icon_50
+com.wawa.arm.R$drawable: int change_icon_51
+com.wawa.arm.R$drawable: int change_icon_52
+com.wawa.arm.R$drawable: int change_icon_53
+com.wawa.arm.R$drawable: int change_icon_54
+com.wawa.arm.R$drawable: int change_icon_55
+com.wawa.arm.R$drawable: int change_icon_56
+com.wawa.arm.R$drawable: int change_icon_57
+com.wawa.arm.R$drawable: int change_icon_58
+com.wawa.arm.R$drawable: int change_icon_59
+com.wawa.arm.R$drawable: int change_icon_6
+com.wawa.arm.R$drawable: int change_icon_60
+com.wawa.arm.R$drawable: int change_icon_61
+com.wawa.arm.R$drawable: int change_icon_62
+com.wawa.arm.R$drawable: int change_icon_63
+com.wawa.arm.R$drawable: int change_icon_64
+com.wawa.arm.R$drawable: int change_icon_65
+com.wawa.arm.R$drawable: int change_icon_66
+com.wawa.arm.R$drawable: int change_icon_67
+com.wawa.arm.R$drawable: int change_icon_68
+com.wawa.arm.R$drawable: int change_icon_69
+com.wawa.arm.R$drawable: int change_icon_7
+com.wawa.arm.R$drawable: int change_icon_70
+com.wawa.arm.R$drawable: int change_icon_71
+com.wawa.arm.R$drawable: int change_icon_72
+com.wawa.arm.R$drawable: int change_icon_73
+com.wawa.arm.R$drawable: int change_icon_74
+com.wawa.arm.R$drawable: int change_icon_75
+com.wawa.arm.R$drawable: int change_icon_76
+com.wawa.arm.R$drawable: int change_icon_77
+com.wawa.arm.R$drawable: int change_icon_78
+com.wawa.arm.R$drawable: int change_icon_79
+com.wawa.arm.R$drawable: int change_icon_8
+com.wawa.arm.R$drawable: int change_icon_80
+com.wawa.arm.R$drawable: int change_icon_81
+com.wawa.arm.R$drawable: int change_icon_82
+com.wawa.arm.R$drawable: int change_icon_83
+com.wawa.arm.R$drawable: int change_icon_84
+com.wawa.arm.R$drawable: int change_icon_85
+com.wawa.arm.R$drawable: int change_icon_86
+com.wawa.arm.R$drawable: int change_icon_87
+com.wawa.arm.R$drawable: int change_icon_88
+com.wawa.arm.R$drawable: int change_icon_89
+com.wawa.arm.R$drawable: int change_icon_9
+com.wawa.arm.R$drawable: int change_icon_90
+com.wawa.arm.R$drawable: int change_icon_91
+com.wawa.arm.R$drawable: int change_icon__
+com.wawa.arm.R$drawable: int globe_bg
+com.wawa.arm.R$drawable: int globe_bg_hover
 com.wawa.arm.R$drawable: int home_icon_buyairtime
 com.wawa.arm.R$drawable: int home_icon_payment
 com.wawa.arm.R$drawable: int home_icon_sendmoney
@@ -256,6 +366,7 @@ com.wawa.arm.R$drawable: int ic_menu_set_as_clicked
 com.wawa.arm.R$drawable: int ic_menu_setting
 com.wawa.arm.R$drawable: int icon_andbusiness
 com.wawa.arm.R$drawable: int icon_arrow_left_white
+com.wawa.arm.R$drawable: int icon_arrow_left_white_hover
 com.wawa.arm.R$drawable: int icon_arrow_right_black
 com.wawa.arm.R$drawable: int icon_arrow_right_white
 com.wawa.arm.R$drawable: int icon_atmwithdraw
@@ -282,6 +393,8 @@ com.wawa.arm.R$drawable: int launchimage
 com.wawa.arm.R$drawable: int menu_refresh
 com.wawa.arm.R$drawable: int navbar_logo
 com.wawa.arm.R$drawable: int net_loading
+com.wawa.arm.R$drawable: int off_btn
+com.wawa.arm.R$drawable: int on_btn
 com.wawa.arm.R$drawable: int pull_to_refresh_down_arrow
 com.wawa.arm.R$drawable: int pull_to_refresh_down_arrow_little_hint
 com.wawa.arm.R$drawable: int pull_to_refresh_progress_loading
@@ -289,10 +402,13 @@ com.wawa.arm.R$drawable: int pull_to_refresh_sepate_line
 com.wawa.arm.R$drawable: int pull_to_refresh_up_arrow
 com.wawa.arm.R$drawable: int pull_to_refresh_up_arrow_little_hint
 com.wawa.arm.R$drawable: int pull_to_refreshing_progress
+com.wawa.arm.R$drawable: int scan_bg
 com.wawa.arm.R$drawable: int selector_account_menu_item
 com.wawa.arm.R$drawable: int selector_account_menu_item_bottom
 com.wawa.arm.R$drawable: int selector_account_menu_item_middle
 com.wawa.arm.R$drawable: int selector_account_menu_item_top
+com.wawa.arm.R$drawable: int selector_back_bg
+com.wawa.arm.R$drawable: int selector_bg_device
 com.wawa.arm.R$drawable: int selector_bg_query_item
 com.wawa.arm.R$drawable: int selector_bg_send_val_code_left
 com.wawa.arm.R$drawable: int selector_bg_send_val_code_lr
@@ -305,8 +421,18 @@ com.wawa.arm.R$drawable: int selector_edit_input
 com.wawa.arm.R$drawable: int selector_edit_input_bottom
 com.wawa.arm.R$drawable: int selector_edit_input_middle
 com.wawa.arm.R$drawable: int selector_edit_input_top
+com.wawa.arm.R$drawable: int selector_globle_bg
 com.wawa.arm.R$drawable: int selector_main_item
+com.wawa.arm.R$drawable: int selector_setting_bg
 com.wawa.arm.R$drawable: int selector_tabtext
+com.wawa.arm.R$drawable: int setting_bg_new
+com.wawa.arm.R$drawable: int setting_bg_new_hover
+com.wawa.arm.R$drawable: int settings_bg
+com.wawa.arm.R$drawable: int settings_bg_hover
+com.wawa.arm.R$drawable: int sp_bg
+com.wawa.arm.R$drawable: int sp_bg_01
+com.wawa.arm.R$drawable: int sp_bg_02
+com.wawa.arm.R$drawable: int sp_bg_03
 com.wawa.arm.R$drawable: int tab_indicator
 com.wawa.arm.R$drawable: int tabbar_highlight_bg
 com.wawa.arm.R$drawable: int table_icon_buyairtime
@@ -316,6 +442,7 @@ com.wawa.arm.R$drawable: int table_icon_unknown
 com.wawa.arm.R$drawable: int table_icon_withdraw
 com.wawa.arm.R$drawable: int table_item_single_bg_highlight
 com.wawa.arm.R$drawable: int table_split
+com.wawa.arm.R$drawable: int white_btn
 com.wawa.arm.R$drawable: int widget_count_bg
 com.wawa.arm.R$drawable: int widget_count_bg2
 com.wawa.arm.R$id: int ItemImage
@@ -324,29 +451,40 @@ com.wawa.arm.R$id: int about
 com.wawa.arm.R$id: int app_version
 com.wawa.arm.R$id: int arm_mac
 com.wawa.arm.R$id: int arm_name
+com.wawa.arm.R$id: int arm_no
 com.wawa.arm.R$id: int arm_version
 com.wawa.arm.R$id: int back_icon
 com.wawa.arm.R$id: int bottom
 com.wawa.arm.R$id: int button_scan
+com.wawa.arm.R$id: int chgCurrentVolType
 com.wawa.arm.R$id: int dialog_mode_one
 com.wawa.arm.R$id: int dialog_mode_two
 com.wawa.arm.R$id: int dialog_mode_two_btn_ok
+com.wawa.arm.R$id: int doubleRipple
 com.wawa.arm.R$id: int edit_app_cs
+com.wawa.arm.R$id: int edit_app_default_pair_key
+com.wawa.arm.R$id: int edit_app_default_pari_name
 com.wawa.arm.R$id: int edit_arm_rm
 com.wawa.arm.R$id: int edit_arm_sx
 com.wawa.arm.R$id: int edit_arm_times
 com.wawa.arm.R$id: int edit_arm_zq
+com.wawa.arm.R$id: int for_code_open
+com.wawa.arm.R$id: int for_coder
 com.wawa.arm.R$id: int head_img
 com.wawa.arm.R$id: int id_item_listview_layout_content_control_area
 com.wawa.arm.R$id: int id_item_listview_layout_header_time
 com.wawa.arm.R$id: int id_linear_layout
 com.wawa.arm.R$id: int id_refresh_area
+com.wawa.arm.R$id: int item_clear_btn
+com.wawa.arm.R$id: int item_link_btn
+com.wawa.arm.R$id: int item_namedaar_txv
 com.wawa.arm.R$id: int item_query_list_icon
 com.wawa.arm.R$id: int item_query_money_number
 com.wawa.arm.R$id: int item_query_open_type
 com.wawa.arm.R$id: int item_query_oper_result
 com.wawa.arm.R$id: int item_query_oper_time
 com.wawa.arm.R$id: int layout_first
+com.wawa.arm.R$id: int layout_vol_choice_area
 com.wawa.arm.R$id: int login_send_val_code_btn_cancel
 com.wawa.arm.R$id: int login_send_val_code_btn_ok
 com.wawa.arm.R$id: int login_send_val_code_content
@@ -363,14 +501,18 @@ com.wawa.arm.R$id: int pullUpFromBottom
 com.wawa.arm.R$id: int pull_to_refresh_image
 com.wawa.arm.R$id: int pull_to_refresh_progress
 com.wawa.arm.R$id: int pull_to_refresh_text
+com.wawa.arm.R$id: int rectangle
 com.wawa.arm.R$id: int save
+com.wawa.arm.R$id: int scan
 com.wawa.arm.R$id: int select_date_btn_cancel
 com.wawa.arm.R$id: int select_date_btn_ok
 com.wawa.arm.R$id: int select_date_datepicker
 com.wawa.arm.R$id: int setting_icon
+com.wawa.arm.R$id: int simpleRipple
 com.wawa.arm.R$id: int tip_content
 com.wawa.arm.R$id: int tip_head_img
 com.wawa.arm.R$id: int title_icon
+com.wawa.arm.R$id: int title_icon_click
 com.wawa.arm.R$id: int title_new_devices
 com.wawa.arm.R$id: int title_paired_devices
 com.wawa.arm.R$id: int title_text
@@ -378,22 +520,31 @@ com.wawa.arm.R$id: int top
 com.wawa.arm.R$id: int triangle
 com.wawa.arm.R$id: int tv_title_dialog_lock_mode_setting
 com.wawa.arm.R$id: int underline
+com.wawa.arm.R$id: int vol_level_high
+com.wawa.arm.R$id: int vol_level_low
+com.wawa.arm.R$id: int vol_level_mid
+com.wawa.arm.R$id: int wiperSwitch1
 com.wawa.arm.R$layout: int device_list
 com.wawa.arm.R$layout: int device_name
 com.wawa.arm.R$layout: int dialog_date_selecte
 com.wawa.arm.R$layout: int dialog_net_loading
 com.wawa.arm.R$layout: int dialog_send_val_code
 com.wawa.arm.R$layout: int item_gridview_main
+com.wawa.arm.R$layout: int item_listview_device
 com.wawa.arm.R$layout: int item_listview_layout_content
 com.wawa.arm.R$layout: int item_listview_layout_header
 com.wawa.arm.R$layout: int launch_screen
 com.wawa.arm.R$layout: int layout_activity_about
+com.wawa.arm.R$layout: int layout_activity_main
 com.wawa.arm.R$layout: int layout_activity_setting
 com.wawa.arm.R$layout: int layout_toast_diy
 com.wawa.arm.R$layout: int login_screen
+com.wawa.arm.R$layout: int main_title
 com.wawa.arm.R$layout: int pull_list_content_empty
 com.wawa.arm.R$layout: int pull_to_refresh_header
 com.wawa.arm.R$layout: int title
+com.wawa.arm.R$raw: int alarm_du_once
+com.wawa.arm.R$raw: int nomer_du_once
 com.wawa.arm.R$string: int AC0000000001
 com.wawa.arm.R$string: int AC0000000002
 com.wawa.arm.R$string: int CM0000000001
@@ -541,6 +692,7 @@ com.wawa.arm.R$string: int withdraw_money_agent_btn_tip
 com.wawa.arm.R$string: int withdraw_money_atm_btn_tip
 com.wawa.arm.R$string: int withdraw_money_text_tip
 com.wawa.arm.R$string: int withdraw_money_tip
+com.wawa.arm.R$style: int AnimationActivity
 com.wawa.arm.R$style: int AppBaseTheme
 com.wawa.arm.R$style: int AppTheme
 com.wawa.arm.R$style: int CustomTabPageIndicator
@@ -561,6 +713,8 @@ com.wawa.arm.R$style: int klt_confirm_dialog_style
 com.wawa.arm.R$style: int om_net_dialog_style
 com.wawa.arm.R$style: int query_statment_list_item_content_style
 com.wawa.arm.R$style: int query_statment_list_item_title_style
+com.wawa.arm.R$style: int scan_devices_dialog_style
+com.wawa.arm.R$style: int themeanimation
 com.wawa.arm.R$styleable: int[] CirclePageIndicator
 com.wawa.arm.R$styleable: int CirclePageIndicator_android_background
 com.wawa.arm.R$styleable: int CirclePageIndicator_android_orientation
@@ -584,6 +738,17 @@ com.wawa.arm.R$styleable: int PullToRefresh_adapterViewBackground
 com.wawa.arm.R$styleable: int PullToRefresh_headerBackground
 com.wawa.arm.R$styleable: int PullToRefresh_headerTextColor
 com.wawa.arm.R$styleable: int PullToRefresh_pullMode
+com.wawa.arm.R$styleable: int[] RippleView
+com.wawa.arm.R$styleable: int RippleView_rv_alpha
+com.wawa.arm.R$styleable: int RippleView_rv_centered
+com.wawa.arm.R$styleable: int RippleView_rv_color
+com.wawa.arm.R$styleable: int RippleView_rv_framerate
+com.wawa.arm.R$styleable: int RippleView_rv_rippleDuration
+com.wawa.arm.R$styleable: int RippleView_rv_ripplePadding
+com.wawa.arm.R$styleable: int RippleView_rv_type
+com.wawa.arm.R$styleable: int RippleView_rv_zoom
+com.wawa.arm.R$styleable: int RippleView_rv_zoomDuration
+com.wawa.arm.R$styleable: int RippleView_rv_zoomScale
 com.wawa.arm.R$styleable: int[] TitlePageIndicator
 com.wawa.arm.R$styleable: int TitlePageIndicator_android_background
 com.wawa.arm.R$styleable: int TitlePageIndicator_android_textColor
@@ -615,9 +780,14 @@ com.wawa.arm.R$styleable: int ViewPagerIndicator_vpiTitlePageIndicatorStyle
 com.wawa.arm.R$styleable: int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle
 com.wawa.arm.SettingActivity
 com.wawa.arm.SettingActivity: SettingActivity()
+com.wawa.arm.StartActivity
+com.wawa.arm.StartActivity: StartActivity()
 com.wawa.arm.common.BaseActivity: BaseActivity()
 com.wawa.arm.common.OMApplication
 com.wawa.arm.common.OMApplication: OMApplication()
+com.wawa.arm.utile.widgets.BaseView: BaseView(android.content.Context)
+com.wawa.arm.utile.widgets.BaseView: BaseView(android.content.Context,android.util.AttributeSet)
+com.wawa.arm.utile.widgets.BaseView: BaseView(android.content.Context,android.util.AttributeSet,int)
 com.wawa.arm.utile.widgets.OMEditText
 com.wawa.arm.utile.widgets.OMEditText: OMEditText(android.content.Context)
 com.wawa.arm.utile.widgets.OMEditText: OMEditText(android.content.Context,android.util.AttributeSet,int)
@@ -643,6 +813,20 @@ com.wawa.arm.utile.widgets.PullToRefreshListView: void setBackToTopView(android.
 com.wawa.arm.utile.widgets.PullToRefreshListView: void setEmptyView(android.view.View)
 com.wawa.arm.utile.widgets.PullToRefreshListView: void setOnLastItemVisibleListener(com.wawa.arm.utile.widgets.PullToRefreshBase$OnLastItemVisibleListener)
 com.wawa.arm.utile.widgets.PullToRefreshListView: void setOnScrollListener(android.widget.AbsListView$OnScrollListener)
+com.wawa.arm.utile.widgets.RippleView
+com.wawa.arm.utile.widgets.RippleView: RippleView(android.content.Context)
+com.wawa.arm.utile.widgets.RippleView: RippleView(android.content.Context,android.util.AttributeSet)
+com.wawa.arm.utile.widgets.RippleView: RippleView(android.content.Context,android.util.AttributeSet,int)
+com.wawa.arm.utile.widgets.SearchDevicesView
+com.wawa.arm.utile.widgets.SearchDevicesView: SearchDevicesView(android.content.Context)
+com.wawa.arm.utile.widgets.SearchDevicesView: SearchDevicesView(android.content.Context,android.util.AttributeSet)
+com.wawa.arm.utile.widgets.SearchDevicesView: SearchDevicesView(android.content.Context,android.util.AttributeSet,int)
+com.wawa.arm.utile.widgets.SearchDevicesView: void setHandler(android.os.Handler)
+com.wawa.arm.utile.widgets.WiperSwitchView
+com.wawa.arm.utile.widgets.WiperSwitchView: WiperSwitchView(android.content.Context)
+com.wawa.arm.utile.widgets.WiperSwitchView: WiperSwitchView(android.content.Context,android.util.AttributeSet)
+com.wawa.arm.utile.widgets.WiperSwitchView: void setOnChangedListener(com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener)
+com.wawa.arm.utile.widgets.WiperSwitchView: void setChecked(boolean)
 com.wawa.arm.utile.widgets.viewpageindicator.TabPageIndicator: void setOnTabReselectedListener(com.wawa.arm.utile.widgets.viewpageindicator.TabPageIndicator$OnTabReselectedListener)
 com.wawa.arm.utile.widgets.viewpageindicator.TabPageIndicator: void setViewPager(android.support.v4.view.ViewPager)
 com.wawa.arm.utile.widgets.viewpageindicator.TabPageIndicator: void setCurrentItem(int)

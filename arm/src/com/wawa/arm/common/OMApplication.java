@@ -196,7 +196,7 @@ public class OMApplication extends Application {
         try {
             in = context.getAssets().open(CommonConsts.PROPERTIES_NAME);
             props.load(in);
-            String httpsUrl = props.getProperty(CommonConsts.HTTPS_BASE);
+            /*String httpsUrl = props.getProperty(CommonConsts.HTTPS_BASE);
             configs.put(CommonConsts.HTTPS_BASE, httpsUrl);
             String requestScheme = props.getProperty(CommonConsts.REQUEST_SCHEME);
             configs.put(CommonConsts.REQUEST_SCHEME, requestScheme);
@@ -213,19 +213,22 @@ public class OMApplication extends Application {
             int pageSize = Integer.valueOf(props.getProperty(CommonConsts.QUERY_PAGE_SIZE));
             configs.put(CommonConsts.QUERY_PAGE_SIZE, pageSize);
             String digestCode = props.getProperty(CommonConsts.DIGEST_CODE);
-            configs.put(CommonConsts.DIGEST_CODE, digestCode);
+            configs.put(CommonConsts.DIGEST_CODE, digestCode);*/
             
             int armpl = Integer.valueOf(props.getProperty(CommonConsts.ARM_PL));
-            configs.put(CommonConsts.ARM_PL, armpl);
+            configs.put(CommonConsts.ARM_PL, armpl+"");
             int armrm = Integer.valueOf(props.getProperty(CommonConsts.ARM_RM));
-            configs.put(CommonConsts.ARM_RM, armrm);
+            configs.put(CommonConsts.ARM_RM, armrm+"");
             int armsx = Integer.valueOf(props.getProperty(CommonConsts.ARM_SX));
-            configs.put(CommonConsts.ARM_SX, armsx);
+            configs.put(CommonConsts.ARM_SX, armsx+"");
             int armzq = Integer.valueOf(props.getProperty(CommonConsts.ARM_ZQ));
-            configs.put(CommonConsts.ARM_ZQ, armzq);
+            configs.put(CommonConsts.ARM_ZQ, armzq+"");
             int apptimeout = Integer.valueOf(props.getProperty(CommonConsts.APP_TIMEOUT));
-            configs.put(CommonConsts.APP_TIMEOUT, apptimeout);
-            
+            configs.put(CommonConsts.APP_TIMEOUT, apptimeout+"");
+            String armpairname = props.getProperty(CommonConsts.ARM_PAIR_NAME);
+            configs.put(CommonConsts.ARM_PAIR_NAME, armpairname+"");
+            String armpairkey = props.getProperty(CommonConsts.ARM_PAIR_KEY);
+            configs.put(CommonConsts.ARM_PAIR_KEY, armpairkey+"");
             if (context != null){
             	sharePrefer = context.getSharedPreferences(PREFS_NAME, 0);
             	sharePreferEd = sharePrefer.edit();
@@ -235,6 +238,10 @@ public class OMApplication extends Application {
             	setVal(CommonConsts.ARM_SX, sharePrefer.getString(CommonConsts.ARM_SX, armsx+""), true);
             	setVal(CommonConsts.ARM_ZQ, sharePrefer.getString(CommonConsts.ARM_ZQ, armzq+""), true);
             	setVal(CommonConsts.APP_TIMEOUT, sharePrefer.getString(CommonConsts.APP_TIMEOUT, apptimeout+""), true);
+            	setVal(CommonConsts.ARM_PAIR_NAME, sharePrefer.getString(CommonConsts.ARM_PAIR_NAME, armpairname+""), true);
+            	setVal(CommonConsts.ARM_PAIR_KEY, sharePrefer.getString(CommonConsts.ARM_PAIR_KEY, armpairkey+""), true);
+            	setVal(CommonConsts.APP_VOL_OPEN_STATU, sharePrefer.getString(CommonConsts.APP_VOL_OPEN_STATU, "0"), true);
+            	setVal(CommonConsts.APP_VOL_VAL, sharePrefer.getString(CommonConsts.APP_VOL_VAL, "4"), true);
             }
         }catch(Exception e){
         	LogUtil.e(TAG, "get properties error", e);
@@ -279,9 +286,9 @@ public class OMApplication extends Application {
 	
 	@SuppressWarnings("unchecked")
 	public <T>  T getVal(String key,T defaultVal){
-		T result = (T) configs.get(key);
+		T result = (T) cacheVal.get(key);
 		if(result == null){
-			result = (T) cacheVal.get(key);
+			result = (T) configs.get(key);
 			if(result == null){
 				if(key.equals(CommonConsts.LAST_LOGIN_NAME)){
 					result = (T) sharePrefer.getString(CommonConsts.LAST_LOGIN_NAME, (String) defaultVal);

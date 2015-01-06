@@ -77,6 +77,13 @@ public class BaseActivity extends FragmentActivity{
 		// 添加Activity到堆栈
 		AppManager.getAppManager().addActivity(this);
 	}
+	protected void onCreate(Bundle savedInstanceState,boolean noTitle) {
+		super.onCreate(savedInstanceState);
+		if(noTitle)requestWindowFeature(Window.FEATURE_NO_TITLE);
+		allowFullScreen = true;
+		// 添加Activity到堆栈
+		AppManager.getAppManager().addActivity(this);
+	}
 	@Override
 	public void setContentView(int layoutResID) {
 		super.setContentView(layoutResID);
@@ -87,6 +94,10 @@ public class BaseActivity extends FragmentActivity{
 		logo = (ImageView)findViewById(R.id.title_icon);
 		logo.setImageResource(R.drawable.ic_menu_set_as_clicked);
 		layoutFirst.setVisibility(View.VISIBLE);
+	}
+	public void setContentView(int layoutResID,boolean noTitle) {
+		super.setContentView(layoutResID);
+		title = (TextView)findViewById(R.id.title_text);
 	}
 	public void setTitle(String titleStr){
 		title.setText(titleStr);
@@ -102,7 +113,7 @@ public class BaseActivity extends FragmentActivity{
 	 */
 	public void showBackBtn(boolean showBack,View.OnClickListener clickListener){
 		layoutFirst.setVisibility(View.GONE);
-		logo.setImageResource(R.drawable.icon_arrow_left_white);
+		logo.setImageResource(R.drawable.selector_back_bg);
 		if(clickListener == null)
 			clickListener = new View.OnClickListener() {
 				@Override

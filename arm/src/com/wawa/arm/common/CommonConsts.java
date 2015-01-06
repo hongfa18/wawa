@@ -104,9 +104,43 @@ public class CommonConsts {
 
 	public static final String APP_TIMEOUT = "app_timeout";
 
-	public static final String ARM_NO = "about_arm_version";
+	public static final String ARM_NO = "about_arm_no";
 
 	public static final String ARM_VERSION = "about_arm_version";
 
 	public static final String ARM_NAME = "about_arm_name";
+
+	public static final String ARM_ADDR = "about_arm_addr";
+
+	public static final String APP_SN = "app_sn";
+
+	public static final String APP_VER = "app_ver";
+
+	public static final int STATU_SETTING = 1;
+	public static final int STATU_HISTORY = 2;
+	public static final int STATU_HISTORY_ONE = 21;
+	public static final int STATU_HISTORY_MORE = 22;
+	public static final int STATU_WORKING = 3;
+	public static final int STATU_PAUSE = 4;
+
+	/**监测设备指令下发次数*/
+	public static final int STOP_COUNT = 2;
+
+	public static final int NO_PAIR_DEVICE = 1;
+	public static final int PAIR_DEVICE = 2;
+
+	public static final String DEFAULT_PERM_NAME = "ZZ01-BK3231-";
+	public static final String DEFAULT_PERM_KEY = "1129";
+
+	public static final String ARM_PAIR_NAME = "arm_pair_name";
+	public static final String ARM_PAIR_KEY = "arm_pair_key";
+
+	public static final String SOUND_NOMOR = "nomer_du";
+
+	public static final String SOUND_ALARM = "alarm_du";
+
+	public static final String APP_VOL_OPEN_STATU = "app_vol_isopen_statu";
+
+	public static final String APP_VOL_VAL = "app_vol_val";
+
 }

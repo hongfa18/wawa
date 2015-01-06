@@ -34,12 +34,34 @@
         <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
  	<!-- 设置titlebar的背景 -->
     </style>
+ 	<!-- 设置左进左出 -->
+    <style name="themeanimation" parent="CustomTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+    <style name="AnimationActivity">
+	    <item name="android:activityOpenEnterAnimation">@anim/slide_in_right_my</item>
+	    <item name="android:activityOpenExitAnimation">@null</item>
+	    <item name="android:activityCloseEnterAnimation">@null</item>
+	    <item name="android:activityCloseExitAnimation">@null</item>
+	    <item name="android:taskToBackExitAnimation">@null</item>
+	</style>
     
     <style name="om_net_dialog_style" parent="@android:style/Theme.Dialog"  ><!-- @android:style/AlertDialog" -->
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
+        <!-- 更换背景图片实现全透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 更改对话框标题栏 -->
+        <item name="android:windowTitleStyle">@null</item>
+         <!-- 屏幕背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="scan_devices_dialog_style" parent="@android:style/Theme.Dialog"  ><!-- @android:style/AlertDialog" -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFrame">@null</item>
         <!-- 更换背景图片实现全透明 -->
         <item name="android:windowBackground">@android:color/transparent</item>
         <!-- 更改对话框标题栏 -->

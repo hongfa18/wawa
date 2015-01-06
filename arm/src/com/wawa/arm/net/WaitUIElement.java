@@ -2,6 +2,7 @@ package com.wawa.arm.net;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 
 import com.wawa.arm.utile.MyToast;
 import com.wawa.arm.utile.widgets.OMNetDialog;
@@ -38,8 +39,18 @@ public class WaitUIElement {
 	public void showProcessDialog(String messageStr)
 	{
 		if(needUI && needDialog){
-			progressDialog = OMNetDialog.createDialog(context, 1, messageStr);
-			progressDialog.show();
+			if(changeMag(messageStr)){
+				progressDialog = OMNetDialog.createDialog(context, 1, messageStr);
+				progressDialog.show();
+			}
+		}
+	}
+	public boolean changeMag(String msg){
+		if(progressDialog != null  && progressDialog.isShowing()){
+			progressDialog.setContent(msg);
+			return false;
+		}else{
+			return true;
 		}
 	}
 	public void dismissProcessDialog()
@@ -52,5 +63,18 @@ public class WaitUIElement {
 	public Context getContext()
 	{
 		return context;
+	}
+	
+	public boolean isShowing(){
+		if (progressDialog != null && progressDialog.isShowing()) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public void setCancelLis(DialogInterface.OnCancelListener lis){
+		if (progressDialog != null){
+			progressDialog.setOnCancelListener(lis);
+		}
 	}
 }

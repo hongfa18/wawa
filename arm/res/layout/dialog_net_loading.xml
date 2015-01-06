@@ -8,8 +8,8 @@
 	android:padding="20dp">
    	<ImageView
 		android:id="@+id/head_img"
-		android:layout_width="55dp"
-		android:layout_height="55dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:src="@drawable/net_loading"
 		android:scaleType="fitXY"
 		android:layout_gravity="center">
@@ -17,11 +17,11 @@
 	<!-- 提示内容 -->
 	<TextView android:id="@+id/net_loading_content" 
 		android:gravity="center"
-		android:layout_width="fill_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
         android:layout_gravity="center"
 		android:text="正在登录"
-		android:textSize="22sp"
+		android:textSize="18sp"
 		android:textStyle="bold"
 		android:textColor="@android:color/white"
 		android:layout_marginTop="15dp"

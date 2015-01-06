@@ -20,11 +20,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.UUID;
 
 import com.wawa.arm.ARMActivity;
 import com.wawa.arm.common.CommonConsts;
 import com.wawa.arm.common.OMApplication;
+import com.wawa.arm.utile.log.LogUtil;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -111,9 +113,11 @@ public class BluetoothChatService {
 
     // Constants that indicate the current connection state
     public static final int STATE_NONE = 0;       // we're doing nothing
-    public static final int STATE_LISTEN = 1;     // now listening for incoming connections
+    public static final int STATE_LISTEN = 11;     // now listening for incoming connections
     public static final int STATE_CONNECTING = 2; // now initiating an outgoing connection
     public static final int STATE_CONNECTED = 3;  // now connected to a remote device
+	public static final int STATE_LISTEN_CLOSE = 12;
+	public static final int STATE_SEND_MSG_ERROR = 4;
 
     /**
      * Constructor. Prepares a new BluetoothChat session.
@@ -169,7 +173,7 @@ public class BluetoothChatService {
      * @param device  The BluetoothDevice to connect
      */
     public synchronized void connect(BluetoothDevice device) {
-        if (D) Log.d(TAG, "连接蓝牙设备connect to地址: " + device);
+        if (D) Log.d(TAG, "---创建与监测设备通讯连接--- " + device);
 
         // Cancel any thread attempting to make a connection
         if (mState == STATE_CONNECTING) {
@@ -191,7 +195,7 @@ public class BluetoothChatService {
      * @param device  The BluetoothDevice that has been connected
      */
     public synchronized void connected(BluetoothSocket socket, BluetoothDevice device) {
-        if (D) Log.d(TAG, "-----连接成功打开输入输出流connected");
+        if (D) Log.d(TAG, "---获取设备串口通信连接成功---");
 
         // Cancel the thread that completed the connection
         if (mConnectThread != null) {mConnectThread.cancel(); mConnectThread = null;}
@@ -253,7 +257,7 @@ public class BluetoothChatService {
         // Send a failure message back to the Activity
         Message msg = mHandler.obtainMessage(ARMActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(ARMActivity.TOAST, "不能连接蓝牙设备");
+        bundle.putString(ARMActivity.TOAST, "与监测设备建立通讯连接失败");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
     }
@@ -262,12 +266,22 @@ public class BluetoothChatService {
      * Indicate that the connection was lost and notify the UI Activity.
      */
     private void connectionLost() {
-        setState(STATE_LISTEN);
+        setState(STATE_LISTEN_CLOSE);
 
         // Send a failure message back to the Activity
         Message msg = mHandler.obtainMessage(ARMActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(ARMActivity.TOAST, "蓝牙连接异常");
+        bundle.putString(ARMActivity.TOAST, "与监测设备通讯中断");
+        msg.setData(bundle);
+        mHandler.sendMessage(msg);
+    }
+    
+    private void sendMsgError() {
+        setState(STATE_SEND_MSG_ERROR);
+        // Send a failure message back to the Activity
+        Message msg = mHandler.obtainMessage(ARMActivity.MESSAGE_TOAST);
+        Bundle bundle = new Bundle();
+        bundle.putString(ARMActivity.TOAST, "指令下发失败");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
     }
@@ -318,6 +332,7 @@ public class BluetoothChatService {
                     synchronized (BluetoothChatService.this) {
                         switch (mState) {
                         case STATE_LISTEN:
+                        case STATE_LISTEN_CLOSE:
                         case STATE_CONNECTING:
                             // Situation normal. Start the connected thread.
                             connected(socket, socket.getRemoteDevice());
@@ -373,8 +388,8 @@ public class BluetoothChatService {
                 //方式二  通过遍历端口号 端口号连接时会有自动超时
 				/*Method createBondMethod = device.getClass().getMethod("createRfcommSocket",new Class[] { int.class });
 				tmp = (BluetoothSocket)createBondMethod.invoke(device, 1);//这里端口为1  端口范围1~30，10.11.12.19保留端口*/
-            } catch (Exception e) {
-                Log.e(TAG, "create() failed", e);
+            } catch (Exception e) {//TODO 1 配对成功后建立设备时为什么会失败？？
+                Log.e(TAG, "---创建连接ARM蓝牙设备对象失败---", e);
             }
             mmSocket = tmp;
         }
@@ -390,10 +405,20 @@ public class BluetoothChatService {
             try {
                 // This is a blocking call and will only return on a
                 // successful connection or an exception
-                mmSocket.connect();
-                OMApplication.getInstance().setVal(CommonConsts.ARM_NAME, mmDevice.getAddress(), true);
-            } catch (IOException e) {
-            	Log.e(TAG, "BluetoothSocket打开失败", e);
+            	if(!mmSocket.isConnected()){
+            		mmSocket.connect();
+            	}
+                OMApplication.getInstance().setVal(CommonConsts.ARM_NAME, mmDevice.getName(), true);
+                OMApplication.getInstance().setVal(CommonConsts.ARM_ADDR, mmDevice.getAddress(), true);
+            } catch (IOException e) {//TODO 2 建立设备后为什么会导致打开通讯连接失败（情形一：设备不支持MY_UUID）
+            	//对方会判断是否已配对，没有发送配对密码请求广播
+            	//对方已取消配对 java.io.IOException: Connection reset by peer
+            	//长时间不输人配对密码 java.io.IOException: Connection timed out
+            	
+            	//java.io.IOException: Device or resource busy
+            	
+            	//对方不支持MY_UUID或者该配对设备没在可连接范围（大概5s返回，底层控制不可设置） java.io.IOException: Service discovery failed
+            	Log.e(TAG, "--获取设备串口通信支持失败（配对设备取消配对彼端密码输入超时or错误|对方设备不支持串口|对方设备不再周围|设备被别的蓝牙连接）--", e);
                 connectionFailed();
                 // Close the socket
                 try {
@@ -444,8 +469,8 @@ public class BluetoothChatService {
             try {
                 tmpIn = socket.getInputStream();
                 tmpOut = socket.getOutputStream();
-            } catch (IOException e) {
-                Log.e(TAG, "temp sockets not created", e);
+            } catch (IOException e) {//TODO 3 打开设备的输入输出流为什么会终端：；处理：
+                Log.e(TAG, "--打开通讯输入输出流失败--", e);
             }
 
             mmInStream = tmpIn;
@@ -462,12 +487,14 @@ public class BluetoothChatService {
                 try {
                     // Read from the InputStream
                     bytes = mmInStream.read(buffer);
-
+                    byte[] truebytes = Arrays.copyOfRange(buffer, 0, bytes);
+                    LogUtil.d("---ARM设备上报数据---"+Arrays.toString(truebytes));
                     // Send the obtained bytes to the UI Activity
-                    mHandler.obtainMessage(ARMActivity.MESSAGE_READ, bytes, -1, buffer)
+                    mHandler.obtainMessage(ARMActivity.MESSAGE_READ, -1, -1,truebytes)
                             .sendToTarget();
-                } catch (Exception e) {
-                    Log.e(TAG, "---读取输入流异常---", e);
+                } catch (Exception e) {//TODO 4 为什么会导致读取失败：  ；处理：重走？流程
+                	//对方关闭蓝牙或两个相连设备超过通讯距离 java.io.IOException: Software caused connection abort
+                    Log.e(TAG, "---通讯中断---", e);
                     connectionLost();
                     break;
                 }
@@ -480,13 +507,14 @@ public class BluetoothChatService {
          */
         public void write(byte[] buffer) {
             try {
-                mmOutStream.write(buffer);
+                mmOutStream.write(buffer);//TODO 4 为什么会导致写失败
 
                 // Share the sent message back to the UI Activity
                 mHandler.obtainMessage(ARMActivity.MESSAGE_WRITE, -1, -1, buffer)
                         .sendToTarget();
             } catch (IOException e) {
-                Log.e(TAG, "Exception during write", e);
+                Log.e(TAG, "---传出数据失败---", e);
+                sendMsgError();
             }
         }
 

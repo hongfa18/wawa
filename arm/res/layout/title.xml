@@ -1,24 +1,36 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res/com.wawa.arm"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center_vertical" 
     android:background="@android:color/black"
     android:orientation="horizontal">
+    <com.wawa.arm.utile.widgets.RippleView
+        	android:id="@+id/title_icon_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ripple:rv_centered="true">
+	    <ImageView
+	        android:id="@+id/title_icon"
+	        android:layout_width="30dp"
+	        android:layout_height="30dp"
+	        android:layout_marginLeft="7dp"
+	        android:src="@drawable/ic_menu_set_as_clicked" />
+    </com.wawa.arm.utile.widgets.RippleView>
 
-    <ImageView
-        android:id="@+id/title_icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="7dp"
-        android:src="@drawable/ic_menu_set_as_clicked" />
-    <ImageView
-        android:id="@+id/back_icon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:scaleType="center"
-        android:layout_marginLeft="5dp"
-        android:src="@drawable/icon_arrow_left_white" 
-        android:visibility="gone"/>
+    <com.wawa.arm.utile.widgets.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            ripple:rv_centered="true">
+		    <ImageView
+		        android:id="@+id/back_icon"
+		        android:layout_width="35dp"
+		        android:layout_height="35dp"
+		        android:scaleType="center"
+		        android:src="@drawable/icon_arrow_left_white" 
+		        android:visibility="gone"/>
+    </com.wawa.arm.utile.widgets.RippleView>
 
     <TextView
         android:id="@+id/title_text"
@@ -27,7 +39,7 @@
         android:layout_marginLeft="2dp"
         android:text="0"
         android:textColor="#ffffff"
-        android:layout_toRightOf="@id/title_icon"
+        android:layout_toRightOf="@id/title_icon_click"
         android:textSize="20sp" />
     <LinearLayout android:layout_height="35dp" 
         android:layout_width="wrap_content"

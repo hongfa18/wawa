@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ARM无线监测</string>
+    <string name="app_name">无线监测</string>
     
     <string name="login_title">Login</string>
     	<!-- 登录成功 -->
@@ -151,7 +151,7 @@
     <string name="submit_report">确认</string>
     
     <string name="app_exit_tip">退出</string>
-    <string name="app_menu_surelogout">确定退出ARM无线监测?</string>
+    <string name="app_menu_surelogout">确定退出无线监测?</string>
     <string name="sure">确定</string>
     <string name="cancle">取消</string>
     
@@ -165,18 +165,18 @@
     <!-- 没有内容 -->
     <string name="pull_to_refresh_not_content">No content</string>
     
-    <string name="not_connected">还没有连接到蓝牙设备</string>
-    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="not_connected">还没有连接到监测设备</string>
+    <string name="bt_not_enabled_leaving">蓝牙打开失败，监控程序推出.</string>
     <string name="title_connecting">连接中...</string>
-    <string name="title_connected_to">连接到: </string>
+    <string name="title_connected_to">成功连接到监测设备: </string>
     <string name="title_not_connected">没有连上</string>
 
     <!--  DeviceListActivity -->
-    <string name="scanning">搜索蓝牙设备...</string>
-    <string name="select_device">选择蓝牙设备连接</string>
-    <string name="none_paired">没有配对的蓝牙设备</string>
-    <string name="none_found">没有发现蓝牙设备</string>
-    <string name="title_paired_devices">已配对蓝牙设备</string>
-    <string name="title_other_devices">未配对蓝牙设备</string>
-    <string name="button_scan">搜索蓝牙</string>
+    <string name="scanning">搜索监测设备...</string>
+    <string name="select_device">选择监测设备连接</string>
+    <string name="none_paired">没有配对的监测设备</string>
+    <string name="none_found">没有发现新的监测设备</string>
+    <string name="title_paired_devices">已配对监测设备</string>
+    <string name="title_other_devices">未配对监测设备</string>
+    <string name="button_scan">搜索新设备</string>
 </resources>

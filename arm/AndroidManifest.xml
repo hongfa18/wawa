@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wawa.arm"
     android:versionCode="1"
-    android:versionName="V1.0" >
+    android:versionName="V1.0_beta07" >
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -19,13 +19,16 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     
     <application
         android:name="com.wawa.arm.common.OMApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomTitleBar" >
+        android:theme="@android:style/Theme.NoTitleBar" >
         <!-- 启动 -->
         <activity android:name="com.wawa.arm.StartActivity" android:screenOrientation="nosensor">
             <intent-filter>
@@ -35,11 +38,11 @@
             </intent-filter>
         </activity>
         <!-- 设置 -->
-        <activity android:name="SettingActivity" android:screenOrientation="nosensor"></activity>
+        <activity android:name="SettingActivity" android:screenOrientation="nosensor" android:windowSoftInputMode="stateHidden|stateUnchanged" android:theme="@style/CustomTitleBar" ></activity>
          <!-- 关于 -->
-        <activity android:name="AboutActivity" android:screenOrientation="nosensor"></activity>
+        <activity android:name="AboutActivity" android:screenOrientation="nosensor" android:theme="@style/CustomTitleBar" ></activity>
         <!-- 蓝牙操作界面 -->
-        <activity android:name="DeviceListActivity" android:screenOrientation="nosensor" android:theme="@android:style/Theme.Dialog"
+        <activity android:name="DeviceListActivity" android:screenOrientation="nosensor" android:theme="@style/scan_devices_dialog_style"
                   android:configChanges="orientation|keyboardHidden" ></activity>
         <!-- 主界面 -->
         <activity android:name="ARMActivity" android:screenOrientation="nosensor" android:launchMode="singleTask"></activity>

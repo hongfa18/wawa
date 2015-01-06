@@ -1065,55 +1065,57 @@ com.wawa.arm.ARMActivity:
     public static final int MESSAGE_TOAST
     private static final int REQUEST_CONNECT_DEVICE
     private static final int REQUEST_ENABLE_BT
+    public static final int REQUEST_SEETTING_DEVICE
     public static final java.lang.String DEVICE_NAME
     public static final java.lang.String TOAST
+    private android.os.PowerManager$WakeLock mPowerMgr
+    public static final int STOP_SCAN
+    public static final int START_SCAN
+    826:856:private void createImag(java.lang.String)
+    860:867:private void saveMyBitmap(android.graphics.Bitmap,java.lang.String)
 com.wawa.arm.BuildConfig
 com.wawa.arm.DeviceListActivity:
     private static final java.lang.String TAG
     private static final boolean D
     public static final java.lang.String ACTION_PAIRING_REQUEST
-com.wawa.arm.R
+com.wawa.arm.R:
+    10:10:public R()
 com.wawa.arm.R$anim
 com.wawa.arm.R$attr
 com.wawa.arm.R$color
 com.wawa.arm.R$drawable
 com.wawa.arm.R$id
 com.wawa.arm.R$layout
+com.wawa.arm.R$raw
 com.wawa.arm.R$string
 com.wawa.arm.R$style
-com.wawa.arm.R$styleable
+com.wawa.arm.R$styleable:
+    1400:1400:public R$styleable()
 com.wawa.arm.adapter.TradeRecordListAdapter
 com.wawa.arm.adapter.TradeRecordListAdapter$ViewHolder
 com.wawa.arm.common.AppManager:
-    32:36:public void addActivity(android.app.Activity)
     48:50:public void finishActivity()
-    55:60:public void finishActivity(android.app.Activity)
     65:70:public void finishActivity(java.lang.Class)
 com.wawa.arm.common.BaseActivity:
-    private boolean allowFullScreen
-    private boolean allowDestroy
-    private android.widget.TextView title
-    private android.widget.ImageView logo
     private android.widget.ImageView backBtn
-    private android.widget.LinearLayout layoutFirst
-    private android.view.View view
-    private com.wawa.arm.net.WaitUIElement dialog
-    protected android.os.Handler coomonHandler
-    124:124:public boolean isAllowFullScreen()
-    133:133:public void setAllowFullScreen(boolean)
-    137:137:public void setAllowDestroy(boolean)
-    141:141:public void setAllowDestroy(boolean,android.view.View)
+    134:134:public boolean isAllowFullScreen()
+    143:144:public void setAllowFullScreen(boolean)
+    147:148:public void setAllowDestroy(boolean)
+    151:153:public void setAllowDestroy(boolean,android.view.View)
 com.wawa.arm.common.BaseFragment
 com.wawa.arm.common.BaseFragment$1
 com.wawa.arm.common.CommonConsts
+com.wawa.arm.common.CommonMethod:
+    3:3:public CommonMethod()
 com.wawa.arm.common.OMApplication:
     private static final java.lang.String PREFS_NAME
-    120:125:public java.lang.String getAppId()
-    129:134:private void changeAppLanguage()
-    136:165:public java.lang.String getTradeStateSuccessTip(int)
-    168:191:public java.lang.String getTradePINTitle(int)
-    298:305:public java.lang.Object getValNew(java.lang.String,java.lang.Object)
-    309:310:public void logoutClearCacheData()
+    119:124:public java.lang.String getAppId()
+    128:133:private void changeAppLanguage()
+    135:164:public java.lang.String getTradeStateSuccessTip(int)
+    167:190:public java.lang.String getTradePINTitle(int)
+    304:311:public java.lang.Object getValNew(java.lang.String,java.lang.Object)
+com.wawa.arm.common.SoundPoolPlay:
+    private int volLow
 com.wawa.arm.entity.AppParamMap
 com.wawa.arm.entity.DateInfo
 com.wawa.arm.entity.LanguageType
@@ -1126,9 +1128,24 @@ com.wawa.arm.entity.User
 com.wawa.arm.net.CustomerHttpClient
 com.wawa.arm.net.EasySSLSocketFactory
 com.wawa.arm.net.EasySSLSocketFactory$1
-com.wawa.arm.net.WaitUIElement
+com.wawa.arm.net.WaitUIElement:
+    65:65:public android.content.Context getContext()
+    69:72:public boolean isShowing()
 com.wawa.arm.service.ACCService
 com.wawa.arm.service.BaseService
+com.wawa.arm.service.BluetoothChatService:
+    private static final java.lang.String TAG
+    private static final boolean D
+    private static final java.lang.String NAME
+    public static final int STATE_NONE
+    public static final int STATE_LISTEN
+    public static final int STATE_CONNECTING
+    public static final int STATE_CONNECTED
+    public static final int STATE_LISTEN_CLOSE
+    public static final int STATE_SEND_MSG_ERROR
+    155:169:public synchronized void start()
+com.wawa.arm.service.BluetoothChatService$AcceptThread:
+    298:312:public BluetoothChatService$AcceptThread(com.wawa.arm.service.BluetoothChatService)
 com.wawa.arm.service.SECService
 com.wawa.arm.service.SYSService
 com.wawa.arm.service.TRSService
@@ -1156,19 +1173,28 @@ com.wawa.arm.utile.AppException:
     173:173:public static com.wawa.arm.utile.AppException xml(java.lang.Exception)
     177:186:public static com.wawa.arm.utile.AppException network(java.lang.Exception)
     190:190:public static com.wawa.arm.utile.AppException run(java.lang.Exception)
-com.wawa.arm.utile.BluetoothChatService:
-    private static final java.lang.String TAG
-    private static final boolean D
-    private static final java.lang.String NAME
-    public static final int STATE_NONE
-    public static final int STATE_LISTEN
-    public static final int STATE_CONNECTING
-    public static final int STATE_CONNECTED
-    221:226:public synchronized void stop()
+com.wawa.arm.utile.BluetoothChatService
+com.wawa.arm.utile.BluetoothChatService$AcceptThread
+com.wawa.arm.utile.BluetoothChatService$ConnectThread
+com.wawa.arm.utile.BluetoothChatService$ConnectedThread
 com.wawa.arm.utile.DigestUtil
 com.wawa.arm.utile.JSONUtile
 com.wawa.arm.utile.MD5Util
-com.wawa.arm.utile.MobileUtils
+com.wawa.arm.utile.MobileUtils:
+    public android.content.Context context
+    43:43:public MobileUtils()
+    44:46:public MobileUtils(android.content.Context)
+    58:64:public static void getWidthAndHight(android.content.Context)
+    110:114:public java.lang.String getMacAddress()
+    126:130:private void getAvailMemory()
+    141:158:public long getSDCardFreeSpace()
+    172:189:public static java.lang.String getSDCardPath(android.content.Context,java.lang.String)
+    202:224:public static int clearAppWebCache(java.io.File)
+    238:253:public static boolean isServiceRunning(android.content.Context,java.lang.String)
+    264:279:public static void setListViewHeight(android.widget.ListView)
+    286:288:public boolean isNetworkConnected()
+    296:315:public int getNetworkType()
+    330:336:public static boolean checkMobileNO(java.lang.String)
 com.wawa.arm.utile.MyToast:
     24:24:public MyToast()
     56:57:public static void showToast(android.content.Context,int,int)
@@ -1179,6 +1205,7 @@ com.wawa.arm.utile.StringUtils$1
 com.wawa.arm.utile.StringUtils$2
 com.wawa.arm.utile.TransferUtil:
     23:23:public TransferUtil()
+    50:64:public static int byteArrayToInt(byte[])
     75:75:public static short byteArrayToShort(byte[])
     87:92:public static byte[] longTo4Bytes(long)
     103:110:public static long byteArray2Long(byte[])
@@ -1243,7 +1270,7 @@ com.wawa.arm.utile.TransferUtil:
     1085:1091:public static java.lang.String firstLetter2Upper(java.lang.String)
     1095:1095:public static void main(java.lang.String[])
 com.wawa.arm.utile.log.LogThread:
-    93:94:public boolean stopLogThread()
+    104:105:public boolean stopLogThread()
 com.wawa.arm.utile.log.LogUtil:
     private static final int INDEX_OF_CALLER_IN_STACK
     14:14:public LogUtil()
@@ -1266,6 +1293,7 @@ com.wawa.arm.utile.log.LogUtil:
     127:128:public static void d(java.lang.String,java.lang.String,java.lang.Throwable)
     130:131:public static void i(java.lang.String,java.lang.String,java.lang.Throwable)
     133:134:public static void w(java.lang.String,java.lang.String,java.lang.Throwable)
+com.wawa.arm.utile.widgets.MyGifView
 com.wawa.arm.utile.widgets.OMDialog:
     private android.content.Context context
     public static final int DIALOG_MODE_ONE
@@ -1274,7 +1302,10 @@ com.wawa.arm.utile.widgets.OMDialog:
     98:114:public void setDialogMode(int)
 com.wawa.arm.utile.widgets.OMEditText:
     private static final java.lang.String TAG
-com.wawa.arm.utile.widgets.OMNetDialog
+com.wawa.arm.utile.widgets.OMNetDialog:
+    private android.content.Context context
+    28:31:public OMNetDialog(android.content.Context)
+    109:113:public com.wawa.arm.utile.widgets.OMNetDialog changeImage(int)
 com.wawa.arm.utile.widgets.PullToRefreshBase
 com.wawa.arm.utile.widgets.PullToRefreshBase$LoadingLayout
 com.wawa.arm.utile.widgets.PullToRefreshBase$OnLastItemVisibleListener
@@ -1284,6 +1315,9 @@ com.wawa.arm.utile.widgets.PullToRefreshListView
 com.wawa.arm.utile.widgets.PullToRefreshListView$1
 com.wawa.arm.utile.widgets.PullToRefreshListView$EmptyViewMethodAccessor
 com.wawa.arm.utile.widgets.PullToRefreshListView$InternalListView
+com.wawa.arm.utile.widgets.SearchDevicesView:
+    public static final java.lang.String TAG
+    public static final boolean D
 com.wawa.arm.utile.widgets.viewpageindicator.IconPagerAdapter
 com.wawa.arm.utile.widgets.viewpageindicator.IcsLinearLayout
 com.wawa.arm.utile.widgets.viewpageindicator.PageIndicator

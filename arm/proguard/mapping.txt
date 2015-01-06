@@ -1416,109 +1416,355 @@ android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.a
     int clampViewPositionHorizontal(android.view.View,int,int) -> a
     int clampViewPositionVertical(android.view.View,int,int) -> b
 com.wawa.arm.ARMActivity -> com.wawa.arm.ARMActivity:
-    java.lang.String TAG -> n
-    android.widget.ImageView openImg -> o
-    android.widget.ImageView settingImg -> p
-    android.bluetooth.BluetoothAdapter mBluetoothAdapter -> q
-    com.wawa.arm.utile.BluetoothChatService mChatService -> r
-    java.lang.String mConnectedDeviceName -> s
-    boolean isStopflag -> t
-    android.os.Handler mHandler -> u
+    java.lang.String TAG -> p
+    android.widget.ImageView openImg -> q
+    android.widget.ImageView settingImg -> r
+    android.bluetooth.BluetoothAdapter mBluetoothAdapter -> s
+    com.wawa.arm.service.BluetoothChatService mChatService -> t
+    java.lang.String mConnectedDeviceName -> u
+    boolean isStopflag -> v
+    com.wawa.arm.net.WaitUIElement dialog -> w
+    com.wawa.arm.utile.widgets.SearchDevicesView scan -> x
+    java.util.Timer timer -> y
+    long lastUpDataTime -> z
+    long cmdResultTime -> A
+    int stopCount -> n
+    com.wawa.arm.common.SoundPoolPlay play -> B
+    int currentStatu -> C
+    android.os.Handler handler -> D
+    android.os.Handler mHandler -> E
+    boolean can -> F
+    android.content.BroadcastReceiver mReceiver -> G
+    boolean isBack -> H
+    boolean needOpenChooice -> I
+    com.wawa.arm.utile.widgets.OMDialog closeDialog -> J
+    android.app.Notification notification -> K
+    android.app.NotificationManager nManager -> L
+    android.app.PendingIntent pendingIntent -> M
+    int lastVal -> N
     void onCreate(android.os.Bundle) -> onCreate
+    void initStatutButton(boolean) -> b
+    void changeButtonStatu(int,java.lang.Object[]) -> a
     void onStart() -> onStart
-    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void connect(java.lang.String) -> c
     void setupChat() -> f
     void startARM() -> g
     void stopARM() -> h
     void readMsg(byte[]) -> a
     void sendMessage(byte[]) -> b
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onDestroy() -> onDestroy
+    void onUserInteraction() -> onUserInteraction
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-    java.lang.String access$0() -> e
-    java.lang.String access$1(com.wawa.arm.ARMActivity) -> a
-    void access$2(com.wawa.arm.ARMActivity) -> b
-    void access$3(com.wawa.arm.ARMActivity,byte[]) -> a
-    void access$4(com.wawa.arm.ARMActivity,java.lang.String) -> a
-    boolean access$5(com.wawa.arm.ARMActivity) -> c
-    void access$6(com.wawa.arm.ARMActivity,boolean) -> a
-    void access$7(com.wawa.arm.ARMActivity) -> d
+    void notification(int) -> a
+    void disnotifcation() -> i
+    void access$0(com.wawa.arm.ARMActivity) -> a
+    void access$1(com.wawa.arm.ARMActivity) -> b
+    java.lang.String access$2() -> e
+    com.wawa.arm.net.WaitUIElement access$3(com.wawa.arm.ARMActivity) -> c
+    void access$4(com.wawa.arm.ARMActivity,boolean) -> a
+    com.wawa.arm.service.BluetoothChatService access$5(com.wawa.arm.ARMActivity) -> d
+    void access$6(com.wawa.arm.ARMActivity,int,java.lang.Object[]) -> a
+    void access$7(com.wawa.arm.ARMActivity,boolean) -> b
+    void access$8(com.wawa.arm.ARMActivity,int) -> a
+    void access$9(com.wawa.arm.ARMActivity,byte[]) -> a
+    void access$10(com.wawa.arm.ARMActivity,java.lang.String) -> a
+    boolean access$11(com.wawa.arm.ARMActivity) -> e
+    boolean access$12(com.wawa.arm.ARMActivity) -> f
+    void access$13(com.wawa.arm.ARMActivity,boolean) -> c
+    boolean access$14(com.wawa.arm.ARMActivity) -> g
+    int access$15(com.wawa.arm.ARMActivity) -> h
+    void access$16(com.wawa.arm.ARMActivity,boolean) -> d
+    void access$17(com.wawa.arm.ARMActivity,java.lang.String) -> b
+    long access$18(com.wawa.arm.ARMActivity) -> i
+    android.os.Handler access$19(com.wawa.arm.ARMActivity) -> j
+    android.widget.ImageView access$20(com.wawa.arm.ARMActivity) -> k
+    long access$21(com.wawa.arm.ARMActivity) -> l
+    java.util.Timer access$22(com.wawa.arm.ARMActivity) -> m
+    void access$23(com.wawa.arm.ARMActivity,java.util.Timer) -> a
+    void access$24(com.wawa.arm.ARMActivity,long) -> a
+    com.wawa.arm.utile.widgets.OMDialog access$25(com.wawa.arm.ARMActivity) -> n
 com.wawa.arm.ARMActivity$1 -> com.wawa.arm.a:
     com.wawa.arm.ARMActivity this$0 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.wawa.arm.ARMActivity$10 -> com.wawa.arm.b:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void run() -> run
+com.wawa.arm.ARMActivity$11 -> com.wawa.arm.c:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.ARMActivity$12 -> com.wawa.arm.d:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void run() -> run
+com.wawa.arm.ARMActivity$13 -> com.wawa.arm.e:
+    com.wawa.arm.ARMActivity this$0 -> a
+    byte[] val$cmd -> b
+    void run() -> run
+com.wawa.arm.ARMActivity$14 -> com.wawa.arm.f:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.ARMActivity$2 -> com.wawa.arm.g:
+    com.wawa.arm.ARMActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.wawa.arm.ARMActivity$2 -> com.wawa.arm.b:
+    com.wawa.arm.ARMActivity access$0(com.wawa.arm.ARMActivity$2) -> a
+com.wawa.arm.ARMActivity$2$1 -> com.wawa.arm.h:
+    com.wawa.arm.ARMActivity$2 this$1 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.wawa.arm.ARMActivity$3 -> com.wawa.arm.i:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.wawa.arm.ARMActivity$4 -> com.wawa.arm.j:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$3 -> com.wawa.arm.c:
+com.wawa.arm.ARMActivity$5 -> com.wawa.arm.k:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$4 -> com.wawa.arm.d:
+com.wawa.arm.ARMActivity$6 -> com.wawa.arm.l:
     com.wawa.arm.ARMActivity this$0 -> a
-    com.wawa.arm.utile.widgets.OMDialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.ARMActivity$7 -> com.wawa.arm.m:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.ARMActivity$8 -> com.wawa.arm.n:
+    com.wawa.arm.ARMActivity this$0 -> a
+    java.lang.Object[] val$vals -> b
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.ARMActivity$9 -> com.wawa.arm.o:
+    com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.wawa.arm.AboutActivity -> com.wawa.arm.AboutActivity:
     android.widget.TextView sn -> n
-    android.widget.TextView appver -> o
-    android.widget.TextView name -> p
-    android.widget.TextView mac -> q
-    android.widget.TextView armver -> r
+    android.widget.TextView appver -> p
+    android.widget.TextView name -> q
+    android.widget.TextView mac -> r
+    android.widget.TextView armver -> s
+    android.widget.TextView armno -> t
     void onCreate(android.os.Bundle) -> onCreate
+    void initData() -> e
 com.wawa.arm.DeviceListActivity -> com.wawa.arm.DeviceListActivity:
     java.lang.String EXTRA_DEVICE_ADDRESS -> a
     android.bluetooth.BluetoothAdapter mBtAdapter -> b
-    android.widget.ArrayAdapter mPairedDevicesArrayAdapter -> c
-    android.widget.ArrayAdapter mNewDevicesArrayAdapter -> d
-    android.widget.AdapterView$OnItemClickListener mDeviceClickListener -> e
-    android.content.BroadcastReceiver mReceiver -> f
+    com.wawa.arm.adapter.DeivceListAdapter mPairedDevicesArrayAdapter -> c
+    com.wawa.arm.adapter.DeivceListAdapter mNewDevicesArrayAdapter -> d
+    com.wawa.arm.net.WaitUIElement dialog -> e
+    java.util.List nopairs -> f
+    java.util.List pairs -> g
+    java.util.Set set -> h
+    android.widget.AdapterView$OnItemClickListener mDeviceClickListener -> i
+    android.content.BroadcastReceiver mReceiver -> j
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
     void doDiscovery() -> a
-    void result(java.lang.String) -> a
+    void result(java.lang.String) -> c
+    void linkDeivce(java.lang.String) -> a
+    void clearDeivce(java.lang.String) -> b
     android.bluetooth.BluetoothAdapter access$0(com.wawa.arm.DeviceListActivity) -> a
-    android.widget.ArrayAdapter access$1(com.wawa.arm.DeviceListActivity) -> b
-    void access$2(com.wawa.arm.DeviceListActivity,java.lang.String) -> a
-    void access$3(com.wawa.arm.DeviceListActivity) -> c
-com.wawa.arm.DeviceListActivity$1 -> com.wawa.arm.e:
+    java.util.Set access$1(com.wawa.arm.DeviceListActivity) -> b
+    java.util.List access$2(com.wawa.arm.DeviceListActivity) -> c
+    com.wawa.arm.adapter.DeivceListAdapter access$3(com.wawa.arm.DeviceListActivity) -> d
+    com.wawa.arm.net.WaitUIElement access$4(com.wawa.arm.DeviceListActivity) -> e
+    void access$5(com.wawa.arm.DeviceListActivity,java.lang.String) -> a
+    void access$6(com.wawa.arm.DeviceListActivity) -> f
+com.wawa.arm.DeviceListActivity$1 -> com.wawa.arm.p:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.wawa.arm.DeviceListActivity$2 -> com.wawa.arm.f:
+com.wawa.arm.DeviceListActivity$2 -> com.wawa.arm.q:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.wawa.arm.DeviceListActivity$3 -> com.wawa.arm.g:
+com.wawa.arm.DeviceListActivity$3 -> com.wawa.arm.r:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onClick(android.view.View) -> onClick
+com.wawa.arm.R -> com.wawa.arm.s:
+com.wawa.arm.R$styleable -> com.wawa.arm.t:
+    int[] CirclePageIndicator -> CirclePageIndicator
+    int CirclePageIndicator_android_background -> CirclePageIndicator_android_background
+    int CirclePageIndicator_android_orientation -> CirclePageIndicator_android_orientation
+    int CirclePageIndicator_centered -> CirclePageIndicator_centered
+    int CirclePageIndicator_fillColor -> CirclePageIndicator_fillColor
+    int CirclePageIndicator_pageColor -> CirclePageIndicator_pageColor
+    int CirclePageIndicator_radius -> CirclePageIndicator_radius
+    int CirclePageIndicator_snap -> CirclePageIndicator_snap
+    int CirclePageIndicator_strokeColor -> CirclePageIndicator_strokeColor
+    int CirclePageIndicator_strokeWidth -> CirclePageIndicator_strokeWidth
+    int[] LinePageIndicator -> LinePageIndicator
+    int LinePageIndicator_android_background -> LinePageIndicator_android_background
+    int LinePageIndicator_centered -> LinePageIndicator_centered
+    int LinePageIndicator_gapWidth -> LinePageIndicator_gapWidth
+    int LinePageIndicator_lineWidth -> LinePageIndicator_lineWidth
+    int LinePageIndicator_selectedColor -> LinePageIndicator_selectedColor
+    int LinePageIndicator_strokeWidth -> LinePageIndicator_strokeWidth
+    int LinePageIndicator_unselectedColor -> LinePageIndicator_unselectedColor
+    int[] PullToRefresh -> PullToRefresh
+    int PullToRefresh_adapterViewBackground -> PullToRefresh_adapterViewBackground
+    int PullToRefresh_headerBackground -> PullToRefresh_headerBackground
+    int PullToRefresh_headerTextColor -> PullToRefresh_headerTextColor
+    int PullToRefresh_pullMode -> PullToRefresh_pullMode
+    int[] RippleView -> RippleView
+    int RippleView_rv_alpha -> RippleView_rv_alpha
+    int RippleView_rv_centered -> RippleView_rv_centered
+    int RippleView_rv_color -> RippleView_rv_color
+    int RippleView_rv_framerate -> RippleView_rv_framerate
+    int RippleView_rv_rippleDuration -> RippleView_rv_rippleDuration
+    int RippleView_rv_ripplePadding -> RippleView_rv_ripplePadding
+    int RippleView_rv_type -> RippleView_rv_type
+    int RippleView_rv_zoom -> RippleView_rv_zoom
+    int RippleView_rv_zoomDuration -> RippleView_rv_zoomDuration
+    int RippleView_rv_zoomScale -> RippleView_rv_zoomScale
+    int[] TitlePageIndicator -> TitlePageIndicator
+    int TitlePageIndicator_android_background -> TitlePageIndicator_android_background
+    int TitlePageIndicator_android_textColor -> TitlePageIndicator_android_textColor
+    int TitlePageIndicator_android_textSize -> TitlePageIndicator_android_textSize
+    int TitlePageIndicator_clipPadding -> TitlePageIndicator_clipPadding
+    int TitlePageIndicator_footerColor -> TitlePageIndicator_footerColor
+    int TitlePageIndicator_footerIndicatorHeight -> TitlePageIndicator_footerIndicatorHeight
+    int TitlePageIndicator_footerIndicatorStyle -> TitlePageIndicator_footerIndicatorStyle
+    int TitlePageIndicator_footerIndicatorUnderlinePadding -> TitlePageIndicator_footerIndicatorUnderlinePadding
+    int TitlePageIndicator_footerLineHeight -> TitlePageIndicator_footerLineHeight
+    int TitlePageIndicator_footerPadding -> TitlePageIndicator_footerPadding
+    int TitlePageIndicator_linePosition -> TitlePageIndicator_linePosition
+    int TitlePageIndicator_selectedBold -> TitlePageIndicator_selectedBold
+    int TitlePageIndicator_selectedColor -> TitlePageIndicator_selectedColor
+    int TitlePageIndicator_titlePadding -> TitlePageIndicator_titlePadding
+    int TitlePageIndicator_topPadding -> TitlePageIndicator_topPadding
+    int[] UnderlinePageIndicator -> UnderlinePageIndicator
+    int UnderlinePageIndicator_android_background -> UnderlinePageIndicator_android_background
+    int UnderlinePageIndicator_fadeDelay -> UnderlinePageIndicator_fadeDelay
+    int UnderlinePageIndicator_fadeLength -> UnderlinePageIndicator_fadeLength
+    int UnderlinePageIndicator_fades -> UnderlinePageIndicator_fades
+    int UnderlinePageIndicator_selectedColor -> UnderlinePageIndicator_selectedColor
+    int[] ViewPagerIndicator -> ViewPagerIndicator
+    int ViewPagerIndicator_vpiCirclePageIndicatorStyle -> ViewPagerIndicator_vpiCirclePageIndicatorStyle
+    int ViewPagerIndicator_vpiIconPageIndicatorStyle -> ViewPagerIndicator_vpiIconPageIndicatorStyle
+    int ViewPagerIndicator_vpiLinePageIndicatorStyle -> ViewPagerIndicator_vpiLinePageIndicatorStyle
+    int ViewPagerIndicator_vpiTabPageIndicatorStyle -> ViewPagerIndicator_vpiTabPageIndicatorStyle
+    int ViewPagerIndicator_vpiTitlePageIndicatorStyle -> ViewPagerIndicator_vpiTitlePageIndicatorStyle
+    int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle -> ViewPagerIndicator_vpiUnderlinePageIndicatorStyle
 com.wawa.arm.SettingActivity -> com.wawa.arm.SettingActivity:
     android.widget.TextView about -> n
-    android.widget.Button save -> o
-    com.wawa.arm.utile.widgets.OMEditText armpl -> p
-    com.wawa.arm.utile.widgets.OMEditText armrm -> q
-    com.wawa.arm.utile.widgets.OMEditText armsx -> r
-    com.wawa.arm.utile.widgets.OMEditText armzq -> s
-    com.wawa.arm.utile.widgets.OMEditText appcs -> t
+    android.widget.Button save -> p
+    com.wawa.arm.utile.widgets.OMEditText armpl -> q
+    com.wawa.arm.utile.widgets.OMEditText armrm -> r
+    com.wawa.arm.utile.widgets.OMEditText armsx -> s
+    com.wawa.arm.utile.widgets.OMEditText armzq -> t
+    com.wawa.arm.utile.widgets.OMEditText appcs -> u
+    com.wawa.arm.utile.widgets.OMEditText armpairname -> v
+    com.wawa.arm.utile.widgets.OMEditText armpairkey -> w
+    android.widget.LinearLayout volChooseArea -> x
+    long time -> y
+    int count -> z
+    java.lang.String isOpen -> A
+    java.lang.String currentChoose -> B
     void onCreate(android.os.Bundle) -> onCreate
-    com.wawa.arm.utile.widgets.OMEditText access$0(com.wawa.arm.SettingActivity) -> a
-    com.wawa.arm.utile.widgets.OMEditText access$1(com.wawa.arm.SettingActivity) -> b
-    com.wawa.arm.utile.widgets.OMEditText access$2(com.wawa.arm.SettingActivity) -> c
-    com.wawa.arm.utile.widgets.OMEditText access$3(com.wawa.arm.SettingActivity) -> d
-    com.wawa.arm.utile.widgets.OMEditText access$4(com.wawa.arm.SettingActivity) -> e
-com.wawa.arm.SettingActivity$1 -> com.wawa.arm.h:
+    void radioBtn() -> e
+    boolean isOkVal(java.lang.String,java.lang.String) -> a
+    int access$0(com.wawa.arm.SettingActivity) -> a
+    void access$1(com.wawa.arm.SettingActivity,long) -> a
+    long access$2(com.wawa.arm.SettingActivity) -> b
+    void access$3(com.wawa.arm.SettingActivity,int) -> a
+    com.wawa.arm.utile.widgets.OMEditText access$4(com.wawa.arm.SettingActivity) -> c
+    com.wawa.arm.utile.widgets.OMEditText access$5(com.wawa.arm.SettingActivity) -> d
+    com.wawa.arm.utile.widgets.OMEditText access$6(com.wawa.arm.SettingActivity) -> e
+    com.wawa.arm.utile.widgets.OMEditText access$7(com.wawa.arm.SettingActivity) -> f
+    com.wawa.arm.utile.widgets.OMEditText access$8(com.wawa.arm.SettingActivity) -> g
+    com.wawa.arm.utile.widgets.OMEditText access$9(com.wawa.arm.SettingActivity) -> h
+    com.wawa.arm.utile.widgets.OMEditText access$10(com.wawa.arm.SettingActivity) -> i
+    java.lang.String access$11(com.wawa.arm.SettingActivity) -> j
+    java.lang.String access$12(com.wawa.arm.SettingActivity) -> k
+    void access$13(com.wawa.arm.SettingActivity,java.lang.String) -> a
+    void access$14(com.wawa.arm.SettingActivity,java.lang.String) -> b
+com.wawa.arm.SettingActivity$1 -> com.wawa.arm.u:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$2 -> com.wawa.arm.i:
+com.wawa.arm.SettingActivity$2 -> com.wawa.arm.v:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
+com.wawa.arm.SettingActivity$3 -> com.wawa.arm.w:
+    com.wawa.arm.SettingActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.SettingActivity$4 -> com.wawa.arm.x:
+    com.wawa.arm.SettingActivity this$0 -> a
+    void OnChanged(com.wawa.arm.utile.widgets.WiperSwitchView,boolean) -> a
+com.wawa.arm.SettingActivity$5 -> com.wawa.arm.y:
+    com.wawa.arm.SettingActivity this$0 -> a
+    android.widget.RadioButton val$low -> b
+    android.widget.RadioButton val$mid -> c
+    android.widget.RadioButton val$high -> d
+    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+com.wawa.arm.StartActivity -> com.wawa.arm.StartActivity:
+    android.widget.ImageView screenImage -> a
+    android.view.animation.Animation animation -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+com.wawa.arm.StartActivity$1 -> com.wawa.arm.z:
+    com.wawa.arm.StartActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.wawa.arm.adapter.DeivceListAdapter -> com.wawa.arm.a.a:
+    com.wawa.arm.DeviceListActivity context -> a
+    java.util.List mItems -> b
+    int type -> c
+    int getCount() -> getCount
+    java.lang.String getItem(int) -> a
+    long getItemId(int) -> getItemId
+    int getItemViewType(int) -> getItemViewType
+    int getViewTypeCount() -> getViewTypeCount
+    boolean isEnabled(int) -> isEnabled
+    boolean areAllItemsEnabled() -> areAllItemsEnabled
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    java.lang.Object getItem(int) -> getItem
+    com.wawa.arm.DeviceListActivity access$1(com.wawa.arm.adapter.DeivceListAdapter) -> a
+com.wawa.arm.adapter.DeivceListAdapter$1 -> com.wawa.arm.a.b:
+    com.wawa.arm.adapter.DeivceListAdapter this$0 -> a
+    java.lang.String val$item -> b
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.adapter.DeivceListAdapter$2 -> com.wawa.arm.a.c:
+    com.wawa.arm.adapter.DeivceListAdapter this$0 -> a
+    java.lang.String val$item -> b
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.adapter.DeivceListAdapter$ViewHolder -> com.wawa.arm.a.d:
+    android.widget.TextView nameaddr -> a
+    android.widget.Button clear -> b
+    android.widget.Button link -> c
+    com.wawa.arm.adapter.DeivceListAdapter this$0 -> d
 com.wawa.arm.common.AppManager -> com.wawa.arm.common.a:
     java.util.Stack activityStack -> a
     com.wawa.arm.common.AppManager instance -> b
     com.wawa.arm.common.AppManager getAppManager() -> a
+    void addActivity(android.app.Activity) -> a
     android.app.Activity currentActivity() -> b
+    void finishActivity(android.app.Activity) -> b
     void finishAllActivity() -> c
     void AppExit(android.content.Context) -> a
 com.wawa.arm.common.BaseActivity -> com.wawa.arm.common.b:
+    boolean allowFullScreen -> n
+    boolean allowDestroy -> p
+    android.widget.TextView title -> q
+    android.widget.ImageView logo -> r
+    android.widget.LinearLayout layoutFirst -> s
+    android.view.View view -> t
+    com.wawa.arm.net.WaitUIElement dialog -> u
+    android.os.Handler coomonHandler -> o
     void onCreate(android.os.Bundle) -> onCreate
+    void onCreate(android.os.Bundle,boolean) -> a
     void setContentView(int) -> setContentView
+    void setContentView(int,boolean) -> a
     void setTitle(java.lang.String) -> b
     void showBackBtn(boolean,android.view.View$OnClickListener) -> a
     void onDestroy() -> onDestroy
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void access$0(com.wawa.arm.common.BaseActivity,com.wawa.arm.net.WaitUIElement) -> a
+    com.wawa.arm.net.WaitUIElement access$1(com.wawa.arm.common.BaseActivity) -> a
+com.wawa.arm.common.BaseActivity$1 -> com.wawa.arm.common.c:
+    com.wawa.arm.common.BaseActivity this$0 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.wawa.arm.common.BaseActivity$2 -> com.wawa.arm.common.d:
+    com.wawa.arm.common.BaseActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wawa.arm.common.CommonMethod -> com.wawa.arm.common.e:
+    boolean checkDeviceName(java.lang.String) -> a
 com.wawa.arm.common.OMApplication -> com.wawa.arm.common.OMApplication:
     java.lang.String TAG -> p
     com.wawa.arm.common.OMApplication omApp -> q
@@ -1550,6 +1796,76 @@ com.wawa.arm.common.OMApplication -> com.wawa.arm.common.OMApplication:
     void setValToSharePrefer(java.lang.String,java.lang.String) -> a
     void setVal(java.lang.String,java.lang.Object,boolean) -> a
     java.lang.Object getVal(java.lang.String,java.lang.Object) -> a
+    void logoutClearCacheData() -> c
+com.wawa.arm.common.SoundPoolPlay -> com.wawa.arm.common.f:
+    android.media.SoundPool mSoundPool -> a
+    java.util.HashMap mSoundPoolMap -> b
+    android.media.AudioManager mAudioManager -> c
+    int volMax -> d
+    int currentVol -> e
+    int alarmId -> f
+    int nomerId -> g
+    int lastLevl -> h
+    long lastTime -> i
+    void changeSystemAlarmVol(int) -> a
+    int getCurrentVol() -> c
+    void play(int) -> b
+    void stopAll() -> a
+    void destory() -> b
+com.wawa.arm.net.WaitUIElement -> com.wawa.arm.b.a:
+    boolean needUI -> a
+    android.content.Context context -> b
+    com.wawa.arm.utile.widgets.OMNetDialog progressDialog -> c
+    boolean needDialog -> d
+    void showToast(java.lang.String,boolean) -> a
+    void showProcessDialog(java.lang.String) -> a
+    boolean changeMag(java.lang.String) -> b
+    void dismissProcessDialog() -> a
+    void setCancelLis(android.content.DialogInterface$OnCancelListener) -> a
+com.wawa.arm.service.BluetoothChatService -> com.wawa.arm.c.a:
+    java.util.UUID MY_UUID -> a
+    android.bluetooth.BluetoothAdapter mAdapter -> b
+    android.os.Handler mHandler -> c
+    com.wawa.arm.service.BluetoothChatService$AcceptThread mAcceptThread -> d
+    com.wawa.arm.service.BluetoothChatService$ConnectThread mConnectThread -> e
+    com.wawa.arm.service.BluetoothChatService$ConnectedThread mConnectedThread -> f
+    int mState -> g
+    void setState(int) -> a
+    int getState() -> a
+    void connect(android.bluetooth.BluetoothDevice) -> a
+    void connected(android.bluetooth.BluetoothSocket,android.bluetooth.BluetoothDevice) -> a
+    void stop() -> b
+    void write(byte[]) -> a
+    void connectionFailed() -> d
+    void connectionLost() -> e
+    void sendMsgError() -> f
+    android.bluetooth.BluetoothAdapter access$0(com.wawa.arm.service.BluetoothChatService) -> a
+    java.util.UUID access$1() -> c
+    int access$2(com.wawa.arm.service.BluetoothChatService) -> b
+    void access$3(com.wawa.arm.service.BluetoothChatService) -> c
+    void access$4(com.wawa.arm.service.BluetoothChatService,com.wawa.arm.service.BluetoothChatService$ConnectThread) -> a
+    android.os.Handler access$5(com.wawa.arm.service.BluetoothChatService) -> d
+    void access$6(com.wawa.arm.service.BluetoothChatService) -> e
+    void access$7(com.wawa.arm.service.BluetoothChatService) -> f
+com.wawa.arm.service.BluetoothChatService$AcceptThread -> com.wawa.arm.c.b:
+    android.bluetooth.BluetoothServerSocket mmServerSocket -> b
+    com.wawa.arm.service.BluetoothChatService this$0 -> a
+    void run() -> run
+    void cancel() -> a
+com.wawa.arm.service.BluetoothChatService$ConnectThread -> com.wawa.arm.c.c:
+    android.bluetooth.BluetoothSocket mmSocket -> b
+    android.bluetooth.BluetoothDevice mmDevice -> c
+    com.wawa.arm.service.BluetoothChatService this$0 -> a
+    void run() -> run
+    void cancel() -> a
+com.wawa.arm.service.BluetoothChatService$ConnectedThread -> com.wawa.arm.c.d:
+    android.bluetooth.BluetoothSocket mmSocket -> b
+    java.io.InputStream mmInStream -> c
+    java.io.OutputStream mmOutStream -> d
+    com.wawa.arm.service.BluetoothChatService this$0 -> a
+    void run() -> run
+    void write(byte[]) -> a
+    void cancel() -> a
 com.wawa.arm.utile.AppException -> com.wawa.arm.utile.a:
     java.lang.Thread$UncaughtExceptionHandler mDefaultHandler -> a
     com.wawa.arm.utile.AppException getAppExceptionHandler() -> a
@@ -1571,49 +1887,10 @@ com.wawa.arm.utile.AppException$3 -> com.wawa.arm.utile.d:
     com.wawa.arm.utile.widgets.OMDialog val$dialog -> a
     android.content.Context val$cont -> b
     void onClick(android.view.View) -> onClick
-com.wawa.arm.utile.BluetoothChatService -> com.wawa.arm.utile.e:
-    java.util.UUID MY_UUID -> a
-    android.bluetooth.BluetoothAdapter mAdapter -> b
-    android.os.Handler mHandler -> c
-    com.wawa.arm.utile.BluetoothChatService$AcceptThread mAcceptThread -> d
-    com.wawa.arm.utile.BluetoothChatService$ConnectThread mConnectThread -> e
-    com.wawa.arm.utile.BluetoothChatService$ConnectedThread mConnectedThread -> f
-    int mState -> g
-    void setState(int) -> a
-    int getState() -> a
-    void start() -> b
-    void connect(android.bluetooth.BluetoothDevice) -> a
-    void connected(android.bluetooth.BluetoothSocket,android.bluetooth.BluetoothDevice) -> a
-    void write(byte[]) -> a
-    void connectionFailed() -> d
-    void connectionLost() -> e
-    android.bluetooth.BluetoothAdapter access$0(com.wawa.arm.utile.BluetoothChatService) -> a
-    java.util.UUID access$1() -> c
-    int access$2(com.wawa.arm.utile.BluetoothChatService) -> b
-    void access$3(com.wawa.arm.utile.BluetoothChatService) -> c
-    void access$4(com.wawa.arm.utile.BluetoothChatService,com.wawa.arm.utile.BluetoothChatService$ConnectThread) -> a
-    android.os.Handler access$5(com.wawa.arm.utile.BluetoothChatService) -> d
-    void access$6(com.wawa.arm.utile.BluetoothChatService) -> e
-com.wawa.arm.utile.BluetoothChatService$AcceptThread -> com.wawa.arm.utile.f:
-    android.bluetooth.BluetoothServerSocket mmServerSocket -> b
-    com.wawa.arm.utile.BluetoothChatService this$0 -> a
-    void run() -> run
-    void cancel() -> a
-com.wawa.arm.utile.BluetoothChatService$ConnectThread -> com.wawa.arm.utile.g:
-    android.bluetooth.BluetoothSocket mmSocket -> b
-    android.bluetooth.BluetoothDevice mmDevice -> c
-    com.wawa.arm.utile.BluetoothChatService this$0 -> a
-    void run() -> run
-    void cancel() -> a
-com.wawa.arm.utile.BluetoothChatService$ConnectedThread -> com.wawa.arm.utile.h:
-    android.bluetooth.BluetoothSocket mmSocket -> b
-    java.io.InputStream mmInStream -> c
-    java.io.OutputStream mmOutStream -> d
-    com.wawa.arm.utile.BluetoothChatService this$0 -> a
-    void run() -> run
-    void write(byte[]) -> a
-    void cancel() -> a
-com.wawa.arm.utile.MyToast -> com.wawa.arm.utile.i:
+com.wawa.arm.utile.MobileUtils -> com.wawa.arm.utile.e:
+    java.lang.String[] getTelInfo() -> a
+    java.lang.String getAppVersionName(android.content.Context) -> a
+com.wawa.arm.utile.MyToast -> com.wawa.arm.utile.f:
     android.widget.Toast mToast -> a
     android.os.Handler mHandler -> b
     java.lang.Runnable r -> c
@@ -1624,16 +1901,16 @@ com.wawa.arm.utile.MyToast -> com.wawa.arm.utile.i:
     void showDIYToast(android.app.Activity,java.lang.String,int,boolean) -> a
     android.widget.Toast access$0() -> a
     android.widget.Toast access$1() -> b
-com.wawa.arm.utile.MyToast$1 -> com.wawa.arm.utile.j:
+com.wawa.arm.utile.MyToast$1 -> com.wawa.arm.utile.g:
     void run() -> run
-com.wawa.arm.utile.MyToast$2 -> com.wawa.arm.utile.k:
+com.wawa.arm.utile.MyToast$2 -> com.wawa.arm.utile.h:
     void run() -> run
-com.wawa.arm.utile.TransferUtil -> com.wawa.arm.utile.l:
+com.wawa.arm.utile.TransferUtil -> com.wawa.arm.utile.i:
     byte[] int2bytes(int) -> a
-    int byteArrayToInt(byte[]) -> a
-    java.lang.String byte2HexStr(byte[]) -> b
+    java.lang.String byte2HexStr(byte[]) -> a
 com.wawa.arm.utile.log.LogThread -> com.wawa.arm.utile.a.a:
     boolean isPrintLog -> a
+    int maxfilelength -> b
     void run() -> run
 com.wawa.arm.utile.log.LogUtil -> com.wawa.arm.utile.a.b:
     java.lang.String LOG_TAG -> a
@@ -1645,7 +1922,10 @@ com.wawa.arm.utile.log.LogUtil -> com.wawa.arm.utile.a.b:
     void d(java.lang.String,java.lang.String) -> a
     void i(java.lang.String,java.lang.String) -> b
     void e(java.lang.String,java.lang.String,java.lang.Throwable) -> a
-com.wawa.arm.utile.widgets.OMDialog -> com.wawa.arm.utile.widgets.a:
+com.wawa.arm.utile.widgets.BaseView -> com.wawa.arm.utile.widgets.a:
+    android.content.Context context -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+com.wawa.arm.utile.widgets.OMDialog -> com.wawa.arm.utile.widgets.b:
     com.wawa.arm.utile.widgets.OMDialog dialog -> a
     int currentMode -> b
     com.wawa.arm.utile.widgets.OMDialog createDialog(android.content.Context) -> a
@@ -1655,7 +1935,7 @@ com.wawa.arm.utile.widgets.OMDialog -> com.wawa.arm.utile.widgets.a:
     com.wawa.arm.utile.widgets.OMDialog setBtnCancelClickListener(android.view.View$OnClickListener) -> b
     com.wawa.arm.utile.widgets.OMDialog access$0() -> a
     void access$1(com.wawa.arm.utile.widgets.OMDialog) -> a
-com.wawa.arm.utile.widgets.OMDialog$1 -> com.wawa.arm.utile.widgets.b:
+com.wawa.arm.utile.widgets.OMDialog$1 -> com.wawa.arm.utile.widgets.c:
     void onClick(android.view.View) -> onClick
 com.wawa.arm.utile.widgets.OMEditText -> com.wawa.arm.utile.widgets.OMEditText:
     android.graphics.drawable.Drawable imgAble -> a
@@ -1664,8 +1944,95 @@ com.wawa.arm.utile.widgets.OMEditText -> com.wawa.arm.utile.widgets.OMEditText:
     void setDrawable() -> b
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void access$0(com.wawa.arm.utile.widgets.OMEditText) -> a
-com.wawa.arm.utile.widgets.OMEditText$1 -> com.wawa.arm.utile.widgets.c:
+com.wawa.arm.utile.widgets.OMEditText$1 -> com.wawa.arm.utile.widgets.d:
     com.wawa.arm.utile.widgets.OMEditText this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
+com.wawa.arm.utile.widgets.OMNetDialog -> com.wawa.arm.utile.widgets.e:
+    com.wawa.arm.utile.widgets.OMNetDialog dialog -> a
+    com.wawa.arm.utile.widgets.OMNetDialog createDialog(android.content.Context,int,java.lang.String) -> a
+    com.wawa.arm.utile.widgets.OMNetDialog setContent(java.lang.String) -> a
+    void dismiss() -> dismiss
+com.wawa.arm.utile.widgets.RippleView -> com.wawa.arm.utile.widgets.RippleView:
+    int WIDTH -> a
+    int HEIGHT -> b
+    int FRAME_RATE -> c
+    int DURATION -> d
+    int PAINT_ALPHA -> e
+    android.os.Handler canvasHandler -> f
+    float radiusMax -> g
+    boolean animationRunning -> h
+    int timer -> i
+    int timerEmpty -> j
+    int durationEmpty -> k
+    float x -> l
+    float y -> m
+    int zoomDuration -> n
+    float zoomScale -> o
+    android.view.animation.ScaleAnimation scaleAnimation -> p
+    java.lang.Boolean hasToZoom -> q
+    java.lang.Boolean isCentered -> r
+    java.lang.Integer rippleType -> s
+    android.graphics.Paint paint -> t
+    android.graphics.Bitmap originBitmap -> u
+    int rippleColor -> v
+    android.view.View childView -> w
+    int ripplePadding -> x
+    android.view.GestureDetector gestureDetector -> y
+    java.lang.Runnable runnable -> z
+    void init(android.content.Context,android.util.AttributeSet) -> a
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    void draw(android.graphics.Canvas) -> draw
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    android.graphics.Bitmap getCircleBitmap(int) -> a
+com.wawa.arm.utile.widgets.RippleView$1 -> com.wawa.arm.utile.widgets.f:
+    com.wawa.arm.utile.widgets.RippleView this$0 -> a
+    void run() -> run
+com.wawa.arm.utile.widgets.RippleView$2 -> com.wawa.arm.utile.widgets.g:
+    com.wawa.arm.utile.widgets.RippleView this$0 -> a
+    boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
+com.wawa.arm.utile.widgets.SearchDevicesView -> com.wawa.arm.utile.widgets.SearchDevicesView:
+    long TIME_DIFF -> g
+    int[] lineColor -> b
+    int[] innerCircle0 -> c
+    int[] innerCircle1 -> d
+    int[] innerCircle2 -> e
+    int[] argColor -> f
+    float offsetArgs -> h
+    boolean isSearching -> i
+    android.graphics.Bitmap bitmap -> j
+    android.graphics.Bitmap bitmap1 -> k
+    android.graphics.Bitmap bitmap2 -> l
+    android.graphics.Bitmap currentBitmap -> m
+    int LEVLE -> n
+    android.os.Handler handler -> o
+    boolean isSearching() -> a
+    void startSerch() -> b
+    void onPause() -> c
+    void stopSerch() -> d
+    void changeLevle(int) -> a
+    void initBitmap() -> e
+    void onDraw(android.graphics.Canvas) -> onDraw
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void handleActionDownEvenet(android.view.MotionEvent) -> a
+    void setHandler(android.os.Handler) -> setHandler
+com.wawa.arm.utile.widgets.WiperSwitchView -> com.wawa.arm.utile.widgets.WiperSwitchView:
+    android.graphics.Bitmap bg_on -> a
+    android.graphics.Bitmap bg_off -> b
+    android.graphics.Bitmap slipper_btn -> c
+    float downX -> d
+    float nowX -> e
+    boolean onSlip -> f
+    boolean nowStatus -> g
+    com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener listener -> h
+    void init(android.content.Context) -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+    void setOnChangedListener(com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener) -> setOnChangedListener
+    void setChecked(boolean) -> setChecked
+com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener -> com.wawa.arm.utile.widgets.h:
+    void OnChanged(com.wawa.arm.utile.widgets.WiperSwitchView,boolean) -> a

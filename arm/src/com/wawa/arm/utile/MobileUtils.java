@@ -7,6 +7,8 @@ import java.util.regex.Pattern;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
@@ -70,7 +72,7 @@ public class MobileUtils
      * @created 2014年5月20日 下午3:43:59
      */
     public static String[] getTelInfo(){
-    	String[] str = new String[7];
+    	String[] str = new String[8];
         TelephonyManager mTm = (TelephonyManager)OMApplication.getInstance().getSystemService(Context.TELEPHONY_SERVICE);
         String imei = mTm.getDeviceId(); //  存储在手机上IMEI：international mobile Equipment identity手机唯一标识码；
         str[0]  = imei;
@@ -78,6 +80,7 @@ public class MobileUtils
         str[1]  = imsi;
         String numer = mTm.getLine1Number(); // 手机号码，有的可得，有的不可得 取出MSISDN，很可能为空
         str[2]  = numer;
+        //LogUtil.d(mTm.getSimCountryIso()+";"+mTm.getSimSerialNumber()+";"+mTm.getSimOperatorName());
         //String imei =mTm.getSimSerialNumber();  //取出ICCID
         
         String mtyb = android.os.Build.BRAND;// 手机品牌
@@ -88,6 +91,8 @@ public class MobileUtils
         str[5]  = sdk;
         String sysversion = Build.VERSION.RELEASE;// 系统版本号
         str[6]  = sysversion;
+        String sn = android.os.Build.SERIAL;// SN
+        str[7]  = sn;
         return str;
     }
 
@@ -330,4 +335,23 @@ public class MobileUtils
 		Matcher matcher = pattern.matcher(phoneNum);
 		return matcher.matches();
     }
+    
+    /**  
+	* 返回当前程序版本名  
+	*/   
+	public static String getAppVersionName(Context context) {   
+	    String versionName = "";   
+	    try {   
+	        // ---get the package info---   
+	        PackageManager pm = context.getPackageManager();   
+	        PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);   
+	        versionName = pi.versionName;   
+	        if (versionName == null || versionName.length() <= 0) {   
+	            return null;   
+	        }   
+	    } catch (Exception e) {   
+	        LogUtil.e("VersionInfo", "Exception", e);   
+	    }   
+	    return versionName;   
+	}  
 }

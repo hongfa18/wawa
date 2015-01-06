@@ -9,13 +9,5 @@
         android:layout_height="match_parent"
         android:background="@drawable/launchimage">
     </ImageView>
-    <TextView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:text="Copyright©2013-2014 蛙蛙科技  All Right Reserved"
-        android:textColor="@color/white"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="35dp"/>
+    
 </RelativeLayout>

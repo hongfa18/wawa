@@ -17,13 +17,13 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:background="@drawable/bg_klt_confirm_dialog">
     <TextView android:id="@+id/title_paired_devices"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_paired_devices"
         android:visibility="gone"
-        android:background="#666"
+        android:background="@drawable/bg_device_head_txv"
         android:textColor="#fff"
         android:paddingLeft="5dp"
     />
@@ -31,6 +31,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:stackFromBottom="true"
+        android:cacheColorHint="@android:color/transparent"
+        android:dividerHeight="2dp"
+        android:divider="@color/gray"
+        android:listSelector="@null"
         android:layout_weight="1"
     />
     <TextView android:id="@+id/title_new_devices"
@@ -41,16 +45,24 @@
         android:background="#666"
         android:textColor="#fff"
         android:paddingLeft="5dp"
+        android:layout_marginBottom="6dp"
     />
     <ListView android:id="@+id/new_devices"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:dividerHeight="2dp"
+        android:divider="@color/gray"
+        android:listSelector="@null"
         android:stackFromBottom="true"
         android:layout_weight="2"
     />
     <Button android:id="@+id/button_scan"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_scan"
-    />
+        android:layout_height="38dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@drawable/selector_btn_next_ok"
+        android:text="@string/button_scan"/>
 </LinearLayout>

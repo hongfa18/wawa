@@ -16,8 +16,11 @@
 
 package com.wawa.arm;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import android.app.Activity;
@@ -30,14 +33,22 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
+
+import com.wawa.arm.adapter.DeivceListAdapter;
+import com.wawa.arm.common.CommonConsts;
+import com.wawa.arm.common.CommonMethod;
+import com.wawa.arm.common.OMApplication;
+import com.wawa.arm.net.WaitUIElement;
+import com.wawa.arm.utile.MyToast;
 
 /**
  * This Activity appears as a dialog. It lists any paired devices and
@@ -55,9 +66,13 @@ public class DeviceListActivity extends Activity {
 
     // Member fields
     private BluetoothAdapter mBtAdapter;
-    private ArrayAdapter<String> mPairedDevicesArrayAdapter;
-    private ArrayAdapter<String> mNewDevicesArrayAdapter;
+    private DeivceListAdapter mPairedDevicesArrayAdapter;
+    private DeivceListAdapter mNewDevicesArrayAdapter;
     public static final String ACTION_PAIRING_REQUEST = "android.bluetooth.device.action.PAIRING_REQUEST";
+    private WaitUIElement dialog;
+    private List<String> nopairs = new ArrayList<String>();
+    private List<String> pairs = new ArrayList<String>();
+    private Set<String> set = new HashSet<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,8 +97,8 @@ public class DeviceListActivity extends Activity {
 
         // Initialize array adapters. One for already paired devices and
         // one for newly discovered devices
-        mPairedDevicesArrayAdapter = new ArrayAdapter<String>(this, R.layout.device_name);
-        mNewDevicesArrayAdapter = new ArrayAdapter<String>(this, R.layout.device_name);
+        mPairedDevicesArrayAdapter = new DeivceListAdapter(this, pairs, CommonConsts.PAIR_DEVICE);//new ArrayAdapter<String>(this, R.layout.device_name);
+        mNewDevicesArrayAdapter = new DeivceListAdapter(this, nopairs, CommonConsts.NO_PAIR_DEVICE);//new ArrayAdapter<String>(this, R.layout.device_name);
 
         // Find and set up the ListView for paired devices
         ListView pairedListView = (ListView) findViewById(R.id.paired_devices);
@@ -122,15 +137,20 @@ public class DeviceListActivity extends Activity {
         if (pairedDevices.size() > 0) {
             findViewById(R.id.title_paired_devices).setVisibility(View.VISIBLE);
             for (BluetoothDevice device : pairedDevices) {
-                mPairedDevicesArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+            	if(CommonMethod.checkDeviceName(device.getName()))
+            		pairs.add(device.getName() + "\n" + device.getAddress());
             }
-        } else {
+        } 
+        if(pairs.size() == 0){
             String noDevices = getResources().getText(R.string.none_paired).toString();
-            mPairedDevicesArrayAdapter.add(noDevices);
+            pairs.add(noDevices);
         }
+        mPairedDevicesArrayAdapter.notifyDataSetChanged();
+        dialog = new WaitUIElement(this,true);
     }
+    
 
-    @Override
+	@Override
     protected void onDestroy() {
         super.onDestroy();
 
@@ -184,7 +204,6 @@ public class DeviceListActivity extends Activity {
             if(device.getBondState() != BluetoothDevice.BOND_BONDED){
             	try {
             		Method createBondMethod = device.getClass().getMethod("createBond");  
-            		Log.d(TAG, "-----开始配对"+address+"-----");  
             		Boolean flag = (Boolean)createBondMethod.invoke(device);  
             		Log.d(TAG, "-----bond flag-----"+flag); 
             		/*Method setPinMethod = device.getClass().getDeclaredMethod("setPin",
@@ -203,6 +222,7 @@ public class DeviceListActivity extends Activity {
                     Log.d(TAG, "-----cancelBondProcess flag-----"+cancelBonRsult);
                      */
 				} catch (Exception e) {
+					Toast.makeText(DeviceListActivity.this, "设备配对失败！", 3000).show();
 					Log.e(TAG, "-----配对"+address+"失败-----",e);  
 				}
             }else{
@@ -253,32 +273,41 @@ public class DeviceListActivity extends Activity {
                 if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
     				//String str = device.getName() + "/-/" + device.getAddress();
     				/*if (devices.indexOf(str) == -1)// 防止重复添加
-    					devices.add(str); // 获取设备名称和mac地址*/                    
-    				mNewDevicesArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+    					devices.add(str); // 获取设备名称和mac地址*/ 
+                	if(CommonMethod.checkDeviceName(device.getName()) && set.add(device.getAddress()))
+                		nopairs.add(device.getName() + "\n" + device.getAddress());
                 }
+                mNewDevicesArrayAdapter.notifyDataSetChanged();
             // When discovery is finished, change the Activity title
             } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                 setProgressBarIndeterminateVisibility(false);
                 setTitle(R.string.select_device);
                 if (mNewDevicesArrayAdapter.getCount() == 0) {
                     String noDevices = getResources().getText(R.string.none_found).toString();
-                    mNewDevicesArrayAdapter.add(noDevices);
+                    nopairs.add(noDevices);
                 }
+                set.clear();
+                mNewDevicesArrayAdapter.notifyDataSetChanged();
             }
             
             if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
             	BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
             	switch (device.getBondState()) {
 				case BluetoothDevice.BOND_BONDED://配对完成
+					dialog.dismissProcessDialog();
+					Toast.makeText(DeviceListActivity.this, "设备配对成功！", 3000).show();
 					Log.d(TAG, "--设备"+device.getAddress()+"配对完成--");
-					result(device.getAddress());	
+					result(device.getAddress());
 					break;
 				case BluetoothDevice.BOND_BONDING://正在配对
 					//TODO 限制用户操作
+					dialog.showProcessDialog("设备配对中...");
 					Log.d(TAG, "--设备"+device.getAddress()+"正在配对--");
 					break;
 				case BluetoothDevice.BOND_NONE://取消配对
 					//TODO 取消用户限制操作
+					dialog.dismissProcessDialog();
+					Toast.makeText(DeviceListActivity.this, "设备配对失败！", 3000).show();
 					Log.d(TAG, "--设备"+device.getAddress()+"取消配对--");
 					
 					break;
@@ -286,23 +315,29 @@ public class DeviceListActivity extends Activity {
 				}
             }
             
-            if(ACTION_PAIRING_REQUEST.equals(action)){
+            /*if(ACTION_PAIRING_REQUEST.equals(action)){
             	BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
             	Log.d(TAG, "--设备"+device.getAddress()+"密码--");
 				try {
-					/*Method createBondMethod = device.getClass().getMethod("createBond");  
-            		Log.d(TAG, "-----开始配对"+device.getAddress()+"-----");  
-            		Boolean flag = (Boolean)createBondMethod.invoke(device);  
-            		Log.d(TAG, "-----bond flag-----"+flag); */
-					Method setPinMethod = device.getClass().getDeclaredMethod("setPin",
-							new Class[]{byte[].class});
+					
+					Method setPinMethod = device.getClass().getDeclaredMethod("setPin",new Class[]{byte[].class});
 					Boolean returnValue = (Boolean) setPinMethod.invoke( device,
-							new Object[]{"1234".getBytes()});
+							new Object[]{OMApplication.getInstance().getVal(CommonConsts.ARM_PAIR_KEY, CommonConsts.DEFAULT_PERM_KEY).getBytes()});
 					Log.d(TAG, "-----setPin flag-----"+returnValue); 
+					
+					Method createBondMethod = device.getClass().getMethod("createBond");  
+					Log.d(TAG, "-----开始配对"+device.getAddress()+"-----");  
+					Boolean flag = (Boolean)createBondMethod.invoke(device);  
+					Log.d(TAG, "-----bond flag-----"+flag); 
+					
+					Method cancelUMethod = device.getClass().getMethod("cancelPairingUserInput");
+					Boolean cancelRsult = (Boolean) cancelUMethod.invoke(device);
+					Log.d(TAG, "-----cancelPairingUserInput flag-----"+cancelRsult);
+					
 				} catch (Exception e) {
 					Log.e(TAG, "--setPin error---", e);
 				}
-            }
+            }*/
         }
         
         
@@ -317,5 +352,78 @@ public class DeviceListActivity extends Activity {
         setResult(Activity.RESULT_OK, intent);
         finish();	
     }
+
+	public void linkDeivce(String address) {
+		mBtAdapter.cancelDiscovery();
+		if (!BluetoothAdapter.checkBluetoothAddress(address))
+		{ // 检查蓝牙地址是否有效
+
+			Log.d("-----------------", "--------checkBluetoothAddress---"+address+"----false---");
+		}
+        BluetoothDevice device = mBtAdapter.getRemoteDevice(address);
+        // 连接建立之前的先配对  
+        if(device.getBondState() != BluetoothDevice.BOND_BONDED){
+        	try {
+        		Method createBondMethod = device.getClass().getMethod("createBond");  
+        		Log.d(TAG, "-----开始配对"+address+"-----");  
+        		Boolean flag = (Boolean)createBondMethod.invoke(device);  
+        		Log.d(TAG, "-----bond flag-----"+flag); 
+        		/*Method setPinMethod = device.getClass().getDeclaredMethod("setPin",
+                        new Class[]
+                        {byte[].class});
+                Boolean returnValue = (Boolean) setPinMethod.invoke( device,
+                        new Object[]{"123456".getBytes()});
+               Log.d(TAG, "-----setPin flag-----"+returnValue); 
+        		
+                Method cancelUMethod = device.getClass().getMethod("cancelPairingUserInput");
+                Boolean cancelRsult = (Boolean) cancelUMethod.invoke(device);
+                Log.d(TAG, "-----cancelPairingUserInput flag-----"+cancelRsult);
+                
+                Method cancelBondMethod = device.getClass().getMethod("cancelBondProcess");
+                Boolean cancelBonRsult = (Boolean) cancelBondMethod.invoke(device);
+                Log.d(TAG, "-----cancelBondProcess flag-----"+cancelBonRsult);
+                 */
+			} catch (Exception e) {
+				Toast.makeText(DeviceListActivity.this, "设备配对失败！", 3000).show();
+				Log.e(TAG, "-----配对"+address+"失败-----",e);  
+			}
+        }else{
+        	Intent intent = new Intent();
+            intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
+
+            // Set result and finish this Activity
+            setResult(Activity.RESULT_OK, intent);
+            finish();
+        }
+		
+	}
+
+	public void clearDeivce(String address) {
+		BluetoothDevice device = mBtAdapter.getRemoteDevice(address);
+		try {
+			Method createBondMethod = device.getClass().getMethod("removeBond");//cancelBondProcess");
+			Boolean returnValue = (Boolean) createBondMethod.invoke(device);
+			if(returnValue){
+				for (Iterator iterator = pairs.iterator(); iterator.hasNext();) {
+					String type = (String) iterator.next();
+					String daddress = type.substring(type.length() - 17);
+					if(daddress.equals(address)){
+						iterator.remove();
+					}
+				}
+				if(pairs.size() == 0){
+					String noDevices = getResources().getText(R.string.none_paired).toString();
+		            pairs.add(noDevices);
+				}
+		        mPairedDevicesArrayAdapter.notifyDataSetChanged();
+				MyToast.showToast(getApplicationContext(), "设备清除成功。", 3000);
+				Log.d(TAG, "-----成功取消"+address+"配对-----");  
+			}else{
+				MyToast.showToast(getApplicationContext(), "设备清除失败，可到手机\"蓝牙管理\"里取消配对清除。", 3000);
+			}
+		} catch (Exception e) {
+			Log.d(TAG, "-----取消"+address+"配对失败-----",e);  
+		}
+	}
 
 }

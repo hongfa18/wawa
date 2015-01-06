@@ -14,14 +14,24 @@
         android:orientation="vertical"
         android:gravity="center_vertical">
         <TextView 
+            android:text="监测APP信息"
+            style="@style/account_text_style_new"
+            android:layout_height="40dp"
+            android:textSize="15sp"
+            android:background="@drawable/selector_account_menu_item_top"
+            android:gravity="center"/>
+        <TextView 
             android:id="@+id/phone_sn"
             android:text="手机SN：55668889"
             style="@style/account_text_style_new"
-            android:background="@drawable/selector_account_menu_item_top"/>
+            android:textColor="#888888"
+            android:background="@drawable/selector_account_menu_item_middle"
+            android:layout_marginTop="-0.25dp"/>
          <TextView 
             android:id="@+id/app_version"
             android:text="APP版本：V1.0"
             style="@style/account_text_style_new"
+            android:textColor="#888888"
             android:background="@drawable/selector_account_menu_item_bottom"
             android:layout_marginTop="-0.25dp"/>
     </LinearLayout>
@@ -32,23 +42,50 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_account_layout"
         android:orientation="vertical">
+         <TextView 
+            android:text="监测设备信息"
+            style="@style/account_text_style_new"
+            android:layout_height="40dp"
+            android:textSize="15sp"
+            android:background="@drawable/selector_account_menu_item_top"
+            android:gravity="center"/>
         <TextView 
             android:id="@+id/arm_name"
             android:text="ARM名称：BK3231_SPP"
             style="@style/account_text_style_new"
-            android:background="@drawable/selector_account_menu_item_top"/>
+            android:textColor="#888888"
+            android:background="@drawable/selector_account_menu_item_middle"
+            android:layout_marginTop="-0.25dp"/>
          <TextView 
             android:id="@+id/arm_mac"
             android:text="ARM地址：55：A4:6A:c5"
             style="@style/account_text_style_new"
+            android:textColor="#888888"
+            android:background="@drawable/selector_account_menu_item_middle"
+            android:layout_marginTop="-0.25dp"/>
+         <TextView 
+            android:id="@+id/arm_no"
+            android:text="ARM编号：A556"
+            style="@style/account_text_style_new"
+            android:textColor="#888888"
             android:background="@drawable/selector_account_menu_item_middle"
             android:layout_marginTop="-0.25dp"/>
          <TextView 
             android:id="@+id/arm_version"
             android:text="ARM版本：V1.0"
             style="@style/account_text_style_new"
+            android:textColor="#888888"
             android:background="@drawable/selector_account_menu_item_bottom"
             android:layout_marginTop="-0.25dp"/>
     </LinearLayout>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textSize="12sp"
+        android:text="Copyright©2013-2014 蛙蛙科技  All Right Reserved"
+        android:gravity="center"
+        android:textColor="#888888"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
 </LinearLayout>
 
