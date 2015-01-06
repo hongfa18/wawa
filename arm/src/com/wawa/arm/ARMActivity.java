@@ -856,7 +856,6 @@ public class ARMActivity extends BaseActivity{
 	}
 
 	private void saveMyBitmap(Bitmap icon,String name) {
-		// TODO Auto-generated method stub
 		FileOutputStream bitmapWtriter = null;
         try {
 	         bitmapWtriter = new FileOutputStream("/sdcard/smartpay/change_icon_"+name+".png");
