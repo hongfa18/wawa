@@ -102,6 +102,16 @@ public class BaseActivity extends FragmentActivity{
 	public void setTitle(String titleStr){
 		title.setText(titleStr);
 	}
+	public int getTitleVal(){
+		int i = -1;
+		if(title != null && title.getText() != null && !"".equals(title.getText().toString())){
+			try {
+				i = Integer.parseInt(title.getText().toString());
+			} catch (Exception e) {
+			}
+		}
+		return i;
+	}
 	/**
 	 * 描述：
 	 * 是否显示返回按钮

@@ -7,6 +7,7 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,7 +26,6 @@ import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.FontMetrics;
@@ -38,6 +38,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.ParcelUuid;
 import android.os.PowerManager;
+import android.speech.tts.TextToSpeech;
 import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -54,15 +55,19 @@ import com.wawa.arm.common.OMApplication;
 import com.wawa.arm.common.SoundPoolPlay;
 import com.wawa.arm.net.WaitUIElement;
 import com.wawa.arm.service.BluetoothChatService;
+import com.wawa.arm.utile.LineChartUtil;
 import com.wawa.arm.utile.MyToast;
 import com.wawa.arm.utile.TransferUtil;
 import com.wawa.arm.utile.log.LogUtil;
+import com.wawa.arm.utile.widgets.MyLineChart;
 import com.wawa.arm.utile.widgets.OMDialog;
 import com.wawa.arm.utile.widgets.SearchDevicesView;
 
 public class ARMActivity extends BaseActivity{
 	private static final String TAG = ARMActivity.class.getSimpleName();
 	private ImageView openImg,settingImg;
+	private ImageView volsettingImg;
+	private ImageView openclose;
 	// Local Bluetooth adapter
     private BluetoothAdapter mBluetoothAdapter = null;
     // Member object for the chat services
@@ -83,6 +88,7 @@ public class ARMActivity extends BaseActivity{
  // Name of the connected device
     private String mConnectedDeviceName = null;
     private boolean isStopflag;
+    private boolean isSearching;
     private WaitUIElement dialog;
 //    private WebView runWebView=null;
     private SearchDevicesView scan;
@@ -92,6 +98,8 @@ public class ARMActivity extends BaseActivity{
 	
 	private PowerManager.WakeLock mPowerMgr;
 	private SoundPoolPlay play;
+	
+	private LineChartUtil mChart;
 	
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -165,14 +173,66 @@ public class ARMActivity extends BaseActivity{
 				
 			}
 		});
+		
+		
+		
+		openclose = (ImageView)findViewById(R.id.open_close_icon);
+		volsettingImg = (ImageView)findViewById(R.id.vol_setting_icon);
+        
+		openclose.setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+        		if(needOpenChooice){
+					needOpenChooice = false;
+					changeButtonStatu(currentStatu);
+				}else{
+					if(!isSearching) {//暂停就搜索
+						handler.sendEmptyMessage(ARMActivity.START_SCAN);
+					}else{//搜索就暂停
+						handler.sendEmptyMessage(ARMActivity.STOP_SCAN);
+					}
+				}
+        	}
+        });
+		String isOpen = OMApplication.getInstance().getVal(CommonConsts.APP_VOL_OPEN_STATU, "0");
+        if("0".equals(isOpen)){//关
+        	volsettingImg.setImageResource(R.drawable.a_close);  
+        }else{
+        	volsettingImg.setImageResource(R.drawable.a_open);  
+        }
+        play = new SoundPoolPlay(this,"1".equals(isOpen));
+        volsettingImg.setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+        		String isOpen = OMApplication.getInstance().getVal(CommonConsts.APP_VOL_OPEN_STATU, "0");
+                if("0".equals(isOpen)){//关就打开
+                	MyToast.showToast(getBaseContext(), "语音播报打开", 3000);
+                	play.setOpen(true);
+                	if(getTitleVal() != 0) play.play(getTitleVal());
+                	volsettingImg.setImageResource(R.drawable.a_open);  
+                	OMApplication.getInstance().setValToSharePrefer(CommonConsts.APP_VOL_OPEN_STATU,"1");
+                }else{
+                	play.stopAll();
+                	MyToast.showToast(getBaseContext(), "语音播报关闭", 3000);
+                	play.setOpen(false);
+                	volsettingImg.setImageResource(R.drawable.a_close);  
+                	OMApplication.getInstance().setValToSharePrefer(CommonConsts.APP_VOL_OPEN_STATU,"0");
+                }
+        	}
+        });
 		//changeButtonStatu(CommonConsts.STATU_WORKING);//for test
 		
 		//TODO 引入电源管理模块
         //PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         //mPowerMgr = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK|PowerManager.ON_AFTER_RELEASE, "wawaarm");
 		
-		play = new SoundPoolPlay(this);
 		lastVal = -5;
+		MyLineChart lmChart = (MyLineChart) findViewById(R.id.id_detail_current_chartview);
+		mChart = new LineChartUtil(this,lmChart);
+		mChart.init();
+		
+		/**检测语音播报TTS环境*/
+		Intent checkTTSIntent = new Intent();
+        checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        startActivityForResult(checkTTSIntent, CHECK_TTS);
 	}
 	
 	/**
@@ -224,7 +284,10 @@ public class ARMActivity extends BaseActivity{
 		switch (statuOne) {
 		case CommonConsts.STATU_SETTING://设置
 			play.stopAll();
-			scan.stopSerch();
+			//scan.stopSerch();
+			isSearching = false;
+			mChart.removeDataSet(false);
+			openclose.setImageResource(R.drawable.play);
 			needClick = true;
 			bgId = R.drawable.selector_globle_bg;
 			click = new View.OnClickListener() {
@@ -238,7 +301,10 @@ public class ARMActivity extends BaseActivity{
 			break;
 		case CommonConsts.STATU_HISTORY://有连接历史
 			play.stopAll();
-			scan.stopSerch();
+			//scan.stopSerch();
+			isSearching = false;
+			mChart.removeDataSet(false);
+			openclose.setImageResource(R.drawable.play);
 			needClick = true;
 			setTitle("");
 			bgId = R.drawable.sp_bg;
@@ -257,8 +323,10 @@ public class ARMActivity extends BaseActivity{
 		case CommonConsts.STATU_WORKING://爬动的蜘蛛
 			//TODO 变色
 			//mPowerMgr.acquire();//防止锁屏
-			scan.startSerch();
-			scan.changeLevle(0);
+			//scan.startSerch();
+			//scan.changeLevle(0);
+			isSearching = true;
+			openclose.setImageResource(R.drawable.stop);
 			bgId = R.anim.animation_sp_movie;
 			startMovie = true;
 			click = new View.OnClickListener() {
@@ -283,7 +351,11 @@ public class ARMActivity extends BaseActivity{
 			break;
 		case CommonConsts.STATU_PAUSE://暂停监测
 			//mPowerMgr.release();
-			scan.onPause();
+			//scan.onPause();
+			isSearching = false;
+			mChart.removeDataSet(true);
+			//mChart.removeDataSet();暂停不需要删数据
+			openclose.setImageResource(R.drawable.play);
 			play.stopAll();
 			setTitle("0");
 			bgId = R.drawable.sp_bg_03;
@@ -340,26 +412,6 @@ public class ARMActivity extends BaseActivity{
 			return false;
 		}
 	});
-	@Override
-    public void onStart() {
-        super.onStart();
-        LogUtil.d(TAG, "--ARMActivity start---");
-
-        // If BT is not on, request that it be enabled.
-        // setupChat() will then be called during onActivityResult
-        /**
-         * 步骤二：
-         * 判断蓝牙是否打开
-         */
-        if (!mBluetoothAdapter.isEnabled()) {
-            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
-        // Otherwise, setup the chat session
-        } else {
-            if (mChatService == null) setupChat();
-        }
-    }
-	
 	
 	private void connect(String address) {
 		/**
@@ -545,8 +597,10 @@ public class ARMActivity extends BaseActivity{
 			lastUpDataTime = System.currentTimeMillis();
 			int m = Arrays.copyOfRange(msg, 3, 4)[0];
 			if(0 <= m && m <= 91){
+				if(mChart.isNeedSetZero()) m = 0;
 				setTitle(m+"");
-				scan.changeLevle(m);
+				//scan.changeLevle(m);
+				mChart.addEntry(m);
 				if(!isBack)
 					play.play(m);
 				if(isBack){
@@ -651,11 +705,31 @@ public class ARMActivity extends BaseActivity{
         
         
     };
+    private static final int CHECK_TTS = 101;
+	@Override
+    public void onStart() {
+        super.onStart();
+        LogUtil.d(TAG, "--ARMActivity start---");
+        // If BT is not on, request that it be enabled.
+        // setupChat() will then be called during onActivityResult
+        /**
+         * 步骤二：
+         * 判断蓝牙是否打开
+         */
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+        // Otherwise, setup the chat session
+        } else {
+            if (mChatService == null) setupChat();
+        }
+    }
     private boolean isBack = false;
     @Override
    	protected void onResume() {
    		super.onResume();
    		//TODO 
+   		if(getTitleVal() != 0) play.play(getTitleVal());
    		isBack = false;
    		disnotifcation();
    	}
@@ -671,10 +745,12 @@ public class ARMActivity extends BaseActivity{
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+		stopARM();
 		mChatService.stop();
 		this.unregisterReceiver(mReceiver);
 		//mPowerMgr.release();
 		play.destory();
+		if(myTTS != null) myTTS.shutdown();
 	}
 	
 	private boolean needOpenChooice;
@@ -687,6 +763,7 @@ public class ARMActivity extends BaseActivity{
 		}*/
 	}
 
+	private TextToSpeech myTTS;
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.d(TAG, "onActivityResult " + resultCode);
         switch (requestCode) {
@@ -722,6 +799,29 @@ public class ARMActivity extends BaseActivity{
                 Toast.makeText(this, R.string.bt_not_enabled_leaving, Toast.LENGTH_SHORT).show();
                 AppManager.getAppManager().AppExit(ARMActivity.this);
             }
+        case CHECK_TTS:
+        	if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
+        		myTTS = new TextToSpeech(this, new  TextToSpeech.OnInitListener() {
+					@Override
+					public void onInit(int initStatus) {
+						if (initStatus == TextToSpeech.SUCCESS) {
+							int result = myTTS.setLanguage(Locale.CHINA);
+							if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED){
+								MyToast.showToast(getBaseContext(), "当前系统设置不支持中文播报", 3000);
+								int result2 = myTTS.setLanguage(Locale.US);
+							}
+							play.setTTS(myTTS);
+						}else if(initStatus == TextToSpeech.ERROR){
+							Toast.makeText(getBaseContext(), "语音加载失败", Toast.LENGTH_LONG).show();
+						}
+					}
+				});
+        	}else {
+        		Intent installTTSIntent = new Intent();
+        		installTTSIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+        		startActivity(installTTSIntent);
+        	}
+        	break;
         }
     }
 	private OMDialog closeDialog;

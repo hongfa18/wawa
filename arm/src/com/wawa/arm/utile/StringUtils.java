@@ -1,10 +1,15 @@
 package com.wawa.arm.utile;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
+
+import android.annotation.SuppressLint;
 
 /**
  * √Ë ˆ£∫
@@ -190,6 +195,27 @@ public class StringUtils
 			return Boolean.parseBoolean(b);
 		}catch(Exception e){}
 		return false;
+	}
+	
+	public static List<String> getStringList(String str) {
+		List<String> list = new ArrayList<String>();
+		if(str != null) {
+			String[] num = str.split(";");
+			for (int i = 0; i < num.length; i++) {
+				list.add(num[i]);
+			}
+		}
+		return list;
+	}
+	@SuppressLint("SimpleDateFormat")
+	public static String GetDatas(int day) {
+		String str = "01-01";
+		DateFormat format = new SimpleDateFormat("MM-dd");
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, -day);
+		Date d = cal.getTime();
+		str = format.format(d);
+		return str;
 	}
 
 }

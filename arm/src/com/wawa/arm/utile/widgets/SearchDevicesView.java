@@ -147,10 +147,10 @@ public class SearchDevicesView extends BaseView{
 	        	offsetArgs = offsetArgs + 4;
 	        }
 		}
-		canvas.restore();
-		Paint p = new Paint();
+		canvas.restore();//È¥µôÐý×ª
+		/*Paint p = new Paint();
 		p.setColor(needgreen?0xff00FF00:0xff8c0628);
-        canvas.drawCircle(getWidth()/2,getHeight()/2,10, p);
+        canvas.drawCircle(getWidth()/2,getHeight()/2,10, p);*/
 		
         if(currentBitmap != null){
         	canvas.drawBitmap(currentBitmap,  getWidth() / 2  - currentBitmap.getWidth()/2 , getHeight()/2 - currentBitmap.getHeight()/2, null);

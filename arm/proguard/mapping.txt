@@ -690,45 +690,59 @@ android.support.v4.util.SparseArrayCompat -> android.support.v4.c.m:
     void clear() -> c
     java.lang.String toString() -> toString
     java.lang.Object clone() -> clone
-android.support.v4.view.GravityCompat -> android.support.v4.view.a:
+android.support.v4.view.AccessibilityDelegateCompat -> android.support.v4.view.a:
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl IMPL -> b
+    java.lang.Object DEFAULT_DELEGATE -> c
+    java.lang.Object mBridge -> a
+    java.lang.Object getBridge() -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl -> android.support.v4.view.b:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl -> android.support.v4.view.c:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl -> android.support.v4.view.d:
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateStubImpl -> android.support.v4.view.e:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+android.support.v4.view.AccessibilityDelegateCompatIcs -> android.support.v4.view.f:
+    java.lang.Object newAccessibilityDelegateDefaultImpl() -> a
+android.support.v4.view.GravityCompat -> android.support.v4.view.g:
     android.support.v4.view.GravityCompat$GravityCompatImpl IMPL -> a
     int getAbsoluteGravity(int,int) -> a
-android.support.v4.view.GravityCompat$GravityCompatImpl -> android.support.v4.view.b:
+android.support.v4.view.GravityCompat$GravityCompatImpl -> android.support.v4.view.h:
     int getAbsoluteGravity(int,int) -> a
-android.support.v4.view.GravityCompat$GravityCompatImplBase -> android.support.v4.view.c:
+android.support.v4.view.GravityCompat$GravityCompatImplBase -> android.support.v4.view.i:
     int getAbsoluteGravity(int,int) -> a
-android.support.v4.view.GravityCompat$GravityCompatImplJellybeanMr1 -> android.support.v4.view.d:
+android.support.v4.view.GravityCompat$GravityCompatImplJellybeanMr1 -> android.support.v4.view.j:
     int getAbsoluteGravity(int,int) -> a
-android.support.v4.view.GravityCompatJellybeanMr1 -> android.support.v4.view.e:
+android.support.v4.view.GravityCompatJellybeanMr1 -> android.support.v4.view.k:
     int getAbsoluteGravity(int,int) -> a
-android.support.v4.view.KeyEventCompat -> android.support.v4.view.f:
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.l:
     android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
     boolean hasModifiers(android.view.KeyEvent,int) -> a
     boolean hasNoModifiers(android.view.KeyEvent) -> a
     void startTracking(android.view.KeyEvent) -> b
-android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.g:
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.m:
     int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
     int normalizeMetaState(int) -> a
     boolean metaStateHasModifiers(int,int) -> a
     boolean metaStateHasNoModifiers(int) -> b
     void startTracking(android.view.KeyEvent) -> a
-android.support.v4.view.KeyEventCompat$EclairKeyEventVersionImpl -> android.support.v4.view.h:
+android.support.v4.view.KeyEventCompat$EclairKeyEventVersionImpl -> android.support.v4.view.n:
     void startTracking(android.view.KeyEvent) -> a
-android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.i:
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.o:
     int normalizeMetaState(int) -> a
     boolean metaStateHasModifiers(int,int) -> a
     boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.j:
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.p:
     boolean metaStateHasModifiers(int,int) -> a
     boolean metaStateHasNoModifiers(int) -> b
     void startTracking(android.view.KeyEvent) -> a
-android.support.v4.view.KeyEventCompatEclair -> android.support.v4.view.k:
+android.support.v4.view.KeyEventCompatEclair -> android.support.v4.view.q:
     void startTracking(android.view.KeyEvent) -> a
-android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.l:
+android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.r:
     int normalizeMetaState(int) -> a
     boolean metaStateHasModifiers(int,int) -> a
     boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.MotionEventCompat -> android.support.v4.view.m:
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.s:
     android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
     int getActionMasked(android.view.MotionEvent) -> a
     int getActionIndex(android.view.MotionEvent) -> b
@@ -737,31 +751,31 @@ android.support.v4.view.MotionEventCompat -> android.support.v4.view.m:
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
     int getPointerCount(android.view.MotionEvent) -> c
-android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.n:
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.t:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
     int getPointerCount(android.view.MotionEvent) -> a
-android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.o:
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.u:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
     int getPointerCount(android.view.MotionEvent) -> a
-android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.p:
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.v:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
     int getPointerCount(android.view.MotionEvent) -> a
-android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.q:
+android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.w:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
     int getPointerCount(android.view.MotionEvent) -> a
-android.support.v4.view.PagerAdapter -> android.support.v4.view.r:
+android.support.v4.view.PagerAdapter -> android.support.v4.view.x:
     android.database.DataSetObservable mObservable -> a
     int getCount() -> a
     void startUpdate(android.view.ViewGroup) -> a
@@ -781,91 +795,103 @@ android.support.v4.view.PagerAdapter -> android.support.v4.view.r:
     void registerDataSetObserver(android.database.DataSetObserver) -> a
     void unregisterDataSetObserver(android.database.DataSetObserver) -> b
     float getPageWidth(int) -> a
-android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.s:
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.y:
     android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.t:
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.z:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.u:
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.aa:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.v:
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.ab:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.w:
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.ac:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.ViewCompat -> android.support.v4.view.x:
+android.support.v4.view.ViewCompat -> android.support.v4.view.ad:
     android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
     void postInvalidateOnAnimation(android.view.View) -> b
     void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setImportantForAccessibility(android.view.View,int) -> b
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
     int getLayerType(android.view.View) -> c
     void setLayerPaint(android.view.View,android.graphics.Paint) -> a
     int getLayoutDirection(android.view.View) -> d
     boolean isOpaque(android.view.View) -> e
-android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.y:
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.ae:
+    java.util.WeakHashMap mViewPropertyAnimatorCompatMap -> a
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
     void postInvalidateOnAnimation(android.view.View) -> b
     void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
     long getFrameTime() -> a
+    void setImportantForAccessibility(android.view.View,int) -> b
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
     int getLayerType(android.view.View) -> c
     void setLayerPaint(android.view.View,android.graphics.Paint) -> a
     int getLayoutDirection(android.view.View) -> d
     boolean isOpaque(android.view.View) -> e
-android.support.v4.view.ViewCompat$EclairMr1ViewCompatImpl -> android.support.v4.view.z:
+android.support.v4.view.ViewCompat$EclairMr1ViewCompatImpl -> android.support.v4.view.af:
     boolean isOpaque(android.view.View) -> e
-android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.aa:
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.ag:
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.ab:
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.ah:
     long getFrameTime() -> a
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
     int getLayerType(android.view.View) -> c
     void setLayerPaint(android.view.View,android.graphics.Paint) -> a
-android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.ac:
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.ai:
     boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.ad:
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.aj:
     void postInvalidateOnAnimation(android.view.View) -> b
     void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
-android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.ae:
+    void setImportantForAccessibility(android.view.View,int) -> b
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.ak:
     void setLayerPaint(android.view.View,android.graphics.Paint) -> a
     int getLayoutDirection(android.view.View) -> d
-android.support.v4.view.ViewCompat$KitKatViewCompatImpl -> android.support.v4.view.af:
-android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.ag:
+android.support.v4.view.ViewCompat$KitKatViewCompatImpl -> android.support.v4.view.al:
+    void setImportantForAccessibility(android.view.View,int) -> b
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.am:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
     void postInvalidateOnAnimation(android.view.View) -> b
     void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setImportantForAccessibility(android.view.View,int) -> b
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
     int getLayerType(android.view.View) -> c
     void setLayerPaint(android.view.View,android.graphics.Paint) -> a
     int getLayoutDirection(android.view.View) -> d
     boolean isOpaque(android.view.View) -> e
-android.support.v4.view.ViewCompatEclairMr1 -> android.support.v4.view.ah:
+android.support.v4.view.ViewCompatEclairMr1 -> android.support.v4.view.an:
     boolean isOpaque(android.view.View) -> a
-android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.ai:
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.ao:
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompatHC -> android.support.v4.view.aj:
+android.support.v4.view.ViewCompatHC -> android.support.v4.view.ap:
     long getFrameTime() -> a
     void setLayerType(android.view.View,int,android.graphics.Paint) -> a
     int getLayerType(android.view.View) -> a
-android.support.v4.view.ViewCompatICS -> android.support.v4.view.ak:
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.aq:
     boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewCompatJB -> android.support.v4.view.al:
+    void setAccessibilityDelegate(android.view.View,java.lang.Object) -> a
+android.support.v4.view.ViewCompatJB -> android.support.v4.view.ar:
     void postInvalidateOnAnimation(android.view.View) -> a
     void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
     void postOnAnimation(android.view.View,java.lang.Runnable) -> a
-android.support.v4.view.ViewCompatJellybeanMr1 -> android.support.v4.view.am:
+    void setImportantForAccessibility(android.view.View,int) -> a
+android.support.v4.view.ViewCompatJellybeanMr1 -> android.support.v4.view.as:
     void setLayerPaint(android.view.View,android.graphics.Paint) -> a
     int getLayoutDirection(android.view.View) -> a
 android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
@@ -1005,34 +1031,34 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
     int[] access$400() -> e
-android.support.v4.view.ViewPager$1 -> android.support.v4.view.an:
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.at:
     int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-android.support.v4.view.ViewPager$2 -> android.support.v4.view.ao:
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.au:
     float getInterpolation(float) -> getInterpolation
-android.support.v4.view.ViewPager$Decor -> android.support.v4.view.ap:
-android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.aq:
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.av:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.aw:
     java.lang.Object object -> a
     int position -> b
     boolean scrolling -> c
     float widthFactor -> d
     float offset -> e
-android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ar:
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ax:
     boolean isDecor -> a
     int gravity -> b
     float widthFactor -> c
     boolean needsMeasure -> d
     int position -> e
     int childIndex -> f
-android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.as:
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ay:
     void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
-android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.at:
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.az:
     void onPageScrolled(int,float,int) -> a
     void onPageSelected(int) -> a
     void onPageScrollStateChanged(int) -> b
-android.support.v4.view.ViewPager$PageTransformer -> android.support.v4.view.au:
+android.support.v4.view.ViewPager$PageTransformer -> android.support.v4.view.ba:
     void transformPage(android.view.View,float) -> a
-android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.av:
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.bb:
     android.support.v4.view.ViewPager this$0 -> a
     void onChanged() -> onChanged
     void onInvalidated() -> onInvalidated
@@ -1043,36 +1069,37 @@ android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPage
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
     java.lang.String toString() -> toString
-android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.aw:
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.bc:
     android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
     android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
     java.lang.Object[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
-android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.ax:
+android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.bd:
     int compare(android.view.View,android.view.View) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
 android.support.v4.widget.DrawerLayout -> android.support.v4.widget.DrawerLayout:
     int[] LAYOUT_ATTRS -> a
-    int mMinDrawerMargin -> b
-    int mScrimColor -> c
-    float mScrimOpacity -> d
-    android.graphics.Paint mScrimPaint -> e
-    android.support.v4.widget.ViewDragHelper mLeftDragger -> f
-    android.support.v4.widget.ViewDragHelper mRightDragger -> g
-    android.support.v4.widget.DrawerLayout$ViewDragCallback mLeftCallback -> h
-    android.support.v4.widget.DrawerLayout$ViewDragCallback mRightCallback -> i
-    int mDrawerState -> j
-    boolean mInLayout -> k
-    boolean mFirstLayout -> l
-    int mLockModeLeft -> m
-    int mLockModeRight -> n
-    boolean mDisallowInterceptRequested -> o
-    boolean mChildrenCanceledTouch -> p
-    android.support.v4.widget.DrawerLayout$DrawerListener mListener -> q
-    float mInitialMotionX -> r
-    float mInitialMotionY -> s
-    android.graphics.drawable.Drawable mShadowLeft -> t
-    android.graphics.drawable.Drawable mShadowRight -> u
+    android.support.v4.widget.DrawerLayout$ChildAccessibilityDelegate mChildAccessibilityDelegate -> b
+    int mMinDrawerMargin -> c
+    int mScrimColor -> d
+    float mScrimOpacity -> e
+    android.graphics.Paint mScrimPaint -> f
+    android.support.v4.widget.ViewDragHelper mLeftDragger -> g
+    android.support.v4.widget.ViewDragHelper mRightDragger -> h
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mLeftCallback -> i
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mRightCallback -> j
+    int mDrawerState -> k
+    boolean mInLayout -> l
+    boolean mFirstLayout -> m
+    int mLockModeLeft -> n
+    int mLockModeRight -> o
+    boolean mDisallowInterceptRequested -> p
+    boolean mChildrenCanceledTouch -> q
+    android.support.v4.widget.DrawerLayout$DrawerListener mListener -> r
+    float mInitialMotionX -> s
+    float mInitialMotionY -> t
+    android.graphics.drawable.Drawable mShadowLeft -> u
+    android.graphics.drawable.Drawable mShadowRight -> v
     void setScrimColor(int) -> setScrimColor
     void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener) -> setDrawerListener
     void setDrawerLockMode(int) -> setDrawerLockMode
@@ -1118,13 +1145,15 @@ android.support.v4.widget.DrawerLayout -> android.support.v4.widget.DrawerLayout
     boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
     int[] access$100() -> c
-android.support.v4.widget.DrawerLayout$DrawerListener -> android.support.v4.widget.a:
+android.support.v4.widget.DrawerLayout$ChildAccessibilityDelegate -> android.support.v4.widget.a:
+android.support.v4.widget.DrawerLayout$DrawerListener -> android.support.v4.widget.b:
     void onDrawerSlide(android.view.View,float) -> a
     void onDrawerOpened(android.view.View) -> a
     void onDrawerClosed(android.view.View) -> b
     void onDrawerStateChanged(int) -> a
-android.support.v4.widget.DrawerLayout$LayoutParams -> android.support.v4.widget.b:
+android.support.v4.widget.DrawerLayout$LayoutParams -> android.support.v4.widget.c:
     int gravity -> a
     float onScreen -> b
     boolean isPeeking -> c
@@ -1135,12 +1164,12 @@ android.support.v4.widget.DrawerLayout$SavedState -> android.support.v4.widget.D
     int lockModeRight -> c
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.widget.DrawerLayout$SavedState$1 -> android.support.v4.widget.c:
+android.support.v4.widget.DrawerLayout$SavedState$1 -> android.support.v4.widget.d:
     android.support.v4.widget.DrawerLayout$SavedState createFromParcel(android.os.Parcel) -> a
     android.support.v4.widget.DrawerLayout$SavedState[] newArray(int) -> a
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.widget.DrawerLayout$ViewDragCallback -> android.support.v4.widget.d:
+android.support.v4.widget.DrawerLayout$ViewDragCallback -> android.support.v4.widget.e:
     int mAbsGravity -> b
     android.support.v4.widget.ViewDragHelper mDragger -> c
     java.lang.Runnable mPeekRunnable -> d
@@ -1158,7 +1187,7 @@ android.support.v4.widget.DrawerLayout$ViewDragCallback -> android.support.v4.wi
     int getViewHorizontalDragRange(android.view.View) -> a
     int clampViewPositionHorizontal(android.view.View,int,int) -> a
     int clampViewPositionVertical(android.view.View,int,int) -> b
-android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.e:
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.f:
     java.lang.Object mEdgeEffect -> a
     android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
     void setSize(int,int) -> a
@@ -1167,37 +1196,37 @@ android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.e:
     boolean onPull(float) -> a
     boolean onRelease() -> c
     boolean draw(android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.widget.f:
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.widget.g:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.widget.g:
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.widget.h:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.widget.h:
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.widget.i:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.widget.i:
+android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.widget.j:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.ScrollerCompat -> android.support.v4.widget.j:
+android.support.v4.widget.ScrollerCompat -> android.support.v4.widget.k:
     java.lang.Object mScroller -> a
-    android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl IMPL -> b
+    android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl mImpl -> b
     boolean isFinished() -> a
     int getCurrX() -> b
     int getCurrY() -> c
@@ -1206,35 +1235,7 @@ android.support.v4.widget.ScrollerCompat -> android.support.v4.widget.j:
     boolean computeScrollOffset() -> f
     void startScroll(int,int,int,int,int) -> a
     void abortAnimation() -> g
-android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl -> android.support.v4.widget.k:
-    boolean isFinished(java.lang.Object) -> a
-    int getCurrX(java.lang.Object) -> b
-    int getCurrY(java.lang.Object) -> c
-    boolean computeScrollOffset(java.lang.Object) -> d
-    void startScroll(java.lang.Object,int,int,int,int,int) -> a
-    void abortAnimation(java.lang.Object) -> e
-    int getFinalX(java.lang.Object) -> f
-    int getFinalY(java.lang.Object) -> g
-android.support.v4.widget.ScrollerCompat$ScrollerCompatImplBase -> android.support.v4.widget.l:
-    boolean isFinished(java.lang.Object) -> a
-    int getCurrX(java.lang.Object) -> b
-    int getCurrY(java.lang.Object) -> c
-    boolean computeScrollOffset(java.lang.Object) -> d
-    void startScroll(java.lang.Object,int,int,int,int,int) -> a
-    void abortAnimation(java.lang.Object) -> e
-    int getFinalX(java.lang.Object) -> f
-    int getFinalY(java.lang.Object) -> g
-android.support.v4.widget.ScrollerCompat$ScrollerCompatImplGingerbread -> android.support.v4.widget.m:
-    boolean isFinished(java.lang.Object) -> a
-    int getCurrX(java.lang.Object) -> b
-    int getCurrY(java.lang.Object) -> c
-    boolean computeScrollOffset(java.lang.Object) -> d
-    void startScroll(java.lang.Object,int,int,int,int,int) -> a
-    void abortAnimation(java.lang.Object) -> e
-    int getFinalX(java.lang.Object) -> f
-    int getFinalY(java.lang.Object) -> g
-android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs -> android.support.v4.widget.n:
-android.support.v4.widget.ScrollerCompatGingerbread -> android.support.v4.widget.o:
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl -> android.support.v4.widget.l:
     boolean isFinished(java.lang.Object) -> a
     int getCurrX(java.lang.Object) -> b
     int getCurrY(java.lang.Object) -> c
@@ -1246,23 +1247,24 @@ android.support.v4.widget.ScrollerCompatGingerbread -> android.support.v4.widget
 android.support.v4.widget.SlidingPaneLayout -> android.support.v4.widget.SlidingPaneLayout:
     int mSliderFadeColor -> b
     int mCoveredFadeColor -> c
-    android.graphics.drawable.Drawable mShadowDrawable -> d
-    int mOverhangSize -> e
-    boolean mCanSlide -> f
-    android.view.View mSlideableView -> g
-    float mSlideOffset -> h
-    float mParallaxOffset -> i
-    int mSlideRange -> j
-    boolean mIsUnableToDrag -> k
-    int mParallaxBy -> l
-    float mInitialMotionX -> m
-    float mInitialMotionY -> n
-    android.support.v4.widget.SlidingPaneLayout$PanelSlideListener mPanelSlideListener -> o
-    android.support.v4.widget.ViewDragHelper mDragHelper -> p
-    boolean mPreservedOpenState -> q
-    boolean mFirstLayout -> r
-    android.graphics.Rect mTmpRect -> s
-    java.util.ArrayList mPostedRunnables -> t
+    android.graphics.drawable.Drawable mShadowDrawableLeft -> d
+    android.graphics.drawable.Drawable mShadowDrawableRight -> e
+    int mOverhangSize -> f
+    boolean mCanSlide -> g
+    android.view.View mSlideableView -> h
+    float mSlideOffset -> i
+    float mParallaxOffset -> j
+    int mSlideRange -> k
+    boolean mIsUnableToDrag -> l
+    int mParallaxBy -> m
+    float mInitialMotionX -> n
+    float mInitialMotionY -> o
+    android.support.v4.widget.SlidingPaneLayout$PanelSlideListener mPanelSlideListener -> p
+    android.support.v4.widget.ViewDragHelper mDragHelper -> q
+    boolean mPreservedOpenState -> r
+    boolean mFirstLayout -> s
+    android.graphics.Rect mTmpRect -> t
+    java.util.ArrayList mPostedRunnables -> u
     android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl IMPL -> a
     void setParallaxDistance(int) -> setParallaxDistance
     int getParallaxDistance() -> getParallaxDistance
@@ -1294,7 +1296,11 @@ android.support.v4.widget.SlidingPaneLayout -> android.support.v4.widget.Sliding
     boolean smoothSlideTo(float,int) -> a
     void computeScroll() -> computeScroll
     void setShadowDrawable(android.graphics.drawable.Drawable) -> setShadowDrawable
+    void setShadowDrawableLeft(android.graphics.drawable.Drawable) -> setShadowDrawableLeft
+    void setShadowDrawableRight(android.graphics.drawable.Drawable) -> setShadowDrawableRight
     void setShadowResource(int) -> setShadowResource
+    void setShadowResourceLeft(int) -> setShadowResourceLeft
+    void setShadowResourceRight(int) -> setShadowResourceRight
     void draw(android.graphics.Canvas) -> draw
     void parallaxOtherViews(float) -> a
     boolean isDimmed(android.view.View) -> b
@@ -1304,40 +1310,41 @@ android.support.v4.widget.SlidingPaneLayout -> android.support.v4.widget.Sliding
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
-    void access$900(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
-    java.util.ArrayList access$1000(android.support.v4.widget.SlidingPaneLayout) -> a
-android.support.v4.widget.SlidingPaneLayout$1 -> android.support.v4.widget.p:
-android.support.v4.widget.SlidingPaneLayout$DisableLayerRunnable -> android.support.v4.widget.q:
+    boolean isLayoutRtlSupport() -> f
+    void access$1000(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+    java.util.ArrayList access$1100(android.support.v4.widget.SlidingPaneLayout) -> a
+android.support.v4.widget.SlidingPaneLayout$1 -> android.support.v4.widget.m:
+android.support.v4.widget.SlidingPaneLayout$DisableLayerRunnable -> android.support.v4.widget.n:
     android.view.View mChildView -> a
     android.support.v4.widget.SlidingPaneLayout this$0 -> b
     void run() -> run
-android.support.v4.widget.SlidingPaneLayout$LayoutParams -> android.support.v4.widget.r:
+android.support.v4.widget.SlidingPaneLayout$LayoutParams -> android.support.v4.widget.o:
     int[] ATTRS -> e
     float weight -> a
     boolean slideable -> b
     boolean dimWhenOffset -> c
     android.graphics.Paint dimPaint -> d
-android.support.v4.widget.SlidingPaneLayout$PanelSlideListener -> android.support.v4.widget.s:
+android.support.v4.widget.SlidingPaneLayout$PanelSlideListener -> android.support.v4.widget.p:
 android.support.v4.widget.SlidingPaneLayout$SavedState -> android.support.v4.widget.SlidingPaneLayout$SavedState:
     boolean isOpen -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.widget.SlidingPaneLayout$SavedState$1 -> android.support.v4.widget.t:
+android.support.v4.widget.SlidingPaneLayout$SavedState$1 -> android.support.v4.widget.q:
     android.support.v4.widget.SlidingPaneLayout$SavedState createFromParcel(android.os.Parcel) -> a
     android.support.v4.widget.SlidingPaneLayout$SavedState[] newArray(int) -> a
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl -> android.support.v4.widget.u:
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl -> android.support.v4.widget.r:
     void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
-android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplBase -> android.support.v4.widget.v:
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplBase -> android.support.v4.widget.s:
     void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
-android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJB -> android.support.v4.widget.w:
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJB -> android.support.v4.widget.t:
     java.lang.reflect.Method mGetDisplayList -> a
     java.lang.reflect.Field mRecreateDisplayList -> b
     void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
-android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJBMR1 -> android.support.v4.widget.x:
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJBMR1 -> android.support.v4.widget.u:
     void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
-android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.y:
+android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.v:
     int mDragState -> a
     int mTouchSlop -> b
     int mActivePointerId -> c
@@ -1362,6 +1369,7 @@ android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.y:
     android.view.animation.Interpolator sInterpolator -> v
     java.lang.Runnable mSetIdleRunnable -> w
     int getViewDragState() -> a
+    void setEdgeTrackingEnabled(int) -> a
     int getEdgeSize() -> b
     void captureChildView(android.view.View,int) -> a
     android.view.View getCapturedView() -> c
@@ -1379,19 +1387,19 @@ android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.y:
     boolean continueSettling(boolean) -> a
     void dispatchViewReleased(float,float) -> a
     void clearMotionHistory() -> g
-    void clearMotionHistory(int) -> d
-    void ensureMotionHistorySizeForId(int) -> e
+    void clearMotionHistory(int) -> e
+    void ensureMotionHistorySizeForId(int) -> f
     void saveInitialMotion(float,float,int) -> a
     void saveLastMotion(android.view.MotionEvent) -> c
-    boolean isPointerDown(int) -> a
-    void setDragState(int) -> b
+    boolean isPointerDown(int) -> b
+    void setDragState(int) -> c
     boolean tryCaptureViewForDrag(android.view.View,int) -> b
     boolean shouldInterceptTouchEvent(android.view.MotionEvent) -> a
     void processTouchEvent(android.view.MotionEvent) -> b
     void reportNewEdgeDrags(float,float,int) -> b
     boolean checkNewEdgeDrag(float,float,int,int) -> a
     boolean checkTouchSlop(android.view.View,float,float) -> a
-    boolean checkTouchSlop(int) -> c
+    boolean checkTouchSlop(int) -> d
     boolean checkTouchSlop(int,int) -> b
     void releaseViewForPointerUp() -> h
     void dragTo(int,int,int,int) -> b
@@ -1399,9 +1407,9 @@ android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.y:
     boolean isViewUnder(android.view.View,int,int) -> b
     android.view.View findTopChildUnder(int,int) -> d
     int getEdgesTouched(int,int) -> e
-android.support.v4.widget.ViewDragHelper$1 -> android.support.v4.widget.z:
+android.support.v4.widget.ViewDragHelper$1 -> android.support.v4.widget.w:
     float getInterpolation(float) -> getInterpolation
-android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.aa:
+android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.x:
     void onViewDragStateChanged(int) -> a
     void onViewPositionChanged(android.view.View,int,int,int,int) -> a
     void onViewCaptured(android.view.View,int) -> b
@@ -1415,43 +1423,839 @@ android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.a
     boolean tryCaptureView(android.view.View,int) -> a
     int clampViewPositionHorizontal(android.view.View,int,int) -> a
     int clampViewPositionVertical(android.view.View,int,int) -> b
+com.github.mikephil.charting.charts.BarChart -> com.a.a.a.a.a:
+    float mSkew -> ap
+    float mDepth -> aq
+    boolean m3DEnabled -> ar
+    boolean mDrawHighlightArrow -> as
+    boolean mDrawValueAboveBar -> at
+    boolean mDrawValuesForWholeStack -> au
+    boolean mDrawBarShadow -> a
+    android.graphics.RectF mBarShadow -> b
+    android.graphics.RectF mBarRect -> c
+    void init() -> a
+    void calcMinMax(boolean) -> a
+    void drawHighlights() -> b
+    void drawData() -> c
+    void prepareBar(float,float,float) -> a
+    void drawXLabels(float) -> a
+    void drawVerticalGrid() -> d
+    void drawValues() -> e
+    float getPositiveYOffset(boolean) -> b
+    float getNegativeYOffset(boolean) -> c
+    void drawValue(float,float,float) -> b
+    com.github.mikephil.charting.utils.Highlight getHighlightByTouchPoint(float,float) -> a
+    void setSkew(float) -> setSkew
+    float getSkew() -> getSkew
+    void setDepth(float) -> setDepth
+    float getDepth() -> getDepth
+    void set3DEnabled(boolean) -> set3DEnabled
+    void setDrawHighlightArrow(boolean) -> setDrawHighlightArrow
+    void setDrawValueAboveBar(boolean) -> setDrawValueAboveBar
+    void setDrawValuesForWholeStack(boolean) -> setDrawValuesForWholeStack
+    void setDrawBarShadow(boolean) -> setDrawBarShadow
+    void drawAdditional() -> f
+com.github.mikephil.charting.charts.BarLineChartBase -> com.a.a.a.a.b:
+    int mMaxVisibleCount -> d
+    float mGridWidth -> e
+    boolean mPinchZoomEnabled -> f
+    boolean mDoubleTapToZoomEnabled -> g
+    boolean mDragEnabled -> a
+    boolean mScaleEnabled -> b
+    boolean mFixedYValues -> h
+    boolean mStartAtZero -> i
+    boolean mFilterData -> j
+    android.graphics.Paint mGridPaint -> k
+    android.graphics.Paint mGridBackgroundPaint -> l
+    android.graphics.Paint mBorderPaint -> m
+    boolean mHighLightIndicatorEnabled -> n
+    boolean mDrawVerticalGrid -> o
+    boolean mDrawHorizontalGrid -> p
+    boolean mDrawYLabels -> q
+    boolean mDrawXLabels -> r
+    boolean mDrawBorder -> s
+    boolean mDrawGridBackground -> t
+    com.github.mikephil.charting.interfaces.OnDrawListener mDrawListener -> u
+    com.github.mikephil.charting.utils.YLabels mYLabels -> v
+    com.github.mikephil.charting.utils.XLabels mXLabels -> w
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[] mBorderPositions -> c
+    android.view.View$OnTouchListener mListener -> x
+    int[] $SWITCH_TABLE$com$github$mikephil$charting$charts$BarLineChartBase$BorderPosition -> ap
+    void init() -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void prepare() -> g
+    void prepareMatrix() -> I
+    void notifyDataSetChanged() -> h
+    void calculateOffsets() -> i
+    void calcModulus() -> j
+    void calcMinMax(boolean) -> a
+    void prepareXLabels() -> k
+    void prepareYLabels() -> l
+    void drawXLabels() -> J
+    void drawXLabels(float) -> a
+    void drawYLabels() -> K
+    void drawYLabels(float,float[],float) -> a
+    void drawBorder() -> m
+    void drawGridBackground() -> n
+    void drawHorizontalGrid() -> o
+    void drawVerticalGrid() -> d
+    void drawLimitLines() -> L
+    boolean isOffContentRight(float) -> b
+    boolean isOffContentLeft(float) -> c
+    boolean isOffContentTop(float) -> d
+    boolean isOffContentBottom(float) -> e
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void zoom(float,float,float,float) -> a
+    void fitScreen() -> p
+    void setInvertYAxisEnabled(boolean) -> setInvertYAxisEnabled
+    boolean isInvertYAxisEnabled() -> q
+    void setOnTouchListener(android.view.View$OnTouchListener) -> setOnTouchListener
+    void setOnDrawListener(com.github.mikephil.charting.interfaces.OnDrawListener) -> setOnDrawListener
+    com.github.mikephil.charting.interfaces.OnDrawListener getDrawListener() -> getDrawListener
+    android.graphics.PointF getPosition(com.github.mikephil.charting.data.Entry) -> a
+    void setGridColor(int) -> setGridColor
+    void setMaxVisibleValueCount(int) -> setMaxVisibleValueCount
+    void setHighlightIndicatorEnabled(boolean) -> setHighlightIndicatorEnabled
+    void setStartAtZero(boolean) -> setStartAtZero
+    void setGridWidth(float) -> setGridWidth
+    void setDragEnabled(boolean) -> setDragEnabled
+    boolean isDragEnabled() -> r
+    void setScaleEnabled(boolean) -> setScaleEnabled
+    boolean isScaleEnabled() -> s
+    void setDoubleTapToZoomEnabled(boolean) -> setDoubleTapToZoomEnabled
+    boolean isDoubleTapToZoomEnabled() -> t
+    void setDrawVerticalGrid(boolean) -> setDrawVerticalGrid
+    void setDrawHorizontalGrid(boolean) -> setDrawHorizontalGrid
+    void setDrawBorder(boolean) -> setDrawBorder
+    void setDrawGridBackground(boolean) -> setDrawGridBackground
+    void setDrawXLabels(boolean) -> setDrawXLabels
+    void setDrawYLabels(boolean) -> setDrawYLabels
+    void setBorderPositions(com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[]) -> setBorderPositions
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[] getBorderPositions() -> getBorderPositions
+    void setBorderWidth(int) -> setBorderWidth
+    void setBorderColor(int) -> setBorderColor
+    com.github.mikephil.charting.utils.Highlight getHighlightByTouchPoint(float,float) -> a
+    com.github.mikephil.charting.utils.PointD getValuesByTouchPoint(float,float) -> b
+    float getScaleX() -> getScaleX
+    float getScaleY() -> getScaleY
+    boolean isFullyZoomedOut() -> u
+    com.github.mikephil.charting.utils.YLabels getYLabels() -> getYLabels
+    com.github.mikephil.charting.utils.XLabels getXLabels() -> getXLabels
+    void setPinchZoom(boolean) -> setPinchZoom
+    boolean isPinchZoomEnabled() -> v
+    void setDragOffsetX(float) -> setDragOffsetX
+    void setDragOffsetY(float) -> setDragOffsetY
+    boolean hasNoDragOffset() -> w
+    com.github.mikephil.charting.data.BarLineScatterCandleData getFilteredData() -> getFilteredData
+    int[] $SWITCH_TABLE$com$github$mikephil$charting$charts$BarLineChartBase$BorderPosition() -> x
+com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition -> com.a.a.a.a.c:
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition LEFT -> a
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition RIGHT -> b
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition TOP -> c
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition BOTTOM -> d
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[] ENUM$VALUES -> e
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[] values() -> values
+    com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition valueOf(java.lang.String) -> valueOf
+com.github.mikephil.charting.charts.CandleStickChart -> com.a.a.a.a.d:
+    void calcMinMax(boolean) -> a
+    void drawData() -> c
+    void transformBody(float[],com.github.mikephil.charting.data.CandleEntry,float) -> a
+    void transformShadow(float[],com.github.mikephil.charting.data.CandleEntry) -> a
+    void drawValues() -> e
+    void drawAdditional() -> f
+    void drawHighlights() -> b
+com.github.mikephil.charting.charts.Chart -> com.a.a.a.a.e:
+    boolean mLogEnabled -> y
+    java.lang.String mUnit -> z
+    com.github.mikephil.charting.utils.ValueFormatter mValueFormatter -> A
+    boolean mUseDefaultFormatter -> a
+    float mOffsetLeft -> B
+    float mOffsetTop -> C
+    float mOffsetRight -> D
+    float mOffsetBottom -> E
+    com.github.mikephil.charting.data.ChartData mData -> F
+    android.graphics.Canvas mDrawCanvas -> G
+    float mYChartMin -> H
+    float mYChartMax -> I
+    android.graphics.Paint mXLabelPaint -> J
+    android.graphics.Paint mYLabelPaint -> K
+    android.graphics.Paint mHighlightPaint -> L
+    android.graphics.Paint mDescPaint -> M
+    android.graphics.Paint mInfoPaint -> N
+    android.graphics.Paint mValuePaint -> O
+    android.graphics.Paint mRenderPaint -> P
+    android.graphics.Paint mLegendLabelPaint -> Q
+    android.graphics.Paint mLegendFormPaint -> R
+    android.graphics.Paint mLimitLinePaint -> S
+    java.lang.String mDescription -> T
+    boolean mDataNotSet -> U
+    boolean mDrawUnitInChart -> V
+    float mDeltaY -> W
+    float mDeltaX -> Z
+    boolean mTouchEnabled -> aa
+    boolean mDrawYValues -> ab
+    boolean mHighlightEnabled -> ac
+    boolean mDrawLegend -> ad
+    android.graphics.RectF mContentRect -> ae
+    com.github.mikephil.charting.utils.Legend mLegend -> af
+    com.github.mikephil.charting.renderer.Transformer mTrans -> ag
+    com.github.mikephil.charting.interfaces.OnChartValueSelectedListener mSelectionListener -> ah
+    java.lang.String mNoDataText -> b
+    com.github.mikephil.charting.interfaces.OnChartGestureListener mGestureListener -> c
+    java.lang.String mNoDataTextDescription -> d
+    boolean mOffsetsCalculated -> e
+    android.graphics.Bitmap mDrawBitmap -> ai
+    android.graphics.Paint mDrawPaint -> aj
+    com.github.mikephil.charting.utils.Highlight[] mIndicesToHightlight -> ak
+    boolean mDrawMarkerViews -> al
+    com.github.mikephil.charting.utils.MarkerView mMarkerView -> am
+    float mPhaseY -> an
+    float mPhaseX -> ao
+    int[] $SWITCH_TABLE$com$github$mikephil$charting$utils$Legend$LegendPosition -> f
+    void init() -> a
+    void setData(com.github.mikephil.charting.data.ChartData) -> setData
+    void prepare() -> g
+    void calculateOffsets() -> i
+    void calcMinMax(boolean) -> a
+    void calcFormats() -> y
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void prepareContentRect() -> z
+    void prepareLegend() -> A
+    void drawLegend() -> B
+    void drawDescription() -> C
+    void drawValues() -> e
+    void drawData() -> c
+    void drawAdditional() -> f
+    void drawHighlights() -> b
+    boolean valuesToHighlight() -> D
+    void highlightValues(com.github.mikephil.charting.utils.Highlight[]) -> a
+    void highlightTouch(com.github.mikephil.charting.utils.Highlight) -> a
+    void drawMarkers() -> E
+    float[] getMarkerPosition(com.github.mikephil.charting.data.Entry,int) -> a
+    float getPhaseY() -> getPhaseY
+    void setPhaseY(float) -> setPhaseY
+    float getPhaseX() -> getPhaseX
+    void setPhaseX(float) -> setPhaseX
+    android.graphics.Canvas getCanvas() -> getCanvas
+    void setOnChartValueSelectedListener(com.github.mikephil.charting.interfaces.OnChartValueSelectedListener) -> setOnChartValueSelectedListener
+    void setOnChartGestureListener(com.github.mikephil.charting.interfaces.OnChartGestureListener) -> setOnChartGestureListener
+    com.github.mikephil.charting.interfaces.OnChartGestureListener getOnChartGestureListener() -> getOnChartGestureListener
+    void setHighlightEnabled(boolean) -> setHighlightEnabled
+    float getYValueSum() -> getYValueSum
+    float getYMax() -> getYMax
+    float getYChartMin() -> getYChartMin
+    float getYChartMax() -> getYChartMax
+    float getYMin() -> getYMin
+    float getDeltaX() -> getDeltaX
+    float getDeltaY() -> getDeltaY
+    float getAverage() -> getAverage
+    int getValueCount() -> getValueCount
+    android.graphics.PointF getCenter() -> getCenter
+    android.graphics.PointF getCenterOffsets() -> getCenterOffsets
+    void setDescriptionTextSize(float) -> setDescriptionTextSize
+    void setLogEnabled(boolean) -> setLogEnabled
+    void setDescription(java.lang.String) -> setDescription
+    void setNoDataText(java.lang.String) -> setNoDataText
+    void setNoDataTextDescription(java.lang.String) -> setNoDataTextDescription
+    float getOffsetLeft() -> getOffsetLeft
+    float getOffsetBottom() -> getOffsetBottom
+    float getOffsetRight() -> getOffsetRight
+    float getOffsetTop() -> getOffsetTop
+    void setTouchEnabled(boolean) -> setTouchEnabled
+    void setDrawYValues(boolean) -> setDrawYValues
+    void setMarkerView(com.github.mikephil.charting.utils.MarkerView) -> setMarkerView
+    com.github.mikephil.charting.utils.MarkerView getMarkerView() -> getMarkerView
+    void setDrawUnitsInChart(boolean) -> setDrawUnitsInChart
+    void setUnit(java.lang.String) -> setUnit
+    java.lang.String getUnit() -> getUnit
+    void setDrawLegend(boolean) -> setDrawLegend
+    com.github.mikephil.charting.utils.Legend getLegend() -> getLegend
+    android.graphics.RectF getContentRect() -> getContentRect
+    com.github.mikephil.charting.renderer.Transformer getTransformer() -> getTransformer
+    void disableScroll() -> F
+    void enableScroll() -> G
+    void setDrawMarkerViews(boolean) -> setDrawMarkerViews
+    void setValueFormatter(com.github.mikephil.charting.utils.ValueFormatter) -> setValueFormatter
+    com.github.mikephil.charting.utils.ValueFormatter getValueFormatter() -> getValueFormatter
+    void setValueTextColor(int) -> setValueTextColor
+    void setValueTextSize(float) -> setValueTextSize
+    com.github.mikephil.charting.data.Entry getEntryByDataSetIndex(int,int) -> a
+    java.util.ArrayList getYValsAtIndex(int) -> a
+    com.github.mikephil.charting.data.ChartData getData() -> getData
+    void setValueTypeface(android.graphics.Typeface) -> setValueTypeface
+    void setDescriptionTypeface(android.graphics.Typeface) -> setDescriptionTypeface
+    android.graphics.Bitmap getChartBitmap() -> getChartBitmap
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    android.view.View getChartView() -> getChartView
+    int[] $SWITCH_TABLE$com$github$mikephil$charting$utils$Legend$LegendPosition() -> H
+com.github.mikephil.charting.charts.Chart$DefaultValueFormatter -> com.a.a.a.a.f:
+    java.text.DecimalFormat mFormat -> b
+    com.github.mikephil.charting.charts.Chart this$0 -> a
+    java.lang.String getFormattedValue(float) -> a
+com.github.mikephil.charting.charts.LineChart -> com.a.a.a.a.g:
+    float mHighlightWidth -> a
+    android.graphics.Paint mCirclePaintInner -> b
+    com.github.mikephil.charting.utils.FillFormatter mFillFormatter -> c
+    void init() -> a
+    void calcMinMax(boolean) -> a
+    void drawHighlights() -> b
+    void drawData() -> c
+    void drawCubic(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList) -> a
+    void drawCubicFill(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList,android.graphics.Path) -> a
+    void drawLinear(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList) -> b
+    void drawLinearFill(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList) -> c
+    android.graphics.Path generateFilledPath(java.util.ArrayList,float) -> a
+    android.graphics.Path generateLinePath(java.util.ArrayList) -> a
+    void drawValues() -> e
+    void drawAdditional() -> f
+    void setHighlightLineWidth(float) -> setHighlightLineWidth
+    float getHighlightLineWidth() -> getHighlightLineWidth
+    void setFillFormatter(com.github.mikephil.charting.utils.FillFormatter) -> setFillFormatter
+com.github.mikephil.charting.charts.LineChart$CPoint -> com.a.a.a.a.h:
+    float x -> a
+    float y -> b
+    float dx -> c
+    float dy -> d
+    com.github.mikephil.charting.charts.LineChart this$0 -> e
+com.github.mikephil.charting.charts.LineChart$DefaultFillFormatter -> com.a.a.a.a.i:
+    com.github.mikephil.charting.charts.LineChart this$0 -> a
+    float getFillLinePosition(com.github.mikephil.charting.data.LineDataSet,com.github.mikephil.charting.data.LineData,float,float) -> a
+com.github.mikephil.charting.charts.PieRadarChartBase -> com.a.a.a.a.j:
+    float mRotationAngle -> a
+    boolean mRotateEnabled -> b
+    android.view.View$OnTouchListener mListener -> c
+    float mStartAngle -> d
+    void init() -> a
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void prepare() -> g
+    void calculateOffsets() -> i
+    void drawAdditional() -> f
+    void applyCalculatedOffsets() -> d
+    void setStartAngle(float,float) -> a
+    void updateRotation(float,float) -> b
+    float getAngleForPoint(float,float) -> c
+    android.graphics.PointF getPosition(android.graphics.PointF,float,float) -> a
+    float distanceToCenter(float,float) -> d
+    int getIndexForAngle(float) -> a
+    void setRotationAngle(float) -> setRotationAngle
+    float getRotationAngle() -> getRotationAngle
+    void setRotationEnabled(boolean) -> setRotationEnabled
+    boolean isRotationEnabled() -> h
+    float getDiameter() -> getDiameter
+    float getRadius() -> getRadius
+    float getRequiredBottomOffset() -> getRequiredBottomOffset
+    float getRequiredBaseOffset() -> getRequiredBaseOffset
+    float getFullLegendWidth() -> getFullLegendWidth
+    void setOnTouchListener(android.view.View$OnTouchListener) -> setOnTouchListener
+com.github.mikephil.charting.charts.RadarChart -> com.a.a.a.a.k:
+    android.graphics.Paint mWebPaint -> b
+    float mWebLineWidth -> c
+    float mInnerWebLineWidth -> d
+    int mWebColor -> e
+    int mWebColorInner -> f
+    int mWebAlpha -> g
+    boolean mDrawYLabels -> h
+    boolean mDrawXLabels -> i
+    boolean mDrawWeb -> j
+    com.github.mikephil.charting.utils.YLabels mYLabels -> k
+    com.github.mikephil.charting.utils.XLabels mXLabels -> l
+    void init() -> a
+    void calcMinMax(boolean) -> a
+    void prepare() -> g
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void drawWeb() -> j
+    void drawData() -> c
+    void drawLimitLines() -> k
+    void prepareYLabels() -> l
+    void drawYLabels() -> m
+    void prepareXLabels() -> n
+    void drawXLabels() -> o
+    void drawValues() -> e
+    void drawHighlights() -> b
+    float getFactor() -> getFactor
+    float getSliceAngle() -> getSliceAngle
+    int getIndexForAngle(float) -> a
+    com.github.mikephil.charting.utils.YLabels getYLabels() -> getYLabels
+    com.github.mikephil.charting.utils.XLabels getXLabels() -> getXLabels
+    void setWebLineWidth(float) -> setWebLineWidth
+    void setWebLineWidthInner(float) -> setWebLineWidthInner
+    void setWebAlpha(int) -> setWebAlpha
+    void setWebColor(int) -> setWebColor
+    void setWebColorInner(int) -> setWebColorInner
+    void setDrawWeb(boolean) -> setDrawWeb
+    void setDrawYLabels(boolean) -> setDrawYLabels
+    void setDrawXLabels(boolean) -> setDrawXLabels
+    float getRequiredBottomOffset() -> getRequiredBottomOffset
+    float getRequiredBaseOffset() -> getRequiredBaseOffset
+    float getRadius() -> getRadius
+com.github.mikephil.charting.data.BarData -> com.a.a.a.b.a:
+    float mGroupSpace -> e
+    float getGroupSpace() -> a
+com.github.mikephil.charting.data.BarDataSet -> com.a.a.a.b.b:
+    float mBarSpace -> f
+    int mStackSize -> g
+    int mBarShadowColor -> h
+    int mHighLightAlpha -> i
+    java.lang.String[] mStackLabels -> j
+    int getStackSize() -> a_
+    float getBarSpace() -> b
+    int getBarShadowColor() -> c
+    int getHighLightAlpha() -> d
+    java.lang.String[] getStackLabels() -> e
+com.github.mikephil.charting.data.BarEntry -> com.a.a.a.b.c:
+    float[] mVals -> a
+    float[] getVals() -> b_
+com.github.mikephil.charting.data.BarLineScatterCandleData -> com.a.a.a.b.d:
+com.github.mikephil.charting.data.BarLineScatterCandleRadarData -> com.a.a.a.b.e:
+    java.util.ArrayList mLimitLines -> e
+    java.util.ArrayList getLimitLines() -> b
+com.github.mikephil.charting.data.BarLineScatterCandleRadarDataSet -> com.a.a.a.b.f:
+    int mHighLightColor -> a
+    void setHighLightColor(int) -> a
+    int getHighLightColor() -> f
+com.github.mikephil.charting.data.CandleData -> com.a.a.a.b.g:
+com.github.mikephil.charting.data.CandleDataSet -> com.a.a.a.b.h:
+    float mShadowWidth -> f
+    float mBodySpace -> g
+    void calcMinMax() -> a
+    float getBodySpace() -> b
+    float getShadowWidth() -> c
+com.github.mikephil.charting.data.CandleEntry -> com.a.a.a.b.i:
+    float mShadowHigh -> a
+    float mShadowLow -> b
+    float mClose -> c
+    float mOpen -> d
+    float getVal() -> a
+    float getHigh() -> b
+    float getLow() -> c
+    float getClose() -> d
+    float getOpen() -> e
+com.github.mikephil.charting.data.ChartData -> com.a.a.a.b.j:
+    float mYMax -> a
+    float mYMin -> b
+    float mYValueSum -> e
+    int mYValCount -> f
+    float mXValAverageLength -> g
+    java.util.ArrayList mXVals -> c
+    java.util.ArrayList mDataSets -> d
+    java.util.ArrayList arrayToArrayList(java.lang.String[]) -> a
+    void init() -> a
+    void calcXValAverageLength() -> b
+    void isLegal(java.util.ArrayList) -> d
+    void calcMinMax(java.util.ArrayList) -> a
+    void calcYValueSum(java.util.ArrayList) -> b
+    void calcYValueCount(java.util.ArrayList) -> c
+    int getDataSetCount() -> c
+    float getYMin() -> d
+    float getYMax() -> e
+    float getXValAverageLength() -> f
+    float getYValueSum() -> g
+    int getYValCount() -> h
+    java.util.ArrayList getXVals() -> i
+    java.util.ArrayList getDataSets() -> j
+    int getXValCount() -> k
+    com.github.mikephil.charting.data.DataSet getDataSetByIndex(int) -> a
+    void addDataSet(com.github.mikephil.charting.data.DataSet) -> a
+    boolean removeDataSet(com.github.mikephil.charting.data.DataSet) -> b
+    com.github.mikephil.charting.data.DataSet getDataSetForEntry(com.github.mikephil.charting.data.Entry) -> a
+com.github.mikephil.charting.data.DataSet -> com.a.a.a.b.k:
+    java.util.ArrayList mColors -> b
+    java.util.ArrayList mYVals -> c
+    float mYMax -> d
+    float mYMin -> e
+    float mYValueSum -> a
+    java.lang.String mLabel -> f
+    void calcMinMax() -> a
+    void calcYValueSum() -> b
+    int getEntryCount() -> g
+    float getYValForXIndex(int) -> b
+    com.github.mikephil.charting.data.Entry getEntryForXIndex(int) -> c
+    java.util.ArrayList getYVals() -> h
+    float getYValueSum() -> i
+    float getYMin() -> j
+    float getYMax() -> k
+    java.lang.String toString() -> toString
+    java.lang.String toSimpleString() -> l
+    java.lang.String getLabel() -> m
+    void setColor(int) -> d
+    java.util.ArrayList getColors() -> n
+    int getColor(int) -> e
+    int getColor() -> o
+    void resetColors() -> p
+    int getEntryPosition(com.github.mikephil.charting.data.Entry) -> a
+com.github.mikephil.charting.data.Entry -> com.a.a.a.b.l:
+    float mVal -> a
+    int mXIndex -> b
+    java.lang.Object mData -> c
+    int getXIndex() -> f
+    float getVal() -> a
+    boolean equalTo(com.github.mikephil.charting.data.Entry) -> a
+    java.lang.String toString() -> toString
+com.github.mikephil.charting.data.LineData -> com.a.a.a.b.m:
+com.github.mikephil.charting.data.LineDataSet -> com.a.a.a.b.n:
+    java.util.ArrayList mCircleColors -> f
+    float mCircleSize -> g
+    float mCubicIntensity -> h
+    android.graphics.DashPathEffect mDashPathEffect -> i
+    boolean mDrawCircles -> j
+    boolean mDrawCubic -> k
+    float getCubicIntensity() -> b
+    void setCircleSize(float) -> a
+    float getCircleSize() -> c
+    android.graphics.DashPathEffect getDashPathEffect() -> d
+    boolean isDrawCirclesEnabled() -> e
+    void setDrawCubic(boolean) -> a
+    boolean isDrawCubicEnabled() -> q
+    int getCircleColor(int) -> f
+    void setCircleColor(int) -> g
+    void resetCircleColors() -> r
+com.github.mikephil.charting.data.LineRadarDataSet -> com.a.a.a.b.o:
+    int mFillColor -> f
+    int mFillAlpha -> g
+    float mLineWidth -> h
+    boolean mDrawFilled -> i
+    int getFillColor() -> s
+    int getFillAlpha() -> t
+    void setLineWidth(float) -> b
+    float getLineWidth() -> u
+    boolean isDrawFilledEnabled() -> v
+com.github.mikephil.charting.data.PieDataSet -> com.a.a.a.b.p:
+com.github.mikephil.charting.data.RadarData -> com.a.a.a.b.q:
+com.github.mikephil.charting.data.RadarDataSet -> com.a.a.a.b.r:
+com.github.mikephil.charting.interfaces.ChartInterface -> com.a.a.a.c.a:
+    float getOffsetBottom() -> getOffsetBottom
+    float getOffsetTop() -> getOffsetTop
+    float getOffsetLeft() -> getOffsetLeft
+    float getOffsetRight() -> getOffsetRight
+    float getDeltaX() -> getDeltaX
+    float getDeltaY() -> getDeltaY
+    float getYChartMin() -> getYChartMin
+    int getWidth() -> getWidth
+    int getHeight() -> getHeight
+    android.graphics.RectF getContentRect() -> getContentRect
+    android.view.View getChartView() -> getChartView
+com.github.mikephil.charting.interfaces.OnChartGestureListener -> com.a.a.a.c.b:
+    void onChartLongPressed(android.view.MotionEvent) -> a
+    void onChartDoubleTapped(android.view.MotionEvent) -> b
+    void onChartSingleTapped(android.view.MotionEvent) -> c
+    void onChartFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> a
+com.github.mikephil.charting.interfaces.OnChartValueSelectedListener -> com.a.a.a.c.c:
+    void onValueSelected(com.github.mikephil.charting.data.Entry,int) -> a
+    void onNothingSelected() -> a
+com.github.mikephil.charting.interfaces.OnDrawListener -> com.a.a.a.c.d:
+com.github.mikephil.charting.listener.BarLineChartTouchListener -> com.a.a.a.d.a:
+    android.graphics.Matrix mMatrix -> a
+    android.graphics.Matrix mSavedMatrix -> b
+    android.graphics.PointF mTouchStartPoint -> c
+    android.graphics.PointF mTouchPointCenter -> d
+    int mTouchMode -> e
+    float mSavedXDist -> f
+    float mSavedYDist -> g
+    float mSavedDist -> h
+    com.github.mikephil.charting.utils.Highlight mLastHighlighted -> i
+    com.github.mikephil.charting.charts.BarLineChartBase mChart -> j
+    android.view.GestureDetector mGestureDetector -> k
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+    void saveTouchStart(android.view.MotionEvent) -> a
+    void performDrag(android.view.MotionEvent) -> b
+    void performZoom(android.view.MotionEvent) -> c
+    float distance(float,float,float,float) -> a
+    void midPoint(android.graphics.PointF,android.view.MotionEvent) -> a
+    float spacing(android.view.MotionEvent) -> d
+    float getXDist(android.view.MotionEvent) -> e
+    float getYDist(android.view.MotionEvent) -> f
+    android.graphics.PointF getTrans(float,float) -> a
+    boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    void onLongPress(android.view.MotionEvent) -> onLongPress
+    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
+    boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+com.github.mikephil.charting.listener.PieRadarChartTouchListener -> com.a.a.a.d.b:
+    android.graphics.PointF mTouchStartPoint -> a
+    com.github.mikephil.charting.charts.PieRadarChartBase mChart -> b
+    int mTouchMode -> c
+    android.view.GestureDetector mGestureDetector -> d
+    com.github.mikephil.charting.utils.Highlight mLastHighlight -> e
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+    void onLongPress(android.view.MotionEvent) -> onLongPress
+    boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
+    boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    float distance(float,float,float,float) -> a
+com.github.mikephil.charting.renderer.Transformer -> com.a.a.a.e.a:
+    android.graphics.Matrix mMatrixValueToPx -> a
+    android.graphics.Matrix mMatrixOffset -> b
+    android.graphics.Matrix mMatrixTouch -> c
+    boolean mInvertYAxis -> d
+    float mMinScaleY -> e
+    float mMinScaleX -> f
+    float mScaleX -> g
+    float mScaleY -> h
+    float mTransOffsetX -> i
+    float mTransOffsetY -> j
+    void prepareMatrixValuePx(com.github.mikephil.charting.interfaces.ChartInterface) -> a
+    void prepareMatrixOffset(com.github.mikephil.charting.interfaces.ChartInterface) -> b
+    float[] generateTransformedValuesLineScatter(java.util.ArrayList,float) -> a
+    float[] generateTransformedValuesBarChart(java.util.ArrayList,int,com.github.mikephil.charting.data.BarData,float) -> a
+    void pathValueToPixel(android.graphics.Path) -> a
+    void pointValuesToPixel(float[]) -> a
+    void rectValueToPixel(android.graphics.RectF,float) -> a
+    void pixelsToValue(float[]) -> b
+    android.graphics.Matrix zoom(float,float,float,float) -> a
+    android.graphics.Matrix fitScreen() -> a
+    void setInvertYAxisEnabled(boolean) -> a
+    boolean isInvertYAxisEnabled() -> b
+    android.graphics.Matrix refresh(android.graphics.Matrix,com.github.mikephil.charting.interfaces.ChartInterface) -> a
+    void limitTransAndScale(android.graphics.Matrix,android.graphics.RectF) -> a
+    android.graphics.Matrix getTouchMatrix() -> c
+    android.graphics.Matrix getValueMatrix() -> d
+    android.graphics.Matrix getOffsetMatrix() -> e
+    float getScaleX() -> f
+    float getScaleY() -> g
+    boolean isFullyZoomedOut() -> h
+    boolean isFullyZoomedOutY() -> i
+    boolean isFullyZoomedOutX() -> j
+    void setDragOffsetX(float) -> a
+    void setDragOffsetY(float) -> b
+    boolean hasNoDragOffset() -> k
+com.github.mikephil.charting.utils.FillFormatter -> com.a.a.a.f.a:
+    float getFillLinePosition(com.github.mikephil.charting.data.LineDataSet,com.github.mikephil.charting.data.LineData,float,float) -> a
+com.github.mikephil.charting.utils.Highlight -> com.a.a.a.f.b:
+    int mXIndex -> a
+    int mDataSetIndex -> b
+    int getDataSetIndex() -> a
+    int getXIndex() -> b
+    boolean equalTo(com.github.mikephil.charting.utils.Highlight) -> a
+com.github.mikephil.charting.utils.LabelBase -> com.a.a.a.f.c:
+    android.graphics.Typeface mTypeface -> a
+    float mTextSize -> b
+    int mTextColor -> c
+    void setTextSize(float) -> a
+    float getTextSize() -> a
+    void setTypeface(android.graphics.Typeface) -> a
+    android.graphics.Typeface getTypeface() -> b
+    void setTextColor(int) -> a
+    int getTextColor() -> c
+com.github.mikephil.charting.utils.Legend -> com.a.a.a.f.d:
+    float mLegendOffsetBottom -> a
+    float mLegendOffsetRight -> b
+    float mLegendOffsetLeft -> c
+    float mLegendOffsetTop -> d
+    int[] mColors -> e
+    java.lang.String[] mLegendLabels -> f
+    com.github.mikephil.charting.utils.Legend$LegendPosition mPosition -> g
+    com.github.mikephil.charting.utils.Legend$LegendForm mShape -> h
+    android.graphics.Typeface mTypeface -> i
+    float mTextSize -> j
+    int mTextColor -> k
+    float mFormSize -> l
+    float mXEntrySpace -> m
+    float mYEntrySpace -> n
+    float mFormToTextSpace -> o
+    float mStackSpace -> p
+    int[] $SWITCH_TABLE$com$github$mikephil$charting$utils$Legend$LegendForm -> q
+    int getMaximumEntryLength(android.graphics.Paint) -> a
+    int[] getColors() -> a
+    java.lang.String[] getLegendLabels() -> b
+    com.github.mikephil.charting.utils.Legend$LegendPosition getPosition() -> c
+    com.github.mikephil.charting.utils.Legend$LegendForm getForm() -> d
+    void setForm(com.github.mikephil.charting.utils.Legend$LegendForm) -> a
+    android.graphics.Typeface getTypeface() -> e
+    void setTypeface(android.graphics.Typeface) -> a
+    void setFormSize(float) -> a
+    float getFormSize() -> f
+    float getXEntrySpace() -> g
+    float getYEntrySpace() -> h
+    float getFormToTextSpace() -> i
+    void drawForm(android.graphics.Canvas,float,float,android.graphics.Paint,int) -> a
+    void drawLabel(android.graphics.Canvas,float,float,android.graphics.Paint,int) -> b
+    void apply(com.github.mikephil.charting.utils.Legend) -> a
+    float getOffsetBottom() -> j
+    void setOffsetBottom(float) -> b
+    void setOffsetRight(float) -> c
+    float getOffsetTop() -> k
+    float getOffsetLeft() -> l
+    void setOffsetTop(float) -> d
+    void setOffsetLeft(float) -> e
+    float getTextSize() -> m
+    float getStackSpace() -> n
+    float getFullWidth(android.graphics.Paint) -> b
+    float getFullHeight(android.graphics.Paint) -> c
+    void setTextColor(int) -> a
+    int getTextColor() -> o
+    int[] $SWITCH_TABLE$com$github$mikephil$charting$utils$Legend$LegendForm() -> p
+com.github.mikephil.charting.utils.Legend$LegendForm -> com.a.a.a.f.e:
+    com.github.mikephil.charting.utils.Legend$LegendForm SQUARE -> a
+    com.github.mikephil.charting.utils.Legend$LegendForm CIRCLE -> b
+    com.github.mikephil.charting.utils.Legend$LegendForm LINE -> c
+    com.github.mikephil.charting.utils.Legend$LegendForm[] ENUM$VALUES -> d
+    com.github.mikephil.charting.utils.Legend$LegendForm[] values() -> values
+    com.github.mikephil.charting.utils.Legend$LegendForm valueOf(java.lang.String) -> valueOf
+com.github.mikephil.charting.utils.Legend$LegendPosition -> com.a.a.a.f.f:
+    com.github.mikephil.charting.utils.Legend$LegendPosition RIGHT_OF_CHART -> a
+    com.github.mikephil.charting.utils.Legend$LegendPosition RIGHT_OF_CHART_CENTER -> b
+    com.github.mikephil.charting.utils.Legend$LegendPosition RIGHT_OF_CHART_INSIDE -> c
+    com.github.mikephil.charting.utils.Legend$LegendPosition BELOW_CHART_LEFT -> d
+    com.github.mikephil.charting.utils.Legend$LegendPosition BELOW_CHART_RIGHT -> e
+    com.github.mikephil.charting.utils.Legend$LegendPosition BELOW_CHART_CENTER -> f
+    com.github.mikephil.charting.utils.Legend$LegendPosition PIECHART_CENTER -> g
+    com.github.mikephil.charting.utils.Legend$LegendPosition NONE -> h
+    com.github.mikephil.charting.utils.Legend$LegendPosition[] ENUM$VALUES -> i
+    com.github.mikephil.charting.utils.Legend$LegendPosition[] values() -> values
+    com.github.mikephil.charting.utils.Legend$LegendPosition valueOf(java.lang.String) -> valueOf
+com.github.mikephil.charting.utils.LimitLine -> com.a.a.a.f.g:
+    float mLimit -> a
+    float mLineWidth -> b
+    int mLineColor -> c
+    boolean mDrawValue -> d
+    android.graphics.DashPathEffect mDashPathEffect -> e
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition mLabelPosition -> f
+    float getLimit() -> a
+    float getLineWidth() -> b
+    int getLineColor() -> c
+    android.graphics.DashPathEffect getDashPathEffect() -> d
+    boolean isDrawValueEnabled() -> e
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition getLabelPosition() -> f
+com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition -> com.a.a.a.f.h:
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition LEFT -> a
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition RIGHT -> b
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition[] ENUM$VALUES -> c
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition[] values() -> values
+    com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition valueOf(java.lang.String) -> valueOf
+com.github.mikephil.charting.utils.MarkerView -> com.a.a.a.f.i:
+    float mXOffset -> a
+    float mYOffset -> b
+    void setupLayoutResource(int) -> setupLayoutResource
+    void draw(android.graphics.Canvas,float,float) -> a
+    void refreshContent(com.github.mikephil.charting.data.Entry,int) -> a
+    float getXOffset() -> getXOffset
+    float getYOffset() -> getYOffset
+com.github.mikephil.charting.utils.PointD -> com.a.a.a.f.j:
+    double x -> a
+    double y -> b
+    java.lang.String toString() -> toString
+com.github.mikephil.charting.utils.SelInfo -> com.a.a.a.f.k:
+    float val -> a
+    int dataSetIndex -> b
+com.github.mikephil.charting.utils.Utils -> com.a.a.a.f.l:
+    android.util.DisplayMetrics mMetrics -> a
+    int[] POW_10 -> b
+    void init(android.content.res.Resources) -> a
+    float convertDpToPixel(float) -> a
+    int calcTextWidth(android.graphics.Paint,java.lang.String) -> a
+    int calcTextHeight(android.graphics.Paint,java.lang.String) -> b
+    java.lang.String formatNumber(float,int,boolean) -> a
+    float roundToNextSignificant(double) -> a
+    int getDecimals(float) -> b
+    int[] convertIntegers(java.util.ArrayList) -> a
+    java.lang.String[] convertStrings(java.util.ArrayList) -> b
+    double nextUp(double) -> b
+    int getClosestDataSetIndex(java.util.ArrayList,float) -> a
+com.github.mikephil.charting.utils.ValueFormatter -> com.a.a.a.f.m:
+    java.lang.String getFormattedValue(float) -> a
+com.github.mikephil.charting.utils.XLabels -> com.a.a.a.f.n:
+    int mLabelWidth -> a
+    int mLabelHeight -> b
+    int mSpaceBetweenLabels -> f
+    int mXAxisLabelModulus -> c
+    int mYAxisLabelModulus -> d
+    boolean mCenterXAxisLabels -> g
+    boolean mAvoidFirstLastClipping -> h
+    boolean mAdjustXAxisLabels -> e
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition mPosition -> i
+    boolean isCenterXLabelsEnabled() -> d
+    void setCenterXLabelText(boolean) -> a
+    void setAdjustXLabels(boolean) -> b
+    boolean isAdjustXLabelsEnabled() -> e
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition getPosition() -> f
+    void setPosition(com.github.mikephil.charting.utils.XLabels$XLabelPosition) -> a
+    int getSpaceBetweenLabels() -> g
+    void setAvoidFirstLastClipping(boolean) -> c
+    boolean isAvoidFirstLastClippingEnabled() -> h
+com.github.mikephil.charting.utils.XLabels$XLabelPosition -> com.a.a.a.f.o:
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition TOP -> a
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition BOTTOM -> b
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition BOTH_SIDED -> c
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition TOP_INSIDE -> d
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition BOTTOM_INSIDE -> e
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition[] ENUM$VALUES -> f
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition[] values() -> values
+    com.github.mikephil.charting.utils.XLabels$XLabelPosition valueOf(java.lang.String) -> valueOf
+com.github.mikephil.charting.utils.YLabels -> com.a.a.a.f.p:
+    float[] mEntries -> a
+    int mEntryCount -> b
+    int mDecimals -> c
+    int mLabelCount -> f
+    boolean mDrawUnitsInLabels -> g
+    boolean mDrawTopYLabelEntry -> h
+    boolean mSeparateTousands -> d
+    boolean mShowOnlyMinMax -> e
+    com.github.mikephil.charting.utils.ValueFormatter mFormatter -> i
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition mPosition -> j
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition getPosition() -> d
+    boolean isDrawUnitsInYLabelEnabled() -> e
+    void setDrawUnitsInYLabel(boolean) -> a
+    boolean isDrawTopYLabelEntryEnabled() -> f
+    void setLabelCount(int) -> b
+    int getLabelCount() -> g
+    boolean isSeparateThousandsEnabled() -> h
+    com.github.mikephil.charting.utils.ValueFormatter getFormatter() -> i
+    boolean isShowOnlyMinMaxEnabled() -> j
+    java.lang.String getLongestLabel() -> k
+    java.lang.String getFormattedLabel(int) -> c
+com.github.mikephil.charting.utils.YLabels$YLabelPosition -> com.a.a.a.f.q:
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition LEFT -> a
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition RIGHT -> b
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition BOTH_SIDED -> c
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition LEFT_INSIDE -> d
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition RIGHT_INSIDE -> e
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition[] ENUM$VALUES -> f
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition[] values() -> values
+    com.github.mikephil.charting.utils.YLabels$YLabelPosition valueOf(java.lang.String) -> valueOf
 com.wawa.arm.ARMActivity -> com.wawa.arm.ARMActivity:
     java.lang.String TAG -> p
     android.widget.ImageView openImg -> q
     android.widget.ImageView settingImg -> r
-    android.bluetooth.BluetoothAdapter mBluetoothAdapter -> s
-    com.wawa.arm.service.BluetoothChatService mChatService -> t
-    java.lang.String mConnectedDeviceName -> u
-    boolean isStopflag -> v
-    com.wawa.arm.net.WaitUIElement dialog -> w
-    com.wawa.arm.utile.widgets.SearchDevicesView scan -> x
-    java.util.Timer timer -> y
-    long lastUpDataTime -> z
-    long cmdResultTime -> A
+    android.widget.ImageView volsettingImg -> s
+    android.widget.ImageView openclose -> t
+    android.bluetooth.BluetoothAdapter mBluetoothAdapter -> u
+    com.wawa.arm.service.BluetoothChatService mChatService -> v
+    java.lang.String mConnectedDeviceName -> w
+    boolean isStopflag -> x
+    boolean isSearching -> y
+    com.wawa.arm.net.WaitUIElement dialog -> z
+    com.wawa.arm.utile.widgets.SearchDevicesView scan -> A
+    java.util.Timer timer -> B
+    long lastUpDataTime -> C
+    long cmdResultTime -> D
     int stopCount -> n
-    com.wawa.arm.common.SoundPoolPlay play -> B
-    int currentStatu -> C
-    android.os.Handler handler -> D
-    android.os.Handler mHandler -> E
-    boolean can -> F
-    android.content.BroadcastReceiver mReceiver -> G
-    boolean isBack -> H
-    boolean needOpenChooice -> I
-    com.wawa.arm.utile.widgets.OMDialog closeDialog -> J
-    android.app.Notification notification -> K
-    android.app.NotificationManager nManager -> L
-    android.app.PendingIntent pendingIntent -> M
-    int lastVal -> N
+    com.wawa.arm.common.SoundPoolPlay play -> E
+    com.wawa.arm.utile.LineChartUtil mChart -> F
+    int currentStatu -> G
+    android.os.Handler handler -> H
+    android.os.Handler mHandler -> I
+    boolean can -> J
+    android.content.BroadcastReceiver mReceiver -> K
+    boolean isBack -> L
+    boolean needOpenChooice -> M
+    android.speech.tts.TextToSpeech myTTS -> N
+    com.wawa.arm.utile.widgets.OMDialog closeDialog -> O
+    android.app.Notification notification -> P
+    android.app.NotificationManager nManager -> Q
+    android.app.PendingIntent pendingIntent -> R
+    int lastVal -> S
     void onCreate(android.os.Bundle) -> onCreate
     void initStatutButton(boolean) -> b
     void changeButtonStatu(int,java.lang.Object[]) -> a
-    void onStart() -> onStart
     void connect(java.lang.String) -> c
-    void setupChat() -> f
-    void startARM() -> g
-    void stopARM() -> h
+    void setupChat() -> g
+    void startARM() -> h
+    void stopARM() -> i
     void readMsg(byte[]) -> a
     void sendMessage(byte[]) -> b
+    void onStart() -> onStart
     void onResume() -> onResume
     void onPause() -> onPause
     void onDestroy() -> onDestroy
@@ -1459,7 +2263,7 @@ com.wawa.arm.ARMActivity -> com.wawa.arm.ARMActivity:
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void notification(int) -> a
-    void disnotifcation() -> i
+    void disnotifcation() -> j
     void access$0(com.wawa.arm.ARMActivity) -> a
     void access$1(com.wawa.arm.ARMActivity) -> b
     java.lang.String access$2() -> e
@@ -1476,22 +2280,27 @@ com.wawa.arm.ARMActivity -> com.wawa.arm.ARMActivity:
     void access$13(com.wawa.arm.ARMActivity,boolean) -> c
     boolean access$14(com.wawa.arm.ARMActivity) -> g
     int access$15(com.wawa.arm.ARMActivity) -> h
-    void access$16(com.wawa.arm.ARMActivity,boolean) -> d
-    void access$17(com.wawa.arm.ARMActivity,java.lang.String) -> b
-    long access$18(com.wawa.arm.ARMActivity) -> i
-    android.os.Handler access$19(com.wawa.arm.ARMActivity) -> j
-    android.widget.ImageView access$20(com.wawa.arm.ARMActivity) -> k
-    long access$21(com.wawa.arm.ARMActivity) -> l
-    java.util.Timer access$22(com.wawa.arm.ARMActivity) -> m
-    void access$23(com.wawa.arm.ARMActivity,java.util.Timer) -> a
-    void access$24(com.wawa.arm.ARMActivity,long) -> a
-    com.wawa.arm.utile.widgets.OMDialog access$25(com.wawa.arm.ARMActivity) -> n
+    boolean access$16(com.wawa.arm.ARMActivity) -> i
+    android.os.Handler access$17(com.wawa.arm.ARMActivity) -> j
+    com.wawa.arm.common.SoundPoolPlay access$18(com.wawa.arm.ARMActivity) -> k
+    android.widget.ImageView access$19(com.wawa.arm.ARMActivity) -> l
+    void access$20(com.wawa.arm.ARMActivity,boolean) -> d
+    void access$21(com.wawa.arm.ARMActivity,java.lang.String) -> b
+    long access$22(com.wawa.arm.ARMActivity) -> m
+    android.widget.ImageView access$23(com.wawa.arm.ARMActivity) -> n
+    long access$24(com.wawa.arm.ARMActivity) -> o
+    java.util.Timer access$25(com.wawa.arm.ARMActivity) -> p
+    void access$26(com.wawa.arm.ARMActivity,java.util.Timer) -> a
+    void access$27(com.wawa.arm.ARMActivity,long) -> a
+    android.speech.tts.TextToSpeech access$28(com.wawa.arm.ARMActivity) -> q
+    com.wawa.arm.utile.widgets.OMDialog access$29(com.wawa.arm.ARMActivity) -> r
 com.wawa.arm.ARMActivity$1 -> com.wawa.arm.a:
     com.wawa.arm.ARMActivity this$0 -> a
     boolean handleMessage(android.os.Message) -> handleMessage
 com.wawa.arm.ARMActivity$10 -> com.wawa.arm.b:
     com.wawa.arm.ARMActivity this$0 -> a
-    void run() -> run
+    java.lang.Object[] val$vals -> b
+    void onClick(android.view.View) -> onClick
 com.wawa.arm.ARMActivity$11 -> com.wawa.arm.c:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -1500,38 +2309,46 @@ com.wawa.arm.ARMActivity$12 -> com.wawa.arm.d:
     void run() -> run
 com.wawa.arm.ARMActivity$13 -> com.wawa.arm.e:
     com.wawa.arm.ARMActivity this$0 -> a
-    byte[] val$cmd -> b
-    void run() -> run
+    void onClick(android.view.View) -> onClick
 com.wawa.arm.ARMActivity$14 -> com.wawa.arm.f:
     com.wawa.arm.ARMActivity this$0 -> a
+    void run() -> run
+com.wawa.arm.ARMActivity$15 -> com.wawa.arm.g:
+    com.wawa.arm.ARMActivity this$0 -> a
+    byte[] val$cmd -> b
+    void run() -> run
+com.wawa.arm.ARMActivity$16 -> com.wawa.arm.h:
+    com.wawa.arm.ARMActivity this$0 -> a
+    void onInit(int) -> onInit
+com.wawa.arm.ARMActivity$17 -> com.wawa.arm.i:
+    com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$2 -> com.wawa.arm.g:
+com.wawa.arm.ARMActivity$2 -> com.wawa.arm.j:
     com.wawa.arm.ARMActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.wawa.arm.ARMActivity access$0(com.wawa.arm.ARMActivity$2) -> a
-com.wawa.arm.ARMActivity$2$1 -> com.wawa.arm.h:
+com.wawa.arm.ARMActivity$2$1 -> com.wawa.arm.k:
     com.wawa.arm.ARMActivity$2 this$1 -> a
     void onCancel(android.content.DialogInterface) -> onCancel
-com.wawa.arm.ARMActivity$3 -> com.wawa.arm.i:
+com.wawa.arm.ARMActivity$3 -> com.wawa.arm.l:
     com.wawa.arm.ARMActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.wawa.arm.ARMActivity$4 -> com.wawa.arm.j:
+com.wawa.arm.ARMActivity$4 -> com.wawa.arm.m:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$5 -> com.wawa.arm.k:
+com.wawa.arm.ARMActivity$5 -> com.wawa.arm.n:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$6 -> com.wawa.arm.l:
+com.wawa.arm.ARMActivity$6 -> com.wawa.arm.o:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$7 -> com.wawa.arm.m:
+com.wawa.arm.ARMActivity$7 -> com.wawa.arm.p:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$8 -> com.wawa.arm.n:
+com.wawa.arm.ARMActivity$8 -> com.wawa.arm.q:
     com.wawa.arm.ARMActivity this$0 -> a
-    java.lang.Object[] val$vals -> b
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$9 -> com.wawa.arm.o:
+com.wawa.arm.ARMActivity$9 -> com.wawa.arm.r:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.wawa.arm.AboutActivity -> com.wawa.arm.AboutActivity:
@@ -1567,17 +2384,17 @@ com.wawa.arm.DeviceListActivity -> com.wawa.arm.DeviceListActivity:
     com.wawa.arm.net.WaitUIElement access$4(com.wawa.arm.DeviceListActivity) -> e
     void access$5(com.wawa.arm.DeviceListActivity,java.lang.String) -> a
     void access$6(com.wawa.arm.DeviceListActivity) -> f
-com.wawa.arm.DeviceListActivity$1 -> com.wawa.arm.p:
+com.wawa.arm.DeviceListActivity$1 -> com.wawa.arm.s:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.wawa.arm.DeviceListActivity$2 -> com.wawa.arm.q:
+com.wawa.arm.DeviceListActivity$2 -> com.wawa.arm.t:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.wawa.arm.DeviceListActivity$3 -> com.wawa.arm.r:
+com.wawa.arm.DeviceListActivity$3 -> com.wawa.arm.u:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.R -> com.wawa.arm.s:
-com.wawa.arm.R$styleable -> com.wawa.arm.t:
+com.wawa.arm.R -> com.wawa.arm.v:
+com.wawa.arm.R$styleable -> com.wawa.arm.w:
     int[] CirclePageIndicator -> CirclePageIndicator
     int CirclePageIndicator_android_background -> CirclePageIndicator_android_background
     int CirclePageIndicator_android_orientation -> CirclePageIndicator_android_orientation
@@ -1674,19 +2491,19 @@ com.wawa.arm.SettingActivity -> com.wawa.arm.SettingActivity:
     java.lang.String access$12(com.wawa.arm.SettingActivity) -> k
     void access$13(com.wawa.arm.SettingActivity,java.lang.String) -> a
     void access$14(com.wawa.arm.SettingActivity,java.lang.String) -> b
-com.wawa.arm.SettingActivity$1 -> com.wawa.arm.u:
+com.wawa.arm.SettingActivity$1 -> com.wawa.arm.x:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$2 -> com.wawa.arm.v:
+com.wawa.arm.SettingActivity$2 -> com.wawa.arm.y:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$3 -> com.wawa.arm.w:
+com.wawa.arm.SettingActivity$3 -> com.wawa.arm.z:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$4 -> com.wawa.arm.x:
+com.wawa.arm.SettingActivity$4 -> com.wawa.arm.aa:
     com.wawa.arm.SettingActivity this$0 -> a
     void OnChanged(com.wawa.arm.utile.widgets.WiperSwitchView,boolean) -> a
-com.wawa.arm.SettingActivity$5 -> com.wawa.arm.y:
+com.wawa.arm.SettingActivity$5 -> com.wawa.arm.ab:
     com.wawa.arm.SettingActivity this$0 -> a
     android.widget.RadioButton val$low -> b
     android.widget.RadioButton val$mid -> c
@@ -1697,7 +2514,7 @@ com.wawa.arm.StartActivity -> com.wawa.arm.StartActivity:
     android.view.animation.Animation animation -> b
     void onCreate(android.os.Bundle) -> onCreate
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-com.wawa.arm.StartActivity$1 -> com.wawa.arm.z:
+com.wawa.arm.StartActivity$1 -> com.wawa.arm.ac:
     com.wawa.arm.StartActivity this$0 -> a
     void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
     void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
@@ -1752,6 +2569,7 @@ com.wawa.arm.common.BaseActivity -> com.wawa.arm.common.b:
     void setContentView(int) -> setContentView
     void setContentView(int,boolean) -> a
     void setTitle(java.lang.String) -> b
+    int getTitleVal() -> f
     void showBackBtn(boolean,android.view.View$OnClickListener) -> a
     void onDestroy() -> onDestroy
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
@@ -1798,20 +2616,30 @@ com.wawa.arm.common.OMApplication -> com.wawa.arm.common.OMApplication:
     java.lang.Object getVal(java.lang.String,java.lang.Object) -> a
     void logoutClearCacheData() -> c
 com.wawa.arm.common.SoundPoolPlay -> com.wawa.arm.common.f:
-    android.media.SoundPool mSoundPool -> a
-    java.util.HashMap mSoundPoolMap -> b
-    android.media.AudioManager mAudioManager -> c
-    int volMax -> d
+    boolean isOpen -> a
+    android.media.SoundPool mSoundPool -> b
+    java.util.HashMap mSoundPoolMap -> c
+    android.media.AudioManager mAudioManager -> d
     int currentVol -> e
     int alarmId -> f
     int nomerId -> g
     int lastLevl -> h
     long lastTime -> i
+    java.util.Timer timer -> j
+    android.speech.tts.TextToSpeech myTTS -> k
+    void setOpen(boolean) -> a
     void changeSystemAlarmVol(int) -> a
     int getCurrentVol() -> c
     void play(int) -> b
     void stopAll() -> a
     void destory() -> b
+    void setTTS(android.speech.tts.TextToSpeech) -> a
+    android.speech.tts.TextToSpeech access$0(com.wawa.arm.common.SoundPoolPlay) -> a
+    int access$1(com.wawa.arm.common.SoundPoolPlay) -> b
+    boolean access$2(com.wawa.arm.common.SoundPoolPlay) -> c
+com.wawa.arm.common.SoundPoolPlay$1 -> com.wawa.arm.common.g:
+    com.wawa.arm.common.SoundPoolPlay this$0 -> a
+    void run() -> run
 com.wawa.arm.net.WaitUIElement -> com.wawa.arm.b.a:
     boolean needUI -> a
     android.content.Context context -> b
@@ -1887,10 +2715,40 @@ com.wawa.arm.utile.AppException$3 -> com.wawa.arm.utile.d:
     com.wawa.arm.utile.widgets.OMDialog val$dialog -> a
     android.content.Context val$cont -> b
     void onClick(android.view.View) -> onClick
-com.wawa.arm.utile.MobileUtils -> com.wawa.arm.utile.e:
+com.wawa.arm.utile.LineChartUtil -> com.wawa.arm.utile.e:
+    com.wawa.arm.utile.widgets.MyLineChart linechart -> a
+    com.wawa.arm.common.BaseActivity context -> b
+    android.graphics.Typeface mTf -> c
+    int GRIDCOLOR -> d
+    android.os.Handler handler -> e
+    java.util.List addData -> f
+    long lastAddDataTime -> g
+    java.util.Timer timer -> h
+    void init() -> a
+    com.github.mikephil.charting.data.LineDataSet createSet(java.util.ArrayList,java.lang.String) -> a
+    boolean isNeedSetZero() -> b
+    void addEntry(int) -> a
+    void changeView() -> c
+    void addDataSet(java.util.List) -> a
+    void removeDataSet(boolean) -> a
+    void addEmptyData() -> d
+    void setupChart(com.github.mikephil.charting.charts.LineChart,com.github.mikephil.charting.data.LineData) -> a
+    void access$0(com.wawa.arm.utile.LineChartUtil) -> a
+    android.os.Handler access$1(com.wawa.arm.utile.LineChartUtil) -> b
+com.wawa.arm.utile.LineChartUtil$1 -> com.wawa.arm.utile.f:
+    com.wawa.arm.utile.LineChartUtil this$0 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.wawa.arm.utile.LineChartUtil$2 -> com.wawa.arm.utile.g:
+    com.wawa.arm.utile.LineChartUtil this$0 -> a
+    void onValueSelected(com.github.mikephil.charting.data.Entry,int) -> a
+    void onNothingSelected() -> a
+com.wawa.arm.utile.LineChartUtil$3 -> com.wawa.arm.utile.h:
+    com.wawa.arm.utile.LineChartUtil this$0 -> a
+    void run() -> run
+com.wawa.arm.utile.MobileUtils -> com.wawa.arm.utile.i:
     java.lang.String[] getTelInfo() -> a
     java.lang.String getAppVersionName(android.content.Context) -> a
-com.wawa.arm.utile.MyToast -> com.wawa.arm.utile.f:
+com.wawa.arm.utile.MyToast -> com.wawa.arm.utile.j:
     android.widget.Toast mToast -> a
     android.os.Handler mHandler -> b
     java.lang.Runnable r -> c
@@ -1901,11 +2759,11 @@ com.wawa.arm.utile.MyToast -> com.wawa.arm.utile.f:
     void showDIYToast(android.app.Activity,java.lang.String,int,boolean) -> a
     android.widget.Toast access$0() -> a
     android.widget.Toast access$1() -> b
-com.wawa.arm.utile.MyToast$1 -> com.wawa.arm.utile.g:
+com.wawa.arm.utile.MyToast$1 -> com.wawa.arm.utile.k:
     void run() -> run
-com.wawa.arm.utile.MyToast$2 -> com.wawa.arm.utile.h:
+com.wawa.arm.utile.MyToast$2 -> com.wawa.arm.utile.l:
     void run() -> run
-com.wawa.arm.utile.TransferUtil -> com.wawa.arm.utile.i:
+com.wawa.arm.utile.TransferUtil -> com.wawa.arm.utile.m:
     byte[] int2bytes(int) -> a
     java.lang.String byte2HexStr(byte[]) -> a
 com.wawa.arm.utile.log.LogThread -> com.wawa.arm.utile.a.a:
@@ -1925,7 +2783,36 @@ com.wawa.arm.utile.log.LogUtil -> com.wawa.arm.utile.a.b:
 com.wawa.arm.utile.widgets.BaseView -> com.wawa.arm.utile.widgets.a:
     android.content.Context context -> a
     void onDraw(android.graphics.Canvas) -> onDraw
-com.wawa.arm.utile.widgets.OMDialog -> com.wawa.arm.utile.widgets.b:
+com.wawa.arm.utile.widgets.MyLineChart -> com.wawa.arm.utile.widgets.MyLineChart:
+    float mHighlightWidth -> c
+    android.graphics.Paint mCirclePaintInner -> ap
+    com.github.mikephil.charting.utils.FillFormatter mFillFormatter -> aq
+    void init() -> a
+    void calcMinMax(boolean) -> a
+    void drawHighlights() -> b
+    void drawData() -> c
+    void drawCubic(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList) -> a
+    void drawCubicFill(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList,android.graphics.Path) -> a
+    void drawLinear(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList) -> b
+    void drawLinearFill(com.github.mikephil.charting.data.LineDataSet,java.util.ArrayList) -> c
+    android.graphics.Path generateFilledPath(java.util.ArrayList,float) -> a
+    android.graphics.Path generateLinePath(java.util.ArrayList) -> a
+    void drawValues() -> e
+    void drawAdditional() -> f
+    void setHighlightLineWidth(float) -> setHighlightLineWidth
+    float getHighlightLineWidth() -> getHighlightLineWidth
+    void setFillFormatter(com.github.mikephil.charting.utils.FillFormatter) -> setFillFormatter
+    boolean access$0(com.wawa.arm.utile.widgets.MyLineChart) -> a
+com.wawa.arm.utile.widgets.MyLineChart$CPoint -> com.wawa.arm.utile.widgets.b:
+    float x -> a
+    float y -> b
+    float dx -> c
+    float dy -> d
+    com.wawa.arm.utile.widgets.MyLineChart this$0 -> e
+com.wawa.arm.utile.widgets.MyLineChart$DefaultFillFormatter -> com.wawa.arm.utile.widgets.c:
+    com.wawa.arm.utile.widgets.MyLineChart this$0 -> a
+    float getFillLinePosition(com.github.mikephil.charting.data.LineDataSet,com.github.mikephil.charting.data.LineData,float,float) -> a
+com.wawa.arm.utile.widgets.OMDialog -> com.wawa.arm.utile.widgets.d:
     com.wawa.arm.utile.widgets.OMDialog dialog -> a
     int currentMode -> b
     com.wawa.arm.utile.widgets.OMDialog createDialog(android.content.Context) -> a
@@ -1935,7 +2822,7 @@ com.wawa.arm.utile.widgets.OMDialog -> com.wawa.arm.utile.widgets.b:
     com.wawa.arm.utile.widgets.OMDialog setBtnCancelClickListener(android.view.View$OnClickListener) -> b
     com.wawa.arm.utile.widgets.OMDialog access$0() -> a
     void access$1(com.wawa.arm.utile.widgets.OMDialog) -> a
-com.wawa.arm.utile.widgets.OMDialog$1 -> com.wawa.arm.utile.widgets.c:
+com.wawa.arm.utile.widgets.OMDialog$1 -> com.wawa.arm.utile.widgets.e:
     void onClick(android.view.View) -> onClick
 com.wawa.arm.utile.widgets.OMEditText -> com.wawa.arm.utile.widgets.OMEditText:
     android.graphics.drawable.Drawable imgAble -> a
@@ -1944,12 +2831,12 @@ com.wawa.arm.utile.widgets.OMEditText -> com.wawa.arm.utile.widgets.OMEditText:
     void setDrawable() -> b
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void access$0(com.wawa.arm.utile.widgets.OMEditText) -> a
-com.wawa.arm.utile.widgets.OMEditText$1 -> com.wawa.arm.utile.widgets.d:
+com.wawa.arm.utile.widgets.OMEditText$1 -> com.wawa.arm.utile.widgets.f:
     com.wawa.arm.utile.widgets.OMEditText this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.wawa.arm.utile.widgets.OMNetDialog -> com.wawa.arm.utile.widgets.e:
+com.wawa.arm.utile.widgets.OMNetDialog -> com.wawa.arm.utile.widgets.g:
     com.wawa.arm.utile.widgets.OMNetDialog dialog -> a
     com.wawa.arm.utile.widgets.OMNetDialog createDialog(android.content.Context,int,java.lang.String) -> a
     com.wawa.arm.utile.widgets.OMNetDialog setContent(java.lang.String) -> a
@@ -1988,10 +2875,10 @@ com.wawa.arm.utile.widgets.RippleView -> com.wawa.arm.utile.widgets.RippleView:
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     android.graphics.Bitmap getCircleBitmap(int) -> a
-com.wawa.arm.utile.widgets.RippleView$1 -> com.wawa.arm.utile.widgets.f:
+com.wawa.arm.utile.widgets.RippleView$1 -> com.wawa.arm.utile.widgets.h:
     com.wawa.arm.utile.widgets.RippleView this$0 -> a
     void run() -> run
-com.wawa.arm.utile.widgets.RippleView$2 -> com.wawa.arm.utile.widgets.g:
+com.wawa.arm.utile.widgets.RippleView$2 -> com.wawa.arm.utile.widgets.i:
     com.wawa.arm.utile.widgets.RippleView this$0 -> a
     boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
     boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
@@ -2011,11 +2898,7 @@ com.wawa.arm.utile.widgets.SearchDevicesView -> com.wawa.arm.utile.widgets.Searc
     int LEVLE -> n
     android.os.Handler handler -> o
     boolean isSearching() -> a
-    void startSerch() -> b
-    void onPause() -> c
-    void stopSerch() -> d
-    void changeLevle(int) -> a
-    void initBitmap() -> e
+    void initBitmap() -> b
     void onDraw(android.graphics.Canvas) -> onDraw
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void handleActionDownEvenet(android.view.MotionEvent) -> a
@@ -2034,5 +2917,5 @@ com.wawa.arm.utile.widgets.WiperSwitchView -> com.wawa.arm.utile.widgets.WiperSw
     boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
     void setOnChangedListener(com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener) -> setOnChangedListener
     void setChecked(boolean) -> setChecked
-com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener -> com.wawa.arm.utile.widgets.h:
+com.wawa.arm.utile.widgets.WiperSwitchView$OnChangedListener -> com.wawa.arm.utile.widgets.j:
     void OnChanged(com.wawa.arm.utile.widgets.WiperSwitchView,boolean) -> a

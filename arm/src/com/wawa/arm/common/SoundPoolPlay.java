@@ -1,18 +1,19 @@
 package com.wawa.arm.common;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.speech.tts.TextToSpeech;
 
 import com.wawa.arm.R;
 import com.wawa.arm.utile.log.LogUtil;
 
 public class SoundPoolPlay {
+	private boolean isOpen;
 	// 加入音效
     private SoundPool mSoundPool;
     private HashMap<String, Integer> mSoundPoolMap;
@@ -21,8 +22,17 @@ public class SoundPoolPlay {
     private int volMax,volLow,currentVol;
     private int alarmId,nomerId;
     
-    public SoundPoolPlay(Context context){
-    	mSoundPool = new SoundPool(1, AudioManager.STREAM_RING, 0);
+    public boolean isOpen() {
+		return isOpen;
+	}
+
+	public void setOpen(boolean isOpen) {
+		this.isOpen = isOpen;
+	}
+
+	public SoundPoolPlay(Context context,boolean isopen){
+    	this.isOpen = isopen;
+    	/*mSoundPool = new SoundPool(1, AudioManager.STREAM_RING, 0);
     	mSoundPoolMap = new HashMap<String, Integer>();
     	mSoundPoolMap.put(CommonConsts.SOUND_NOMOR, mSoundPool.load(context, R.raw.nomer_du_once, 1));
     	mSoundPoolMap.put(CommonConsts.SOUND_ALARM, mSoundPool.load(context, R.raw.alarm_du_once, 1));
@@ -32,7 +42,7 @@ public class SoundPoolPlay {
     	//提示声音音量
     	volMax = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_RING );//取得当前手机的音量，最大值为7，最小值为0，当为0时，手机自动将模式调整为“震动模式”。
     	currentVol = mAudioManager.getStreamVolume(AudioManager.STREAM_RING ); //当前手机设置值
-    	LogUtil.i("---vlo max--"+volMax);
+    	LogUtil.i("---vlo max--"+volMax);*/
     	
     	/*volMax = Integer.valueOf(OMApplication.getInstance().getVal(CommonConsts.APP_VOL_VAL, "4"));
     	if("1".equals(OMApplication.getInstance().getVal(CommonConsts.APP_VOL_OPEN_STATU, "0")))
@@ -61,7 +71,28 @@ public class SoundPoolPlay {
     }
     private int lastLevl = -1;
     private long lastTime = -1;
+    private Timer timer;
 	public void play(int level){
+		if(!isOpen || level == -1){
+			lastLevl = -1;
+			if(timer != null){
+				timer.cancel();
+				timer = null;
+			}
+			return;
+		}
+		lastLevl = level;
+		if(timer == null){
+			timer = new Timer();
+			timer.schedule(new TimerTask() {
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					if(myTTS != null && lastLevl != -1 && isOpen)
+						myTTS.speak(lastLevl+"", TextToSpeech.QUEUE_FLUSH, null);
+				}
+			}, 500, 2000);
+		}
 		/*if("0".equals(OMApplication.getInstance().getVal(CommonConsts.APP_VOL_OPEN_STATU, "0"))){
 			changeSystemAlarmVol(currentVol);
 			 return;
@@ -100,6 +131,11 @@ public class SoundPoolPlay {
 		}
 	}
 	public void stopAll(){
+		lastLevl = -1;
+		if(timer != null){
+			timer.cancel();
+			timer = null;
+		}
 		if(mSoundPool != null){
 			mSoundPool.stop(alarmId);
 			mSoundPool.stop(nomerId);
@@ -113,6 +149,11 @@ public class SoundPoolPlay {
 		mSoundPoolMap = null;
         mSoundPool.release();
         mSoundPool = null;
+	}
+
+	private TextToSpeech myTTS;
+	public void setTTS(TextToSpeech myTTS) {
+		this.myTTS = myTTS;
 	}
 
 }

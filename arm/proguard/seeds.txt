@@ -60,9 +60,181 @@ android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
 android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
 android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
 android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableLeft(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableRight(android.graphics.drawable.Drawable)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
 android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
+android.support.v4.widget.SwipeRefreshLayout: void setTriggerPercentage(float)
+android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setTargetOffsetTopAndBottom(int)
+com.github.mikephil.charting.charts.BarChart: void setSkew(float)
+com.github.mikephil.charting.charts.BarChart: float getSkew()
+com.github.mikephil.charting.charts.BarChart: void setDepth(float)
+com.github.mikephil.charting.charts.BarChart: float getDepth()
+com.github.mikephil.charting.charts.BarChart: void set3DEnabled(boolean)
+com.github.mikephil.charting.charts.BarChart: void setDrawHighlightArrow(boolean)
+com.github.mikephil.charting.charts.BarChart: void setDrawValueAboveBar(boolean)
+com.github.mikephil.charting.charts.BarChart: void setDrawValuesForWholeStack(boolean)
+com.github.mikephil.charting.charts.BarChart: void setDrawBarShadow(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: BarLineChartBase(android.content.Context,android.util.AttributeSet,int)
+com.github.mikephil.charting.charts.BarLineChartBase: BarLineChartBase(android.content.Context,android.util.AttributeSet)
+com.github.mikephil.charting.charts.BarLineChartBase: BarLineChartBase(android.content.Context)
+com.github.mikephil.charting.charts.BarLineChartBase: void setInvertYAxisEnabled(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setOnTouchListener(android.view.View$OnTouchListener)
+com.github.mikephil.charting.charts.BarLineChartBase: void setOnDrawListener(com.github.mikephil.charting.interfaces.OnDrawListener)
+com.github.mikephil.charting.charts.BarLineChartBase: com.github.mikephil.charting.interfaces.OnDrawListener getDrawListener()
+com.github.mikephil.charting.charts.BarLineChartBase: void setGridColor(int)
+com.github.mikephil.charting.charts.BarLineChartBase: void setMaxVisibleValueCount(int)
+com.github.mikephil.charting.charts.BarLineChartBase: void setHighlightIndicatorEnabled(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setStartAtZero(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setGridWidth(float)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDragEnabled(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setScaleEnabled(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDoubleTapToZoomEnabled(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDrawVerticalGrid(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDrawHorizontalGrid(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDrawBorder(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDrawGridBackground(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDrawXLabels(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDrawYLabels(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setBorderPositions(com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[])
+com.github.mikephil.charting.charts.BarLineChartBase: com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[] getBorderPositions()
+com.github.mikephil.charting.charts.BarLineChartBase: void setBorderWidth(int)
+com.github.mikephil.charting.charts.BarLineChartBase: void setBorderColor(int)
+com.github.mikephil.charting.charts.BarLineChartBase: float getScaleX()
+com.github.mikephil.charting.charts.BarLineChartBase: float getScaleY()
+com.github.mikephil.charting.charts.BarLineChartBase: com.github.mikephil.charting.utils.YLabels getYLabels()
+com.github.mikephil.charting.charts.BarLineChartBase: com.github.mikephil.charting.utils.XLabels getXLabels()
+com.github.mikephil.charting.charts.BarLineChartBase: void setPinchZoom(boolean)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDragOffsetX(float)
+com.github.mikephil.charting.charts.BarLineChartBase: void setDragOffsetY(float)
+com.github.mikephil.charting.charts.BarLineChartBase: com.github.mikephil.charting.data.BarLineScatterCandleData getFilteredData()
+com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition: com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition[] values()
+com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition: com.github.mikephil.charting.charts.BarLineChartBase$BorderPosition valueOf(java.lang.String)
+com.github.mikephil.charting.charts.Chart: Chart(android.content.Context)
+com.github.mikephil.charting.charts.Chart: Chart(android.content.Context,android.util.AttributeSet)
+com.github.mikephil.charting.charts.Chart: Chart(android.content.Context,android.util.AttributeSet,int)
+com.github.mikephil.charting.charts.Chart: void setData(com.github.mikephil.charting.data.ChartData)
+com.github.mikephil.charting.charts.Chart: float getPhaseY()
+com.github.mikephil.charting.charts.Chart: void setPhaseY(float)
+com.github.mikephil.charting.charts.Chart: float getPhaseX()
+com.github.mikephil.charting.charts.Chart: void setPhaseX(float)
+com.github.mikephil.charting.charts.Chart: android.graphics.Canvas getCanvas()
+com.github.mikephil.charting.charts.Chart: void setOnChartValueSelectedListener(com.github.mikephil.charting.interfaces.OnChartValueSelectedListener)
+com.github.mikephil.charting.charts.Chart: void setOnChartGestureListener(com.github.mikephil.charting.interfaces.OnChartGestureListener)
+com.github.mikephil.charting.charts.Chart: com.github.mikephil.charting.interfaces.OnChartGestureListener getOnChartGestureListener()
+com.github.mikephil.charting.charts.Chart: void setHighlightEnabled(boolean)
+com.github.mikephil.charting.charts.Chart: float getYValueSum()
+com.github.mikephil.charting.charts.Chart: float getYMax()
+com.github.mikephil.charting.charts.Chart: float getYChartMin()
+com.github.mikephil.charting.charts.Chart: float getYChartMax()
+com.github.mikephil.charting.charts.Chart: float getYMin()
+com.github.mikephil.charting.charts.Chart: float getDeltaX()
+com.github.mikephil.charting.charts.Chart: float getDeltaY()
+com.github.mikephil.charting.charts.Chart: float getAverage()
+com.github.mikephil.charting.charts.Chart: int getValueCount()
+com.github.mikephil.charting.charts.Chart: android.graphics.PointF getCenter()
+com.github.mikephil.charting.charts.Chart: android.graphics.PointF getCenterOffsets()
+com.github.mikephil.charting.charts.Chart: void setDescriptionTextSize(float)
+com.github.mikephil.charting.charts.Chart: void setLogEnabled(boolean)
+com.github.mikephil.charting.charts.Chart: void setDescription(java.lang.String)
+com.github.mikephil.charting.charts.Chart: void setNoDataText(java.lang.String)
+com.github.mikephil.charting.charts.Chart: void setNoDataTextDescription(java.lang.String)
+com.github.mikephil.charting.charts.Chart: float getOffsetLeft()
+com.github.mikephil.charting.charts.Chart: float getOffsetBottom()
+com.github.mikephil.charting.charts.Chart: float getOffsetRight()
+com.github.mikephil.charting.charts.Chart: float getOffsetTop()
+com.github.mikephil.charting.charts.Chart: void setTouchEnabled(boolean)
+com.github.mikephil.charting.charts.Chart: void setDrawYValues(boolean)
+com.github.mikephil.charting.charts.Chart: void setMarkerView(com.github.mikephil.charting.utils.MarkerView)
+com.github.mikephil.charting.charts.Chart: com.github.mikephil.charting.utils.MarkerView getMarkerView()
+com.github.mikephil.charting.charts.Chart: void setDrawUnitsInChart(boolean)
+com.github.mikephil.charting.charts.Chart: void setUnit(java.lang.String)
+com.github.mikephil.charting.charts.Chart: java.lang.String getUnit()
+com.github.mikephil.charting.charts.Chart: void setDrawLegend(boolean)
+com.github.mikephil.charting.charts.Chart: com.github.mikephil.charting.utils.Legend getLegend()
+com.github.mikephil.charting.charts.Chart: android.graphics.RectF getContentRect()
+com.github.mikephil.charting.charts.Chart: com.github.mikephil.charting.renderer.Transformer getTransformer()
+com.github.mikephil.charting.charts.Chart: void setDrawMarkerViews(boolean)
+com.github.mikephil.charting.charts.Chart: void setValueFormatter(com.github.mikephil.charting.utils.ValueFormatter)
+com.github.mikephil.charting.charts.Chart: com.github.mikephil.charting.utils.ValueFormatter getValueFormatter()
+com.github.mikephil.charting.charts.Chart: void setValueTextColor(int)
+com.github.mikephil.charting.charts.Chart: void setValueTextSize(float)
+com.github.mikephil.charting.charts.Chart: com.github.mikephil.charting.data.ChartData getData()
+com.github.mikephil.charting.charts.Chart: void setValueTypeface(android.graphics.Typeface)
+com.github.mikephil.charting.charts.Chart: void setDescriptionTypeface(android.graphics.Typeface)
+com.github.mikephil.charting.charts.Chart: android.graphics.Bitmap getChartBitmap()
+com.github.mikephil.charting.charts.Chart: android.view.View getChartView()
+com.github.mikephil.charting.charts.LineChart: LineChart(android.content.Context)
+com.github.mikephil.charting.charts.LineChart: LineChart(android.content.Context,android.util.AttributeSet)
+com.github.mikephil.charting.charts.LineChart: LineChart(android.content.Context,android.util.AttributeSet,int)
+com.github.mikephil.charting.charts.LineChart: void setHighlightLineWidth(float)
+com.github.mikephil.charting.charts.LineChart: float getHighlightLineWidth()
+com.github.mikephil.charting.charts.LineChart: void setFillFormatter(com.github.mikephil.charting.utils.FillFormatter)
+com.github.mikephil.charting.charts.PieChart: float[] getDrawAngles()
+com.github.mikephil.charting.charts.PieChart: float[] getAbsoluteAngles()
+com.github.mikephil.charting.charts.PieChart: void setHoleColor(int)
+com.github.mikephil.charting.charts.PieChart: void setDrawHoleEnabled(boolean)
+com.github.mikephil.charting.charts.PieChart: void setCenterText(java.lang.String)
+com.github.mikephil.charting.charts.PieChart: java.lang.String getCenterText()
+com.github.mikephil.charting.charts.PieChart: void setDrawCenterText(boolean)
+com.github.mikephil.charting.charts.PieChart: void setUsePercentValues(boolean)
+com.github.mikephil.charting.charts.PieChart: void setDrawXValues(boolean)
+com.github.mikephil.charting.charts.PieChart: float getRequiredBottomOffset()
+com.github.mikephil.charting.charts.PieChart: float getRequiredBaseOffset()
+com.github.mikephil.charting.charts.PieChart: float getRadius()
+com.github.mikephil.charting.charts.PieChart: android.graphics.RectF getCircleBox()
+com.github.mikephil.charting.charts.PieChart: android.graphics.PointF getCenterCircleBox()
+com.github.mikephil.charting.charts.PieChart: void setCenterTextTypeface(android.graphics.Typeface)
+com.github.mikephil.charting.charts.PieChart: void setCenterTextSize(float)
+com.github.mikephil.charting.charts.PieChart: void setHoleRadius(float)
+com.github.mikephil.charting.charts.PieChart: void setTransparentCircleRadius(float)
+com.github.mikephil.charting.charts.PieRadarChartBase: void setRotationAngle(float)
+com.github.mikephil.charting.charts.PieRadarChartBase: float getRotationAngle()
+com.github.mikephil.charting.charts.PieRadarChartBase: void setRotationEnabled(boolean)
+com.github.mikephil.charting.charts.PieRadarChartBase: float getDiameter()
+com.github.mikephil.charting.charts.PieRadarChartBase: float getRadius()
+com.github.mikephil.charting.charts.PieRadarChartBase: float getRequiredBottomOffset()
+com.github.mikephil.charting.charts.PieRadarChartBase: float getRequiredBaseOffset()
+com.github.mikephil.charting.charts.PieRadarChartBase: float getFullLegendWidth()
+com.github.mikephil.charting.charts.PieRadarChartBase: void setOnTouchListener(android.view.View$OnTouchListener)
+com.github.mikephil.charting.charts.RadarChart: float getFactor()
+com.github.mikephil.charting.charts.RadarChart: float getSliceAngle()
+com.github.mikephil.charting.charts.RadarChart: com.github.mikephil.charting.utils.YLabels getYLabels()
+com.github.mikephil.charting.charts.RadarChart: com.github.mikephil.charting.utils.XLabels getXLabels()
+com.github.mikephil.charting.charts.RadarChart: void setWebLineWidth(float)
+com.github.mikephil.charting.charts.RadarChart: void setWebLineWidthInner(float)
+com.github.mikephil.charting.charts.RadarChart: void setWebAlpha(int)
+com.github.mikephil.charting.charts.RadarChart: void setWebColor(int)
+com.github.mikephil.charting.charts.RadarChart: void setWebColorInner(int)
+com.github.mikephil.charting.charts.RadarChart: void setDrawWeb(boolean)
+com.github.mikephil.charting.charts.RadarChart: void setDrawYLabels(boolean)
+com.github.mikephil.charting.charts.RadarChart: void setDrawXLabels(boolean)
+com.github.mikephil.charting.charts.RadarChart: float getRequiredBottomOffset()
+com.github.mikephil.charting.charts.RadarChart: float getRequiredBaseOffset()
+com.github.mikephil.charting.charts.RadarChart: float getRadius()
+com.github.mikephil.charting.charts.ScatterChart: com.github.mikephil.charting.charts.ScatterChart$ScatterShape[] getAllPossibleShapes()
+com.github.mikephil.charting.charts.ScatterChart$ScatterShape: com.github.mikephil.charting.charts.ScatterChart$ScatterShape[] values()
+com.github.mikephil.charting.charts.ScatterChart$ScatterShape: com.github.mikephil.charting.charts.ScatterChart$ScatterShape valueOf(java.lang.String)
+com.github.mikephil.charting.data.filter.Approximator$ApproximatorType: com.github.mikephil.charting.data.filter.Approximator$ApproximatorType[] values()
+com.github.mikephil.charting.data.filter.Approximator$ApproximatorType: com.github.mikephil.charting.data.filter.Approximator$ApproximatorType valueOf(java.lang.String)
+com.github.mikephil.charting.utils.Legend$LegendForm: com.github.mikephil.charting.utils.Legend$LegendForm[] values()
+com.github.mikephil.charting.utils.Legend$LegendForm: com.github.mikephil.charting.utils.Legend$LegendForm valueOf(java.lang.String)
+com.github.mikephil.charting.utils.Legend$LegendPosition: com.github.mikephil.charting.utils.Legend$LegendPosition[] values()
+com.github.mikephil.charting.utils.Legend$LegendPosition: com.github.mikephil.charting.utils.Legend$LegendPosition valueOf(java.lang.String)
+com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition: com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition[] values()
+com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition: com.github.mikephil.charting.utils.LimitLine$LimitLabelPosition valueOf(java.lang.String)
+com.github.mikephil.charting.utils.MarkerView: void setupLayoutResource(int)
+com.github.mikephil.charting.utils.MarkerView: float getXOffset()
+com.github.mikephil.charting.utils.MarkerView: float getYOffset()
+com.github.mikephil.charting.utils.XLabels$XLabelPosition: com.github.mikephil.charting.utils.XLabels$XLabelPosition[] values()
+com.github.mikephil.charting.utils.XLabels$XLabelPosition: com.github.mikephil.charting.utils.XLabels$XLabelPosition valueOf(java.lang.String)
+com.github.mikephil.charting.utils.YLabels$YLabelPosition: com.github.mikephil.charting.utils.YLabels$YLabelPosition[] values()
+com.github.mikephil.charting.utils.YLabels$YLabelPosition: com.github.mikephil.charting.utils.YLabels$YLabelPosition valueOf(java.lang.String)
 com.wawa.arm.ARMActivity
 com.wawa.arm.ARMActivity: ARMActivity()
 com.wawa.arm.AboutActivity
@@ -250,6 +422,8 @@ com.wawa.arm.R$color: int wheat
 com.wawa.arm.R$color: int white
 com.wawa.arm.R$color: int white_50_opacity
 com.wawa.arm.R$color: int whitesmoke
+com.wawa.arm.R$drawable: int a_close
+com.wawa.arm.R$drawable: int a_open
 com.wawa.arm.R$drawable: int action_refresh
 com.wawa.arm.R$drawable: int bg_account_balance_layout
 com.wawa.arm.R$drawable: int bg_account_layout
@@ -395,6 +569,7 @@ com.wawa.arm.R$drawable: int navbar_logo
 com.wawa.arm.R$drawable: int net_loading
 com.wawa.arm.R$drawable: int off_btn
 com.wawa.arm.R$drawable: int on_btn
+com.wawa.arm.R$drawable: int play
 com.wawa.arm.R$drawable: int pull_to_refresh_down_arrow
 com.wawa.arm.R$drawable: int pull_to_refresh_down_arrow_little_hint
 com.wawa.arm.R$drawable: int pull_to_refresh_progress_loading
@@ -425,6 +600,7 @@ com.wawa.arm.R$drawable: int selector_globle_bg
 com.wawa.arm.R$drawable: int selector_main_item
 com.wawa.arm.R$drawable: int selector_setting_bg
 com.wawa.arm.R$drawable: int selector_tabtext
+com.wawa.arm.R$drawable: int set
 com.wawa.arm.R$drawable: int setting_bg_new
 com.wawa.arm.R$drawable: int setting_bg_new_hover
 com.wawa.arm.R$drawable: int settings_bg
@@ -433,6 +609,7 @@ com.wawa.arm.R$drawable: int sp_bg
 com.wawa.arm.R$drawable: int sp_bg_01
 com.wawa.arm.R$drawable: int sp_bg_02
 com.wawa.arm.R$drawable: int sp_bg_03
+com.wawa.arm.R$drawable: int stop
 com.wawa.arm.R$drawable: int tab_indicator
 com.wawa.arm.R$drawable: int tabbar_highlight_bg
 com.wawa.arm.R$drawable: int table_icon_buyairtime
@@ -471,6 +648,7 @@ com.wawa.arm.R$id: int edit_arm_zq
 com.wawa.arm.R$id: int for_code_open
 com.wawa.arm.R$id: int for_coder
 com.wawa.arm.R$id: int head_img
+com.wawa.arm.R$id: int id_detail_current_chartview
 com.wawa.arm.R$id: int id_item_listview_layout_content_control_area
 com.wawa.arm.R$id: int id_item_listview_layout_header_time
 com.wawa.arm.R$id: int id_linear_layout
@@ -492,6 +670,7 @@ com.wawa.arm.R$id: int main_launchimage
 com.wawa.arm.R$id: int net_loading_content
 com.wawa.arm.R$id: int new_devices
 com.wawa.arm.R$id: int none
+com.wawa.arm.R$id: int open_close_icon
 com.wawa.arm.R$id: int open_icon
 com.wawa.arm.R$id: int paired_devices
 com.wawa.arm.R$id: int phone_sn
@@ -508,6 +687,7 @@ com.wawa.arm.R$id: int select_date_btn_cancel
 com.wawa.arm.R$id: int select_date_btn_ok
 com.wawa.arm.R$id: int select_date_datepicker
 com.wawa.arm.R$id: int setting_icon
+com.wawa.arm.R$id: int setting_icon2
 com.wawa.arm.R$id: int simpleRipple
 com.wawa.arm.R$id: int tip_content
 com.wawa.arm.R$id: int tip_head_img
@@ -516,6 +696,7 @@ com.wawa.arm.R$id: int title_icon_click
 com.wawa.arm.R$id: int title_new_devices
 com.wawa.arm.R$id: int title_paired_devices
 com.wawa.arm.R$id: int title_text
+com.wawa.arm.R$id: int title_text2
 com.wawa.arm.R$id: int top
 com.wawa.arm.R$id: int triangle
 com.wawa.arm.R$id: int tv_title_dialog_lock_mode_setting
@@ -523,6 +704,7 @@ com.wawa.arm.R$id: int underline
 com.wawa.arm.R$id: int vol_level_high
 com.wawa.arm.R$id: int vol_level_low
 com.wawa.arm.R$id: int vol_level_mid
+com.wawa.arm.R$id: int vol_setting_icon
 com.wawa.arm.R$id: int wiperSwitch1
 com.wawa.arm.R$layout: int device_list
 com.wawa.arm.R$layout: int device_name
@@ -788,6 +970,14 @@ com.wawa.arm.common.OMApplication: OMApplication()
 com.wawa.arm.utile.widgets.BaseView: BaseView(android.content.Context)
 com.wawa.arm.utile.widgets.BaseView: BaseView(android.content.Context,android.util.AttributeSet)
 com.wawa.arm.utile.widgets.BaseView: BaseView(android.content.Context,android.util.AttributeSet,int)
+com.wawa.arm.utile.widgets.LineDrawView: void setPoints(java.util.List)
+com.wawa.arm.utile.widgets.MyLineChart
+com.wawa.arm.utile.widgets.MyLineChart: MyLineChart(android.content.Context)
+com.wawa.arm.utile.widgets.MyLineChart: MyLineChart(android.content.Context,android.util.AttributeSet)
+com.wawa.arm.utile.widgets.MyLineChart: MyLineChart(android.content.Context,android.util.AttributeSet,int)
+com.wawa.arm.utile.widgets.MyLineChart: void setHighlightLineWidth(float)
+com.wawa.arm.utile.widgets.MyLineChart: float getHighlightLineWidth()
+com.wawa.arm.utile.widgets.MyLineChart: void setFillFormatter(com.github.mikephil.charting.utils.FillFormatter)
 com.wawa.arm.utile.widgets.OMEditText
 com.wawa.arm.utile.widgets.OMEditText: OMEditText(android.content.Context)
 com.wawa.arm.utile.widgets.OMEditText: OMEditText(android.content.Context,android.util.AttributeSet,int)
