@@ -566,6 +566,7 @@ public class ARMActivity extends BaseActivity{
 			};
     	sendMessage(cmd);
     }
+    private int fistVal = -1;
     private void readMsg(byte[] msg){
     	LogUtil.d("--ARM返回数据--"+TransferUtil.byte2HexStr(msg));
     	//TODO 数据校验
@@ -576,6 +577,7 @@ public class ARMActivity extends BaseActivity{
 		case 0x31://开始
 			if(msg.length > 20 ){
 				cmdResultTime = 0;
+				fistVal = -1;//重置启动后第一个上报数据存储变量
 				MyToast.showDIYToast(ARMActivity.this, getString(R.string.title_connected_to)+mConnectedDeviceName, 3000, true);
 				dialog.dismissProcessDialog();
 				String no = TransferUtil.byte2HexStr(Arrays.copyOfRange(msg, 8, 16));
@@ -586,8 +588,9 @@ public class ARMActivity extends BaseActivity{
 				changeButtonStatu(CommonConsts.STATU_WORKING);
 			}
 			break;
-		case 0x32://停止
+		case 0x32://暂停
 			if(msg[2] == 0x04){
+				fistVal = -1;//重置停止后第一个上报数据存储变量
 				cmdResultTime = 0;
 				dialog.dismissProcessDialog();
 			}
@@ -597,7 +600,14 @@ public class ARMActivity extends BaseActivity{
 			lastUpDataTime = System.currentTimeMillis();
 			int m = Arrays.copyOfRange(msg, 3, 4)[0];
 			if(0 <= m && m <= 91){
-				if(mChart.isNeedSetZero()) m = 0;
+				if(fistVal == -1){//第一次置0
+					fistVal = m;
+					m = 0;
+				}else if(m == fistVal){//非第一次 如果等于第一次上报数据则置0
+					m = 0;
+				}else{//非第一次如果不等则算正常数据，并置firstVal为0，一定要为0，否则if(m == fistVal)里的m就不正确
+					fistVal = 0;
+				}
 				setTitle(m+"");
 				//scan.changeLevle(m);
 				mChart.addEntry(m);
@@ -630,6 +640,18 @@ public class ARMActivity extends BaseActivity{
         switch (cmd[1]) {
 		case 0x31:
 			dialog.showProcessDialog("监测启动中...");
+			dialog.setCancelLis(new DialogInterface.OnCancelListener() {
+				@Override
+				public void onCancel(DialogInterface dialogin) {
+					isSearching = false;
+					mChart.removeDataSet(true);
+					//mChart.removeDataSet();暂停不需要删数据
+					openclose.setImageResource(R.drawable.play);
+					play.stopAll();
+					setTitle("0");
+					dialog.dismissProcessDialog();
+				}
+			});
 			break;
 		case 0x32:
 			//dialog.showProcessDialog("正在停止监测...");

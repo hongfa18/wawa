@@ -1778,8 +1778,8 @@ com.wawa.arm.ARMActivity:
     public static final int STOP_SCAN
     public static final int START_SCAN
     private static final int CHECK_TTS
-    926:956:private void createImag(java.lang.String)
-    959:966:private void saveMyBitmap(android.graphics.Bitmap,java.lang.String)
+    948:978:private void createImag(java.lang.String)
+    981:988:private void saveMyBitmap(android.graphics.Bitmap,java.lang.String)
 com.wawa.arm.BuildConfig
 com.wawa.arm.DeviceListActivity:
     private static final java.lang.String TAG
@@ -1888,6 +1888,8 @@ com.wawa.arm.utile.BluetoothChatService$ConnectThread
 com.wawa.arm.utile.BluetoothChatService$ConnectedThread
 com.wawa.arm.utile.DigestUtil
 com.wawa.arm.utile.JSONUtile
+com.wawa.arm.utile.LineChartUtil:
+    104:104:public boolean isNeedSetZero()
 com.wawa.arm.utile.MD5Util
 com.wawa.arm.utile.MobileUtils:
     public android.content.Context context

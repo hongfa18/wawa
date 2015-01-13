@@ -2236,16 +2236,17 @@ com.wawa.arm.ARMActivity -> com.wawa.arm.ARMActivity:
     int currentStatu -> G
     android.os.Handler handler -> H
     android.os.Handler mHandler -> I
-    boolean can -> J
-    android.content.BroadcastReceiver mReceiver -> K
-    boolean isBack -> L
-    boolean needOpenChooice -> M
-    android.speech.tts.TextToSpeech myTTS -> N
-    com.wawa.arm.utile.widgets.OMDialog closeDialog -> O
-    android.app.Notification notification -> P
-    android.app.NotificationManager nManager -> Q
-    android.app.PendingIntent pendingIntent -> R
-    int lastVal -> S
+    int fistVal -> J
+    boolean can -> K
+    android.content.BroadcastReceiver mReceiver -> L
+    boolean isBack -> M
+    boolean needOpenChooice -> N
+    android.speech.tts.TextToSpeech myTTS -> O
+    com.wawa.arm.utile.widgets.OMDialog closeDialog -> P
+    android.app.Notification notification -> Q
+    android.app.NotificationManager nManager -> R
+    android.app.PendingIntent pendingIntent -> S
+    int lastVal -> T
     void onCreate(android.os.Bundle) -> onCreate
     void initStatutButton(boolean) -> b
     void changeButtonStatu(int,java.lang.Object[]) -> a
@@ -2288,12 +2289,15 @@ com.wawa.arm.ARMActivity -> com.wawa.arm.ARMActivity:
     void access$21(com.wawa.arm.ARMActivity,java.lang.String) -> b
     long access$22(com.wawa.arm.ARMActivity) -> m
     android.widget.ImageView access$23(com.wawa.arm.ARMActivity) -> n
-    long access$24(com.wawa.arm.ARMActivity) -> o
-    java.util.Timer access$25(com.wawa.arm.ARMActivity) -> p
-    void access$26(com.wawa.arm.ARMActivity,java.util.Timer) -> a
-    void access$27(com.wawa.arm.ARMActivity,long) -> a
-    android.speech.tts.TextToSpeech access$28(com.wawa.arm.ARMActivity) -> q
-    com.wawa.arm.utile.widgets.OMDialog access$29(com.wawa.arm.ARMActivity) -> r
+    void access$24(com.wawa.arm.ARMActivity,boolean) -> e
+    com.wawa.arm.utile.LineChartUtil access$25(com.wawa.arm.ARMActivity) -> o
+    android.widget.ImageView access$26(com.wawa.arm.ARMActivity) -> p
+    long access$27(com.wawa.arm.ARMActivity) -> q
+    java.util.Timer access$28(com.wawa.arm.ARMActivity) -> r
+    void access$29(com.wawa.arm.ARMActivity,java.util.Timer) -> a
+    void access$30(com.wawa.arm.ARMActivity,long) -> a
+    android.speech.tts.TextToSpeech access$31(com.wawa.arm.ARMActivity) -> s
+    com.wawa.arm.utile.widgets.OMDialog access$32(com.wawa.arm.ARMActivity) -> t
 com.wawa.arm.ARMActivity$1 -> com.wawa.arm.a:
     com.wawa.arm.ARMActivity this$0 -> a
     boolean handleMessage(android.os.Message) -> handleMessage
@@ -2315,40 +2319,43 @@ com.wawa.arm.ARMActivity$14 -> com.wawa.arm.f:
     void run() -> run
 com.wawa.arm.ARMActivity$15 -> com.wawa.arm.g:
     com.wawa.arm.ARMActivity this$0 -> a
-    byte[] val$cmd -> b
-    void run() -> run
+    void onCancel(android.content.DialogInterface) -> onCancel
 com.wawa.arm.ARMActivity$16 -> com.wawa.arm.h:
     com.wawa.arm.ARMActivity this$0 -> a
-    void onInit(int) -> onInit
+    byte[] val$cmd -> b
+    void run() -> run
 com.wawa.arm.ARMActivity$17 -> com.wawa.arm.i:
     com.wawa.arm.ARMActivity this$0 -> a
+    void onInit(int) -> onInit
+com.wawa.arm.ARMActivity$18 -> com.wawa.arm.j:
+    com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$2 -> com.wawa.arm.j:
+com.wawa.arm.ARMActivity$2 -> com.wawa.arm.k:
     com.wawa.arm.ARMActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.wawa.arm.ARMActivity access$0(com.wawa.arm.ARMActivity$2) -> a
-com.wawa.arm.ARMActivity$2$1 -> com.wawa.arm.k:
+com.wawa.arm.ARMActivity$2$1 -> com.wawa.arm.l:
     com.wawa.arm.ARMActivity$2 this$1 -> a
     void onCancel(android.content.DialogInterface) -> onCancel
-com.wawa.arm.ARMActivity$3 -> com.wawa.arm.l:
+com.wawa.arm.ARMActivity$3 -> com.wawa.arm.m:
     com.wawa.arm.ARMActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.wawa.arm.ARMActivity$4 -> com.wawa.arm.m:
+com.wawa.arm.ARMActivity$4 -> com.wawa.arm.n:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$5 -> com.wawa.arm.n:
+com.wawa.arm.ARMActivity$5 -> com.wawa.arm.o:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$6 -> com.wawa.arm.o:
+com.wawa.arm.ARMActivity$6 -> com.wawa.arm.p:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$7 -> com.wawa.arm.p:
+com.wawa.arm.ARMActivity$7 -> com.wawa.arm.q:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$8 -> com.wawa.arm.q:
+com.wawa.arm.ARMActivity$8 -> com.wawa.arm.r:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.ARMActivity$9 -> com.wawa.arm.r:
+com.wawa.arm.ARMActivity$9 -> com.wawa.arm.s:
     com.wawa.arm.ARMActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.wawa.arm.AboutActivity -> com.wawa.arm.AboutActivity:
@@ -2384,17 +2391,17 @@ com.wawa.arm.DeviceListActivity -> com.wawa.arm.DeviceListActivity:
     com.wawa.arm.net.WaitUIElement access$4(com.wawa.arm.DeviceListActivity) -> e
     void access$5(com.wawa.arm.DeviceListActivity,java.lang.String) -> a
     void access$6(com.wawa.arm.DeviceListActivity) -> f
-com.wawa.arm.DeviceListActivity$1 -> com.wawa.arm.s:
+com.wawa.arm.DeviceListActivity$1 -> com.wawa.arm.t:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.wawa.arm.DeviceListActivity$2 -> com.wawa.arm.t:
+com.wawa.arm.DeviceListActivity$2 -> com.wawa.arm.u:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.wawa.arm.DeviceListActivity$3 -> com.wawa.arm.u:
+com.wawa.arm.DeviceListActivity$3 -> com.wawa.arm.v:
     com.wawa.arm.DeviceListActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.R -> com.wawa.arm.v:
-com.wawa.arm.R$styleable -> com.wawa.arm.w:
+com.wawa.arm.R -> com.wawa.arm.w:
+com.wawa.arm.R$styleable -> com.wawa.arm.x:
     int[] CirclePageIndicator -> CirclePageIndicator
     int CirclePageIndicator_android_background -> CirclePageIndicator_android_background
     int CirclePageIndicator_android_orientation -> CirclePageIndicator_android_orientation
@@ -2491,19 +2498,19 @@ com.wawa.arm.SettingActivity -> com.wawa.arm.SettingActivity:
     java.lang.String access$12(com.wawa.arm.SettingActivity) -> k
     void access$13(com.wawa.arm.SettingActivity,java.lang.String) -> a
     void access$14(com.wawa.arm.SettingActivity,java.lang.String) -> b
-com.wawa.arm.SettingActivity$1 -> com.wawa.arm.x:
+com.wawa.arm.SettingActivity$1 -> com.wawa.arm.y:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$2 -> com.wawa.arm.y:
+com.wawa.arm.SettingActivity$2 -> com.wawa.arm.z:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$3 -> com.wawa.arm.z:
+com.wawa.arm.SettingActivity$3 -> com.wawa.arm.aa:
     com.wawa.arm.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wawa.arm.SettingActivity$4 -> com.wawa.arm.aa:
+com.wawa.arm.SettingActivity$4 -> com.wawa.arm.ab:
     com.wawa.arm.SettingActivity this$0 -> a
     void OnChanged(com.wawa.arm.utile.widgets.WiperSwitchView,boolean) -> a
-com.wawa.arm.SettingActivity$5 -> com.wawa.arm.ab:
+com.wawa.arm.SettingActivity$5 -> com.wawa.arm.ac:
     com.wawa.arm.SettingActivity this$0 -> a
     android.widget.RadioButton val$low -> b
     android.widget.RadioButton val$mid -> c
@@ -2514,7 +2521,7 @@ com.wawa.arm.StartActivity -> com.wawa.arm.StartActivity:
     android.view.animation.Animation animation -> b
     void onCreate(android.os.Bundle) -> onCreate
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-com.wawa.arm.StartActivity$1 -> com.wawa.arm.ac:
+com.wawa.arm.StartActivity$1 -> com.wawa.arm.ad:
     com.wawa.arm.StartActivity this$0 -> a
     void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
     void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
@@ -2726,12 +2733,11 @@ com.wawa.arm.utile.LineChartUtil -> com.wawa.arm.utile.e:
     java.util.Timer timer -> h
     void init() -> a
     com.github.mikephil.charting.data.LineDataSet createSet(java.util.ArrayList,java.lang.String) -> a
-    boolean isNeedSetZero() -> b
     void addEntry(int) -> a
-    void changeView() -> c
+    void changeView() -> b
     void addDataSet(java.util.List) -> a
     void removeDataSet(boolean) -> a
-    void addEmptyData() -> d
+    void addEmptyData() -> c
     void setupChart(com.github.mikephil.charting.charts.LineChart,com.github.mikephil.charting.data.LineData) -> a
     void access$0(com.wawa.arm.utile.LineChartUtil) -> a
     android.os.Handler access$1(com.wawa.arm.utile.LineChartUtil) -> b
